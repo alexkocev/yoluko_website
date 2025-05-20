@@ -82,15 +82,64 @@ Add these lines to the <head> section of both HTML files:
 ```html
 <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/images/favicon.png">
-
 ```
-
 Then add your favicon files to the repository root.
 
 
-4. Remove all <code> tags from both HTMLs
+4. Update the form
+Update with
+```html
+<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
+    <form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
+```
+
+Replace
+```html
+<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>```
+with:
+```html
+<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>```
+
+Replace
+```html
+<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="text" /></div>
+```
+with:
+```html
+<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="email" /></div>
+```
 
 
+5. Remove all <code> tags from both HTMLs
+
+
+6. Remove Beefree code
+REMOVE 
+```html
+<div class="bee-row bee-row-35">
+    <div class="bee-row-content">
+        <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-icons">
+                <div class="bee-icon bee-icon-last">
+                    <div class="bee-content">
+                        <div class="bee-icon-image"><a href="http://designedwithbeefree.com/" target="_blank" title="Designed with Beefree"><img alt="Beefree Logo" height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/assets/Beefree-logo.png" width="auto" /></a></div>
+                        <div class="bee-icon-label bee-icon-label-right"><a href="http://designedwithbeefree.com/" target="_blank" title="Designed with Beefree">Designed with Beefree</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+REPLACE
+```html
+<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1391511/1378064/2407024/12774208_large.jpg" property="og:image" />
+```
+WITH 
+```html
+<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
+```
 
 
 

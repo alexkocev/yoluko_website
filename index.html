@@ -14,21 +14,35 @@
 	</script>
 
 
-    <script>
-    // Auto-detect language and redirect
-    (function() {
-        // Skip if already on language page
-        if (window.location.pathname.indexOf('/fr/') !== -1) return;
-        
-        // Get browser language
-        var userLang = navigator.language || navigator.userLanguage;
-        
-        // Check if browser language starts with "fr"
-        if (userLang.indexOf('fr') === 0) {
-        window.location.href = '/fr/';
-        }
-    })();
-    </script>
+	<script>
+	// Auto-detect language and redirect - with session storage to remember user choice
+	(function() {
+		// Check if user manually selected a language
+		if (sessionStorage.getItem('userLanguageChoice')) {
+			// If user chose English, stay on this page
+			if (sessionStorage.getItem('userLanguageChoice') === 'en') {
+				return;
+			}
+			// If user chose French, redirect to French
+			if (sessionStorage.getItem('userLanguageChoice') === 'fr' && 
+				window.location.pathname.indexOf('/fr/') === -1) {
+				window.location.href = '/fr/';
+				return;
+			}
+		}
+		
+		// Skip if already on language page
+		if (window.location.pathname.indexOf('/fr/') !== -1) return;
+		
+		// Get browser language
+		var userLang = navigator.language || navigator.userLanguage;
+		
+		// Check if browser language starts with "fr"
+		if (userLang.indexOf('fr') === 0) {
+			window.location.href = '/fr/';
+		}
+	})();
+	</script>
 
 
 
@@ -1390,11 +1404,11 @@
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact Us</a></li>
                                 <!-- For English version (add to index.html) -->
-                                <li style="margin-left: 10px;">
-                                <a href="/fr/" title="Version française" style="display: flex; align-items: center;">
-                                    <span style="margin-right: 5px;">🇫🇷</span> FR
-                                </a>
-                                </li>
+								<li style="margin-left: 10px;">
+									<a href="/fr/" onclick="sessionStorage.setItem('userLanguageChoice', 'fr');" title="Version française" style="display: flex; align-items: center;">
+										<span style="margin-right: 5px;">🇫🇷</span> FR
+									</a>
+								</li>
 							</ul>
 						</nav>
 					</div>
