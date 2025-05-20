@@ -55,8 +55,7 @@ Add this code to your navigation menu in both versions:
 ```
 
 2. Language Auto-Detection
-Add this script to the <head> section of your index.html:
-
+Add this script to the <head> section of your index.html only:
 
 ```html
 <script>
@@ -89,47 +88,72 @@ Add these lines to the <head> section of both HTML files:
 Then add your favicon files to the repository root.
 
 
-4. Configure Form Submission
-Replace your form action with Formspree integration:
+4. Configure Form Submission 
+IN the head:
 ```html
-<form action="https://formspree.io/f/contact@yoluko.com" method="POST">
-  <!-- Your existing form fields -->
-</form>
-```
-
-Or use this JavaScript to handle form submission:
-
-```html
+<!-- For your form -->
 <script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.formspreeId) return;
     
-    // Get form data
-    const name = document.querySelector("input[name='firstname']").value;
-    const email = document.querySelector("input[name='email']").value;
-    const message = document.querySelector("textarea[name='message']").value;
-    
-    // Send email using Formspree
-    fetch("https://formspree.io/f/contact@yoluko.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message }),
-    })
-      .then(response => {
-        if (response.ok) {
-          alert("Message sent successfully!");
-          document.querySelector("form").reset();
-        } else {
-          alert("Error sending message. Please try again.");
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("Error sending message. Please try again.");
-      });
+    const form = document.querySelector('form');
+    if (form) {
+      form.action = `https://formspree.io/f/${window.YOLUKO_CONFIG.formspreeId}`;
+    }
   });
 </script>
 ```
+
+Replace the <form >
+```html
+<form accept-charset="UTF-8" action="#" autocomplete="on" enctype="multipart/form-data" method="post" target="_self" id="contact-form">
+```
+
+
+
+5. Configure GA4
+
+REPLACE
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSVDY7CP2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WFSVDY7CP2');
+</script>
+```
+
+WITH
+
+```html
+<!-- In your HTML head section -->
+<script src="/config.js"></script>
+
+<!-- For Google Analytics, add this script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.ga4Id) return;
+    
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${window.YOLUKO_CONFIG.ga4Id}`;
+    document.head.appendChild(script);
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', window.YOLUKO_CONFIG.ga4Id);
+  });
+</script>
+```
+
+
+
+6. Remove all <code> tags from both HTMLs
+
+
+
+
+
 

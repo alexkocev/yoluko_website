@@ -3,13 +3,59 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7BT23P737"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-Q7BT23P737');
-	</script>
+    <!-- In your HTML head section -->
+    <script src="/config.js"></script>
+
+    <!-- For Google Analytics, add this script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.ga4Id) return;
+        
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.YOLUKO_CONFIG.ga4Id}`;
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', window.YOLUKO_CONFIG.ga4Id);
+    });
+    </script>
+    <script>
+    // Auto-detect language and redirect
+    (function() {
+        // Skip if already on language page
+        if (window.location.pathname.indexOf('/fr/') !== -1) return;
+        
+        // Get browser language
+        var userLang = navigator.language || navigator.userLanguage;
+        
+        // Check if browser language starts with "fr"
+        if (userLang.indexOf('fr') === 0) {
+        window.location.href = '/fr/';
+        }
+    })();
+    </script>
+
+
+    <!-- For your form -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.formspreeId) return;
+        
+        const form = document.querySelector('form');
+        if (form) {
+        form.action = `https://formspree.io/f/${window.YOLUKO_CONFIG.formspreeId}`;
+        }
+    });
+    </script>
+
+
+    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+
+
 	<title>Yoluko Solutions | Custom Business Automation That Works</title>
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="website" property="og:type" />
@@ -22,25 +68,10 @@
 	<meta content="width=device-width" name="viewport" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<script>
-        // Auto-detect language and redirect
-        (function() {
-            // Skip if already on language page
-            if (window.location.pathname.indexOf('/fr/') !== -1) return;
-            
-            // Get browser language
-            var userLang = navigator.language || navigator.userLanguage;
-            
-            // Check if browser language starts with "fr"
-            if (userLang.indexOf('fr') === 0) {
-            window.location.href = '/fr/';
-            }
-        })();
-        </script>
-    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="/images/favicon.png">
 
-    <style>
+
+
+	<style>
 		.bee-row,
 		.bee-row-content {
 			position: relative
@@ -320,17 +351,15 @@
 			color: #000000
 		}
 
-		.bee-row-2 .bee-col-1 {
-			padding-bottom: 5px;
+		.bee-row-2 .bee-col-1,
+		.bee-row-24 .bee-col-1 {
 			padding-left: 25px;
 			padding-right: 25px
 		}
 
-		.bee-row-2 .bee-col-1 .bee-block-1,
-		.bee-row-23 .bee-col-1 .bee-block-1,
-		.bee-row-32 .bee-col-1 .bee-block-1,
-		.bee-row-32 .bee-col-1 .bee-block-5 {
-			padding: 10px;
+		.bee-row-2 .bee-col-1 .bee-block-1 {
+			padding-left: 10px;
+			padding-right: 10px;
 			text-align: center;
 			width: 100%
 		}
@@ -581,17 +610,20 @@
 			padding: 10px
 		}
 
+		.bee-row-23 .bee-col-1 .bee-block-1,
+		.bee-row-32 .bee-col-1 .bee-block-1,
+		.bee-row-32 .bee-col-1 .bee-block-5 {
+			padding: 10px;
+			text-align: center;
+			width: 100%
+		}
+
 		.bee-row-24 .bee-row-content {
 			background-color: #fff9e5;
 			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/middle_1.png');
 			background-position: center top;
 			background-repeat: repeat;
 			color: #000000
-		}
-
-		.bee-row-24 .bee-col-1 {
-			padding-left: 25px;
-			padding-right: 25px
 		}
 
 		.bee-row-24 .bee-col-1 .bee-block-1,
@@ -710,24 +742,6 @@
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 a,
-		.bee-row-25 .bee-col-1 .bee-block-1 a,
-		.bee-row-4 .bee-col-1 .bee-block-3 a {
-			background-color: #57afb2;
-			border-bottom: 3px solid #57afb2;
-			border-left: 3px solid #57afb2;
-			border-radius: 60px;
-			border-right: 3px solid #57afb2;
-			border-top: 3px solid #57afb2;
-			color: #ffffff;
-			direction: ltr;
-			font-family: inherit;
-			font-weight: 400;
-			line-height: 200%;
-			padding: 5px 40px 5px 35px;
-			width: auto
-		}
-
 		.bee-row-14 .bee-col-4 .bee-block-4,
 		.bee-row-4 .bee-col-1 .bee-block-2 {
 			color: #001524;
@@ -769,6 +783,24 @@
 			margin-bottom: undefined
 		}
 
+		.bee-row-11 .bee-col-2 .bee-block-3 a,
+		.bee-row-25 .bee-col-1 .bee-block-1 a,
+		.bee-row-4 .bee-col-1 .bee-block-3 a {
+			background-color: #57afb2;
+			border-bottom: 3px solid #57afb2;
+			border-left: 3px solid #57afb2;
+			border-radius: 60px;
+			border-right: 3px solid #57afb2;
+			border-top: 3px solid #57afb2;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-weight: 400;
+			line-height: 200%;
+			padding: 5px 40px 5px 35px;
+			width: auto
+		}
+
 		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
 			color: #06d3c5;
 			direction: ltr;
@@ -786,10 +818,10 @@
 		.bee-row-8 .bee-col-4 .bee-block-2 h3 {
 			font-size: 32px;
 			text-align: center;
+			line-height: 120%;
 			font-weight: 700;
 			letter-spacing: normal;
 			direction: ltr;
-			line-height: 120%;
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif
 		}
 
@@ -839,10 +871,6 @@
 			color: #0b0b0b
 		}
 
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-28 .bee-col-1 .bee-block-3,
 		.bee-row-28 .bee-col-2 .bee-block-3,
 		.bee-row-28 .bee-col-3 .bee-block-3,
@@ -864,12 +892,22 @@
 			color: #001524
 		}
 
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
 		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
 
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
 		.bee-row-2 .bee-col-2 .bee-block-1 li {
-			padding: 15px 15px 5px
+			padding-bottom: 5px;
+			padding-left: 15px;
+			padding-right: 15px
 		}
 
 		@media (max-width:768px) {
@@ -947,10 +985,6 @@
 			}
 		}
 
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-11 .bee-col-2 .bee-block-1 h2 {
 			color: #001524;
 			direction: ltr;
@@ -1000,13 +1034,27 @@
 			text-align: center
 		}
 
+		.bee-row-13 .bee-col-1 .bee-block-4,
+		.bee-row-13 .bee-col-2 .bee-block-4,
+		.bee-row-13 .bee-col-3 .bee-block-4,
+		.bee-row-13 .bee-col-4 .bee-block-4,
+		.bee-row-14 .bee-col-1 .bee-block-4,
+		.bee-row-14 .bee-col-2 .bee-block-4,
+		.bee-row-14 .bee-col-3 .bee-block-4 {
+			color: #001524;
+			font-size: 20px;
+			line-height: 120%;
+			text-align: left
+		}
+
 		.bee-row-13 .bee-col-1 .bee-block-2,
 		.bee-row-13 .bee-col-2 .bee-block-2,
 		.bee-row-13 .bee-col-3 .bee-block-2,
 		.bee-row-13 .bee-col-4 .bee-block-2,
 		.bee-row-14 .bee-col-1 .bee-block-2,
 		.bee-row-14 .bee-col-2 .bee-block-2,
-		.bee-row-14 .bee-col-3 .bee-block-2 {
+		.bee-row-14 .bee-col-3 .bee-block-2,
+		.bee-row-14 .bee-col-4 .bee-block-2 {
 			color: #2274a5;
 			font-size: 16px;
 			letter-spacing: 1px;
@@ -1029,19 +1077,6 @@
 			text-align: left
 		}
 
-		.bee-row-13 .bee-col-1 .bee-block-4,
-		.bee-row-13 .bee-col-2 .bee-block-4,
-		.bee-row-13 .bee-col-3 .bee-block-4,
-		.bee-row-13 .bee-col-4 .bee-block-4,
-		.bee-row-14 .bee-col-1 .bee-block-4,
-		.bee-row-14 .bee-col-2 .bee-block-4,
-		.bee-row-14 .bee-col-3 .bee-block-4 {
-			color: #001524;
-			font-size: 20px;
-			line-height: 120%;
-			text-align: left
-		}
-
 		.bee-row-13 .bee-col-2 .bee-block-3 h3,
 		.bee-row-13 .bee-col-3 .bee-block-3 h3,
 		.bee-row-13 .bee-col-4 .bee-block-3 h3,
@@ -1060,12 +1095,7 @@
 		}
 
 		.bee-row-14 .bee-col-4 .bee-block-2 {
-			color: #2274a5;
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 1px;
-			line-height: 120%;
-			text-align: left
+			font-weight: 400
 		}
 
 		.bee-row-16 .bee-col-1 .bee-block-2,
@@ -1127,17 +1157,6 @@
 			text-align: center
 		}
 
-		.bee-row-24 .bee-col-1 .bee-block-3,
-		.bee-row-24 .bee-col-2 .bee-block-3 {
-			color: #001524;
-			direction: ltr;
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 120%;
-			text-align: left
-		}
-
 		.bee-row-24 .bee-col-1 .bee-block-2,
 		.bee-row-24 .bee-col-2 .bee-block-2 {
 			color: #0068a5;
@@ -1156,6 +1175,17 @@
 			margin-right: 0
 		}
 
+		.bee-row-24 .bee-col-1 .bee-block-3,
+		.bee-row-24 .bee-col-2 .bee-block-3 {
+			color: #001524;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
 		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
@@ -1164,6 +1194,19 @@
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
 			font-size: 60px;
 			text-align: center
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-image,
+		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-image {
+			padding: 0 30px 0 0
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-28 .bee-col-1 .bee-block-2 h3,
@@ -1190,19 +1233,6 @@
 			line-height: 120%;
 			text-align: center;
 			direction: ltr
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-image,
-		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-image,
-		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-image,
-		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-image,
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-image,
-		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-image {
-			padding: 0 30px 0 0
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
 		}
 
 		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -1237,11 +1267,6 @@
 			font-size: 60px
 		}
 
-		.bee-row-32 .bee-col-1 .bee-block-5 h3 {
-			color: #0068a5;
-			font-size: 24px
-		}
-
 		.bee-row-32 .bee-col-1 .bee-block-3,
 		.bee-row-32 .bee-col-1 .bee-block-6,
 		.bee-row-32 .bee-col-1 .bee-block-8,
@@ -1253,6 +1278,11 @@
 			letter-spacing: 0;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-32 .bee-col-1 .bee-block-5 h3 {
+			color: #0068a5;
+			font-size: 24px
 		}
 
 		.bee-row-32 .bee-col-1 .bee-block-7 a {
@@ -1376,10 +1406,11 @@
 								<li><a href="#module_76f28396-3497-4f8d-a2b3-abfd72a32072" target="_self" title="Show Pricing">Pricing</a></li>
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact Us</a></li>
+                                <!-- For English version (add to index.html) -->
                                 <li style="margin-left: 10px;">
-                                    <a href="/fr/" title="Version française" style="display: flex; align-items: center;">
-                                        <span style="margin-right: 5px;">🇫🇷</span> FR
-                                    </a>
+                                <a href="/fr/" title="Version française" style="display: flex; align-items: center;">
+                                    <span style="margin-right: 5px;">🇫🇷</span> FR
+                                </a>
                                 </li>
 							</ul>
 						</nav>
@@ -1959,7 +1990,7 @@
 						<h1><span class="tinyMce-placeholder">Ready to Automate Your Business?</span> </h1>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
-						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
+                        <form accept-charset="UTF-8" action="#" autocomplete="on" enctype="multipart/form-data" method="post" target="_self" id="contact-form">
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
 							</div>
