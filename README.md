@@ -39,28 +39,42 @@ Add this code to your navigation menu in both versions:
 ```html
 <!-- For English version (add to index.html) -->
 <li style="margin-left: 10px;">
-  <a href="/fr/" title="Version française" style="display: flex; align-items: center;">
-    <span style="margin-right: 5px;">🇫🇷</span> FR
-  </a>
+    <a href="/fr/" onclick="sessionStorage.setItem('userLanguageChoice', 'fr');" title="Version française" style="display: flex; align-items: center;">
+        <span style="margin-right: 5px;">🇫🇷</span> FR
+    </a>
 </li>
 ```
 
 ```html
 <!-- For French version (add to fr/index.html) -->
 <li style="margin-left: 10px;">
-  <a href="/" title="English version" style="display: flex; align-items: center;">
-    <span style="margin-right: 5px;">🇬🇧</span> EN
-  </a>
+    <a href="/" onclick="sessionStorage.setItem('userLanguageChoice', 'en');" title="English version" style="display: flex; align-items: center;">
+        <span style="margin-right: 5px;">🇬🇧</span> EN
+    </a>
 </li>
 ```
 
 2. Language Auto-Detection
 Add this script to the <head> section of your index.html only:
-
+For English Version (index.html)
 ```html
 <script>
-  // Auto-detect language and redirect
-  (function() {
+// Auto-detect language and redirect - with session storage to remember user choice
+(function() {
+    // Check if user manually selected a language
+    if (sessionStorage.getItem('userLanguageChoice')) {
+        // If user chose English, stay on this page
+        if (sessionStorage.getItem('userLanguageChoice') === 'en') {
+            return;
+        }
+        // If user chose French, redirect to French
+        if (sessionStorage.getItem('userLanguageChoice') === 'fr' && 
+            window.location.pathname.indexOf('/fr/') === -1) {
+            window.location.href = '/fr/';
+            return;
+        }
+    }
+    
     // Skip if already on language page
     if (window.location.pathname.indexOf('/fr/') !== -1) return;
     
@@ -69,12 +83,38 @@ Add this script to the <head> section of your index.html only:
     
     // Check if browser language starts with "fr"
     if (userLang.indexOf('fr') === 0) {
-      window.location.href = '/fr/';
+        window.location.href = '/fr/';
     }
-  })();
+})();
 </script>
 ```
 
+For French Version (fr/index.html)
+```html
+<script>
+// Auto-detect language and redirect - with session storage to remember user choice
+(function() {
+    // Check if user manually selected a language
+    if (sessionStorage.getItem('userLanguageChoice')) {
+        // If user chose French, stay on this page
+        if (sessionStorage.getItem('userLanguageChoice') === 'fr') {
+            return;
+        }
+        // If user chose English, redirect to English
+        if (sessionStorage.getItem('userLanguageChoice') === 'en' && 
+            window.location.pathname.indexOf('/fr/') !== -1) {
+            window.location.href = '/';
+            return;
+        }
+    }
+    
+    // Skip if not on French page (we're already where we should be)
+    if (window.location.pathname.indexOf('/fr/') === -1) return;
+    
+    // We're on French page by default, so no need to redirect based on browser language
+})();
+</script>
+```
 
 3. Add Favicon
 Add these lines to the <head> section of both HTML files:
@@ -95,10 +135,12 @@ Update with
 
 Replace
 ```html
-<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>```
+<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
+```
 with:
 ```html
-<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>```
+<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>
+```
 
 Replace
 ```html

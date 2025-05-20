@@ -16,28 +16,22 @@
 	(function() {
 		// Check if user manually selected a language
 		if (sessionStorage.getItem('userLanguageChoice')) {
-			// If user chose English, stay on this page
-			if (sessionStorage.getItem('userLanguageChoice') === 'en') {
+			// If user chose French, stay on this page
+			if (sessionStorage.getItem('userLanguageChoice') === 'fr') {
 				return;
 			}
-			// If user chose French, redirect to French
-			if (sessionStorage.getItem('userLanguageChoice') === 'fr' && 
-				window.location.pathname.indexOf('/fr/') === -1) {
-				window.location.href = '/fr/';
+			// If user chose English, redirect to English
+			if (sessionStorage.getItem('userLanguageChoice') === 'en' && 
+				window.location.pathname.indexOf('/fr/') !== -1) {
+				window.location.href = '/';
 				return;
 			}
 		}
 		
-		// Skip if already on language page
-		if (window.location.pathname.indexOf('/fr/') !== -1) return;
+		// Skip if not on French page (we're already where we should be)
+		if (window.location.pathname.indexOf('/fr/') === -1) return;
 		
-		// Get browser language
-		var userLang = navigator.language || navigator.userLanguage;
-		
-		// Check if browser language starts with "fr"
-		if (userLang.indexOf('fr') === 0) {
-			window.location.href = '/fr/';
-		}
+		// We're on French page by default, so no need to redirect based on browser language
 	})();
 	</script>
 
@@ -46,23 +40,16 @@
 	<meta content="website" property="og:type" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." property="og:description" />
 	<meta content="" property="og:url" />
-
 	<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
-
 	<meta content="Yoluko Solutions | Custom Business Automation That Works" property="og:title" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." name="description" />
 	<meta charset="utf-8" />
 	<meta content="width=device-width" name="viewport" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	
-    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="/images/favicon.png">
-
-
-
-
-    <style>
+	<link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="/images/favicon.png">
+	<style>
 		.bee-row,
 		.bee-row-content {
 			position: relative
@@ -721,6 +708,154 @@
 			text-align: left
 		}
 
+		.bee-row-4 .bee-col-1 .bee-block-1 h1 {
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 52px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-2 {
+			color: #001524;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-13 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-13 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-13 .bee-col-3 .bee-block-4 p:not(:last-child),
+		.bee-row-13 .bee-col-4 .bee-block-2 p:not(:last-child),
+		.bee-row-13 .bee-col-4 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-3 .bee-block-4 p:not(:last-child),
+		.bee-row-14 .bee-col-4 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-4 .bee-block-4 p:not(:last-child),
+		.bee-row-24 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-24 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-28 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-28 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-28 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-29 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-29 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-29 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-8 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-8 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-8 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-8 .bee-col-4 .bee-block-3 p:not(:last-child) {
+			margin-bottom: undefined
+		}
+
+		.bee-row-11 .bee-col-2 .bee-block-3 a,
+		.bee-row-25 .bee-col-1 .bee-block-1 a,
+		.bee-row-4 .bee-col-1 .bee-block-3 a {
+			background-color: #57afb2;
+			border-bottom: 3px solid #57afb2;
+			border-left: 3px solid #57afb2;
+			border-radius: 60px;
+			border-right: 3px solid #57afb2;
+			border-top: 3px solid #57afb2;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 200%;
+			padding: 5px 40px 5px 35px;
+			width: auto
+		}
+
+		.bee-row-5 .bee-col-1 .bee-block-1 h1,
+		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
+			font-size: 26px;
+			text-align: center;
+			letter-spacing: normal;
+			direction: ltr;
+			font-weight: 400
+		}
+
+		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
+			color: #06d3c5;
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+			line-height: 120%
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-image {
+			padding: 0
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-35 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-label a {
+			color: #000000
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
+			color: #0b0b0b;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			line-height: 120%
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-3,
+		.bee-row-28 .bee-col-2 .bee-block-3,
+		.bee-row-28 .bee-col-3 .bee-block-3,
+		.bee-row-29 .bee-col-1 .bee-block-3,
+		.bee-row-29 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-1 .bee-block-3,
+		.bee-row-8 .bee-col-2 .bee-block-3,
+		.bee-row-8 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-4 .bee-block-3 {
+			color: #001524;
+			font-size: 16px;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-2 .bee-col-2 .bee-block-1 li {
 			padding-bottom: 5px;
 			padding-left: 15px;
@@ -802,169 +937,27 @@
 			}
 		}
 
-		.bee-row-4 .bee-col-1 .bee-block-1 h1 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 68px;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-14 .bee-col-4 .bee-block-4,
-		.bee-row-4 .bee-col-1 .bee-block-2 {
-			color: #001524;
-			font-size: 20px;
-			font-weight: 400;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-13 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-13 .bee-col-1 .bee-block-4 p:not(:last-child),
-		.bee-row-13 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-13 .bee-col-2 .bee-block-4 p:not(:last-child),
-		.bee-row-13 .bee-col-3 .bee-block-2 p:not(:last-child),
-		.bee-row-13 .bee-col-3 .bee-block-4 p:not(:last-child),
-		.bee-row-13 .bee-col-4 .bee-block-2 p:not(:last-child),
-		.bee-row-13 .bee-col-4 .bee-block-4 p:not(:last-child),
-		.bee-row-14 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-14 .bee-col-1 .bee-block-4 p:not(:last-child),
-		.bee-row-14 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-14 .bee-col-2 .bee-block-4 p:not(:last-child),
-		.bee-row-14 .bee-col-3 .bee-block-2 p:not(:last-child),
-		.bee-row-14 .bee-col-3 .bee-block-4 p:not(:last-child),
-		.bee-row-14 .bee-col-4 .bee-block-2 p:not(:last-child),
-		.bee-row-14 .bee-col-4 .bee-block-4 p:not(:last-child),
-		.bee-row-24 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-24 .bee-col-2 .bee-block-2 p:not(:last-child),
-		.bee-row-28 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-28 .bee-col-2 .bee-block-3 p:not(:last-child),
-		.bee-row-28 .bee-col-3 .bee-block-3 p:not(:last-child),
-		.bee-row-29 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-29 .bee-col-2 .bee-block-3 p:not(:last-child),
-		.bee-row-29 .bee-col-3 .bee-block-3 p:not(:last-child),
-		.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),
-		.bee-row-8 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-8 .bee-col-2 .bee-block-3 p:not(:last-child),
-		.bee-row-8 .bee-col-3 .bee-block-3 p:not(:last-child),
-		.bee-row-8 .bee-col-4 .bee-block-3 p:not(:last-child) {
-			margin-bottom: undefined
-		}
-
-		.bee-row-11 .bee-col-2 .bee-block-3 a,
-		.bee-row-25 .bee-col-1 .bee-block-1 a,
-		.bee-row-4 .bee-col-1 .bee-block-3 a {
-			background-color: #57afb2;
-			border-bottom: 3px solid #57afb2;
-			border-left: 3px solid #57afb2;
-			border-radius: 60px;
-			border-right: 3px solid #57afb2;
-			border-top: 3px solid #57afb2;
-			color: #ffffff;
-			direction: ltr;
-			font-family: inherit;
-			font-weight: 400;
-			line-height: 200%;
-			padding: 5px 40px 5px 35px;
-			width: auto
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-image {
-			padding: 0
-		}
-
-		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-35 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
-			margin-left: 0
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
-		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-label a {
-			color: #000000
-		}
-
-		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
-			color: #06d3c5;
-			direction: ltr;
-			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-			font-size: 38px;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-2 h3,
-		.bee-row-8 .bee-col-2 .bee-block-2 h3,
-		.bee-row-8 .bee-col-3 .bee-block-2 h3,
-		.bee-row-8 .bee-col-4 .bee-block-2 h3 {
-			font-size: 32px;
-			text-align: center;
-			font-weight: 700;
-			letter-spacing: normal;
-			direction: ltr;
-			line-height: 120%;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-3,
-		.bee-row-28 .bee-col-2 .bee-block-3,
-		.bee-row-28 .bee-col-3 .bee-block-3,
-		.bee-row-29 .bee-col-1 .bee-block-3,
-		.bee-row-29 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-3,
-		.bee-row-8 .bee-col-2 .bee-block-3,
-		.bee-row-8 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-4 .bee-block-3 {
-			color: #001524;
-			font-size: 20px;
-			line-height: 120%;
-			text-align: center
-		}
-
 		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
 
-		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
-			color: #0b0b0b
-		}
-
+		.bee-row-28 .bee-col-1 .bee-block-2 h3,
+		.bee-row-28 .bee-col-2 .bee-block-2 h3,
+		.bee-row-28 .bee-col-3 .bee-block-2 h3,
+		.bee-row-29 .bee-col-1 .bee-block-2 h3,
+		.bee-row-29 .bee-col-2 .bee-block-2 h3,
+		.bee-row-29 .bee-col-3 .bee-block-2 h3,
 		.bee-row-8 .bee-col-2 .bee-block-2 h3,
 		.bee-row-8 .bee-col-3 .bee-block-2 h3,
 		.bee-row-8 .bee-col-4 .bee-block-2 h3 {
-			color: #001524
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
 		}
 
 		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -975,12 +968,13 @@
 			margin-right: 0
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-1 h2 {
+		.bee-row-11 .bee-col-2 .bee-block-1 h2,
+		.bee-row-20 .bee-col-1 .bee-block-2 h2 {
 			color: #001524;
 			direction: ltr;
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 53px;
-			font-weight: 700;
+			font-size: 48px;
+			font-weight: 400;
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: left
@@ -989,7 +983,7 @@
 		.bee-row-11 .bee-col-2 .bee-block-2 {
 			color: #001524;
 			direction: ltr;
-			font-size: 20px;
+			font-size: 18px;
 			font-weight: 400;
 			letter-spacing: 0;
 			line-height: 120%;
@@ -1013,27 +1007,37 @@
 		}
 
 		.bee-row-12 .bee-col-1 .bee-block-2 h2,
-		.bee-row-15 .bee-col-1 .bee-block-2 h2 {
+		.bee-row-15 .bee-col-1 .bee-block-2 h2,
+		.bee-row-23 .bee-col-1 .bee-block-1 h2,
+		.bee-row-32 .bee-col-1 .bee-block-1 h2 {
 			color: #001524;
 			direction: ltr;
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 60px;
-			font-weight: 700;
+			font-size: 48px;
+			font-weight: 400;
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
 		}
 
-		.bee-row-13 .bee-col-1 .bee-block-2,
-		.bee-row-13 .bee-col-2 .bee-block-2,
-		.bee-row-13 .bee-col-3 .bee-block-2,
-		.bee-row-13 .bee-col-4 .bee-block-2,
-		.bee-row-14 .bee-col-1 .bee-block-2,
-		.bee-row-14 .bee-col-2 .bee-block-2,
-		.bee-row-14 .bee-col-3 .bee-block-2 {
-			color: #2274a5;
-			font-size: 16px;
-			letter-spacing: 1px;
+		.bee-row-13 .bee-col-1 .bee-block-3 h3,
+		.bee-row-13 .bee-col-2 .bee-block-3 h3,
+		.bee-row-13 .bee-col-3 .bee-block-3 h3,
+		.bee-row-13 .bee-col-4 .bee-block-3 h3,
+		.bee-row-14 .bee-col-1 .bee-block-3 h3,
+		.bee-row-14 .bee-col-2 .bee-block-3 h3,
+		.bee-row-14 .bee-col-3 .bee-block-3 h3,
+		.bee-row-14 .bee-col-4 .bee-block-3 h3,
+		.bee-row-16 .bee-col-1 .bee-block-1 h3,
+		.bee-row-16 .bee-col-2 .bee-block-1 h3,
+		.bee-row-18 .bee-col-1 .bee-block-1 h3,
+		.bee-row-18 .bee-col-2 .bee-block-1 h3 {
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
 			line-height: 120%;
 			text-align: left
 		}
@@ -1044,45 +1048,20 @@
 		.bee-row-13 .bee-col-4 .bee-block-4,
 		.bee-row-14 .bee-col-1 .bee-block-4,
 		.bee-row-14 .bee-col-2 .bee-block-4,
-		.bee-row-14 .bee-col-3 .bee-block-4 {
+		.bee-row-14 .bee-col-3 .bee-block-4,
+		.bee-row-14 .bee-col-4 .bee-block-4 {
 			color: #001524;
-			font-size: 20px;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-13 .bee-col-1 .bee-block-3 h3,
-		.bee-row-16 .bee-col-1 .bee-block-1 h3,
-		.bee-row-16 .bee-col-2 .bee-block-1 h3,
-		.bee-row-18 .bee-col-1 .bee-block-1 h3,
-		.bee-row-18 .bee-col-2 .bee-block-1 h3 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 32px;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-13 .bee-col-2 .bee-block-3 h3,
-		.bee-row-13 .bee-col-3 .bee-block-3 h3,
-		.bee-row-13 .bee-col-4 .bee-block-3 h3,
-		.bee-row-14 .bee-col-1 .bee-block-3 h3,
-		.bee-row-14 .bee-col-2 .bee-block-3 h3,
-		.bee-row-14 .bee-col-3 .bee-block-3 h3,
-		.bee-row-14 .bee-col-4 .bee-block-3 h3 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 32px;
+			font-size: 16px;
 			font-weight: 400;
-			letter-spacing: normal;
 			line-height: 120%;
 			text-align: left
 		}
 
+		.bee-row-13 .bee-col-1 .bee-block-2,
+		.bee-row-13 .bee-col-2 .bee-block-2,
+		.bee-row-13 .bee-col-3 .bee-block-2,
+		.bee-row-13 .bee-col-4 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-2,
 		.bee-row-14 .bee-col-4 .bee-block-2 {
 			color: #2274a5;
 			font-size: 16px;
@@ -1092,14 +1071,23 @@
 			text-align: left
 		}
 
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-3 .bee-block-2 {
+			color: #2274a5;
+			font-size: 16px;
+			letter-spacing: 1px;
+			line-height: 120%;
+			text-align: left
+		}
+
 		.bee-row-16 .bee-col-1 .bee-block-2,
 		.bee-row-16 .bee-col-2 .bee-block-2,
 		.bee-row-18 .bee-col-1 .bee-block-2,
 		.bee-row-18 .bee-col-2 .bee-block-2,
-		.bee-row-20 .bee-col-1 .bee-block-3 {
+		.bee-row-20 .bee-col-1 .bee-block-5 {
 			color: #101112;
 			direction: ltr;
-			font-size: 20px;
+			font-size: 16px;
 			font-weight: 400;
 			letter-spacing: 0;
 			line-height: 120%;
@@ -1115,40 +1103,14 @@
 			color: #7747FF
 		}
 
-		.bee-row-20 .bee-col-1 .bee-block-2 h2 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 60px;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-23 .bee-col-1 .bee-block-1 h1,
-		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
-			color: #0b0b0b;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			direction: ltr
-		}
-
-		.bee-row-20 .bee-col-1 .bee-block-5 {
+		.bee-row-20 .bee-col-1 .bee-block-3 {
 			color: #101112;
 			direction: ltr;
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: 400;
 			letter-spacing: 0;
 			line-height: 120%;
 			text-align: left
-		}
-
-		.bee-row-23 .bee-col-1 .bee-block-1 h1 {
-			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-			font-size: 38px;
-			text-align: center
 		}
 
 		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-image,
@@ -1184,6 +1146,17 @@
 			margin-right: 0
 		}
 
+		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-image,
 		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-image,
 		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-image,
@@ -1195,38 +1168,6 @@
 
 		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
-		}
-
-		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 60px;
-			text-align: center
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-2 h3,
-		.bee-row-28 .bee-col-2 .bee-block-2 h3,
-		.bee-row-28 .bee-col-3 .bee-block-2 h3,
-		.bee-row-29 .bee-col-1 .bee-block-2 h3,
-		.bee-row-29 .bee-col-2 .bee-block-2 h3,
-		.bee-row-29 .bee-col-3 .bee-block-2 h3 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 32px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-32 .bee-col-1 .bee-block-1 h1,
-		.bee-row-32 .bee-col-1 .bee-block-5 h3 {
-			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-			font-weight: 700;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center;
-			direction: ltr
 		}
 
 		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -1245,25 +1186,15 @@
 			margin-right: 0
 		}
 
-		.bee-row-29 .bee-col-2 .bee-block-3 {
-			color: #0b0b0b;
-			font-size: 20px;
-			line-height: 120%;
-			text-align: center
-		}
-
 		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
 
-		.bee-row-32 .bee-col-1 .bee-block-1 h1 {
+		.bee-row-29 .bee-col-2 .bee-block-3 {
 			color: #0b0b0b;
-			font-size: 60px
-		}
-
-		.bee-row-32 .bee-col-1 .bee-block-5 h3 {
-			color: #0068a5;
-			font-size: 24px
+			font-size: 16px;
+			line-height: 120%;
+			text-align: center
 		}
 
 		.bee-row-32 .bee-col-1 .bee-block-3,
@@ -1275,6 +1206,17 @@
 			font-size: 16px;
 			font-weight: 400;
 			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-32 .bee-col-1 .bee-block-5 h3 {
+			color: #0068a5;
+			direction: ltr;
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
 		}
@@ -1400,12 +1342,13 @@
 								<li><a href="#module_76f28396-3497-4f8d-a2b3-abfd72a32072" target="_self" title="Show Pricing">Tarifs</a></li>
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact</a></li>
-                                <!-- For French version (add to fr/index.html) -->
+								<!-- For French version (add to fr/index.html) -->
 								<li style="margin-left: 10px;">
 									<a href="/" onclick="sessionStorage.setItem('userLanguageChoice', 'en');" title="English version" style="display: flex; align-items: center;">
 										<span style="margin-right: 5px;">🇬🇧</span> EN
 									</a>
 								</li>
+
 							</ul>
 						</nav>
 					</div>
@@ -1430,7 +1373,7 @@
 					<div class="bee-block bee-block-2 bee-paragraph">
 						<p>Des solutions d'automatisation sur mesure adaptées aux besoins réels de votre entreprise</p>
 					</div>
-					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 14px; display: inline-block;" target="_self"><span style="font-size: 16px; word-break: break-word; line-height: 200%;"><strong><span style="font-size:20px;">Contactez-nous</span></strong></span></a></div>
+					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Contactez-nous</span></strong></span></a></div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Finance App" class="bee-fixedwidth" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/sgk/rq0/it2/14%20mai%202025%2C%2013_47_22.png" style="max-width:610px;" /></div>
@@ -1558,7 +1501,7 @@
 					<div class="bee-block bee-block-2 bee-paragraph">
 						<p>Chez Yoluko Solutions, le 'S' signifie plusieurs solutions personnalisées qui s'adaptent à vos processus uniques - et non l'inverse !</p>
 					</div>
-					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 14px; display: inline-block;" target="_self"><span style="font-size: 16px; word-break: break-word; line-height: 200%;"><strong><span style="font-size:20px;">Parlons de vos besoins</span></strong></span></a></div>
+					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Parlons de vos besoins</span></strong></span></a></div>
 				</div>
 			</div>
 		</div>
@@ -1579,7 +1522,7 @@
 				<div class="bee-col bee-col-1 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Buildings" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/sy9/dwd/2y4/illustration%20Finance%20.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>FINANCE</strong></p>
+						<p style="word-break: break-word;">FINANCE</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
 						<h3>Automatisation des données financières  </h3>
@@ -1591,10 +1534,10 @@
 				<div class="bee-col bee-col-2 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Finance app" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/wt0/xu3/z55/collaboration.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>COMPTABILITÉ </strong></p>
+						<p style="word-break: break-word;">COMPTABILITÉ<strong> </strong></p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Réconciliations bancaires </strong> </h3>
+						<h3>Réconciliations bancaires  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Traitez plusieurs semaines de transactions en quelques minutes avec une précision de 99,8%. Notre système gère même les opérations les plus complexes.</p>
@@ -1603,10 +1546,10 @@
 				<div class="bee-col bee-col-3 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/o6g/dcd/d8p/photo%20dashboard.png" style="max-width:280px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>ANALYSE</strong></p>
+						<p style="word-break: break-word;">ANALYSE</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Tableaux de bord intelligents </strong> </h3>
+						<h3>Tableaux de bord intelligents  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Centralisez toutes vos données business en un seul endroit, organisées automatiquement. Prenez des décisions éclairées grâce à des informations actualisées provenant de toutes vos sources.</p>
@@ -1615,10 +1558,10 @@
 				<div class="bee-col bee-col-4 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/mkg/qsu/kro/photo%20report.png" style="max-width:280px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>REPORTING</strong></p>
+						<p style="word-break: break-word;">REPORTING</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Rapports clients premium</strong> </h3>
+						<h3>Rapports clients premium </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Proposez des rapports professionnels à vos clients sans travail manuel. Transformez votre reporting d'un centre de coûts en véritable source de revenus.</p>
@@ -1631,10 +1574,10 @@
 				<div class="bee-col bee-col-1 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Money" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/m3y/pcm/9ch/illustra%20media.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>MARKETING</strong></p>
+						<p style="word-break: break-word;">MARKETING</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Gestion automatisée des réseaux sociaux </strong> </h3>
+						<h3>Gestion automatisée des réseaux sociaux  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Assurez votre présence en ligne sans y passer des heures. Augmentez l'engagement de 40% tout en réduisant votre temps de création de contenu de 75%.</p>
@@ -1643,10 +1586,10 @@
 				<div class="bee-col bee-col-2 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Finance app" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/2he/jxk/mbg/ill%20assistant_1.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>SUPPORT</strong></p>
+						<p style="word-break: break-word;">SUPPORT</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Assistant IA sur mesure </strong> </h3>
+						<h3>Assistant IA sur mesure  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Un chatbot intelligent qui utilise les connaissances spécifiques de votre entreprise. Réduisez vos tickets d'assistance de 70% et libérez du temps pour votre équipe.</p>
@@ -1655,10 +1598,10 @@
 				<div class="bee-col bee-col-3 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Calculations" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/c3w/qye/dv0/photo%20trading.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>TRADING</strong></p>
+						<p style="word-break: break-word;">TRADING</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Systèmes de trading automatisés </strong> </h3>
+						<h3>Systèmes de trading automatisés  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Transformez vos stratégies de trading en systèmes autonomes fonctionnant 24h/24. Testez, optimisez et déployez sans aucune compétence en programmation.</p>
@@ -1667,10 +1610,10 @@
 				<div class="bee-col bee-col-4 bee-col-w3">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Buildings" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/qxi/32n/wc7/ill%20Dashboard.png" style="max-width:280px;border-radius:30px;" /></div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p style="word-break: break-word;"><strong>PRÉSENTATIONS </strong></p>
+						<p style="word-break: break-word;">PRÉSENTATIONS </p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3><strong>Présentations professionnelles </strong> </h3>
+						<h3>Présentations professionnelles  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
 						<p>Créez des présentations clients hebdomadaires avec des données à jour. Économisez plus de 8 heures par présentation tout en livrant des résultats exceptionnels.</p>
@@ -1759,7 +1702,7 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h2>Compatible avec tous vos outils  </h2>
+						<h2>Compatible avec tous vos outils </h2>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
 						<p>Votre entreprise ne devrait pas changer d'outils - c'est l'automatisation qui s'adapte à vous</p>
@@ -1798,7 +1741,7 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading" id="module_76f28396-3497-4f8d-a2b3-abfd72a32072">
-						<h1>Une tarification claire et sans engagement </h1>
+						<h2>Une tarification claire et sans engagement </h2>
 					</div>
 				</div>
 			</div>
@@ -1848,7 +1791,7 @@
 		<div class="bee-row bee-row-25">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 14px; display: inline-block;" target="_self"><span style="font-size: 16px; word-break: break-word; line-height: 200%;"><strong><span style="font-size:20px;">Contactez nous pour un devis</span></strong></span></a></div>
+					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Contactez nous pour un devis</span></strong></span></a></div>
 				</div>
 			</div>
 		</div>
@@ -1868,7 +1811,7 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading" id="module_e81937f0-3b1e-4e46-b918-391ac891e579">
-						<h2>Questions Fréquentes  </h2>
+						<h2>Questions Fréquentes </h2>
 					</div>
 				</div>
 			</div>
@@ -1981,7 +1924,7 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h1>Envie d'Automatiser Votre Entreprise?</h1>
+						<h2>Envie d'Automatiser Votre Entreprise?</h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
     					<form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
@@ -2041,7 +1984,7 @@
 				</div>
 			</div>
 		</div>
-
+		
 	</div>
 </body>
 
