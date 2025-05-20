@@ -88,69 +88,7 @@ Add these lines to the <head> section of both HTML files:
 Then add your favicon files to the repository root.
 
 
-4. Configure Form Submission 
-IN the head:
-```html
-<!-- For your form -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.formspreeId) return;
-    
-    const form = document.querySelector('form');
-    if (form) {
-      form.action = `https://formspree.io/f/${window.YOLUKO_CONFIG.formspreeId}`;
-    }
-  });
-</script>
-```
-
-Replace the <form >
-```html
-<form accept-charset="UTF-8" action="#" autocomplete="on" enctype="multipart/form-data" method="post" target="_self" id="contact-form">
-```
-
-
-
-5. Configure GA4
-
-REPLACE
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSVDY7CP2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WFSVDY7CP2');
-</script>
-```
-
-WITH
-
-```html
-<!-- In your HTML head section -->
-<script src="/config.js"></script>
-
-<!-- For Google Analytics, add this script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.ga4Id) return;
-    
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${window.YOLUKO_CONFIG.ga4Id}`;
-    document.head.appendChild(script);
-    
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', window.YOLUKO_CONFIG.ga4Id);
-  });
-</script>
-```
-
-
-
-6. Remove all <code> tags from both HTMLs
+4. Remove all <code> tags from both HTMLs
 
 
 

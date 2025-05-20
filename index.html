@@ -2,26 +2,18 @@
 <html lang="en">
 
 <head>
-	<!-- Google tag (gtag.js) -->
-    <!-- In your HTML head section -->
-    <script src="/config.js"></script>
 
-    <!-- For Google Analytics, add this script -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.ga4Id) return;
-        
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.YOLUKO_CONFIG.ga4Id}`;
-        document.head.appendChild(script);
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', window.YOLUKO_CONFIG.ga4Id);
-    });
-    </script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSVDY7CP2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-WFSVDY7CP2');
+	</script>
+
+
     <script>
     // Auto-detect language and redirect
     (function() {
@@ -39,17 +31,7 @@
     </script>
 
 
-    <!-- For your form -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!window.YOLUKO_CONFIG || !window.YOLUKO_CONFIG.formspreeId) return;
-        
-        const form = document.querySelector('form');
-        if (form) {
-        form.action = `https://formspree.io/f/${window.YOLUKO_CONFIG.formspreeId}`;
-        }
-    });
-    </script>
+
 
 
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
@@ -61,7 +43,8 @@
 	<meta content="website" property="og:type" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." property="og:description" />
 	<meta content="" property="og:url" />
-	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1391511/1378064/2407024/12774208_large.jpg" property="og:image" />
+	<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
+
 	<meta content="Yoluko Solutions | Custom Business Automation That Works" property="og:title" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." name="description" />
 	<meta charset="utf-8" />
@@ -1990,13 +1973,12 @@
 						<h1><span class="tinyMce-placeholder">Ready to Automate Your Business?</span> </h1>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
-                        <form accept-charset="UTF-8" action="#" autocomplete="on" enctype="multipart/form-data" method="post" target="_self" id="contact-form">
+    					<form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
+								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="text" /></div>
-							</div>
+								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="email" /></div>							</div>
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r31c0m1i7"><label for="r31c0m1i7">Message</label><textarea id="r31c0m1i7" name="message" rows="7"></textarea></div>
 							</div>
