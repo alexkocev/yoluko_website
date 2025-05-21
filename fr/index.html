@@ -10,45 +10,18 @@
 		gtag('js', new Date());
 		gtag('config', 'G-WFSVDY7CP2');
 	</script>
-
-	<script>
-	// Auto-detect language and redirect - with session storage to remember user choice
-	(function() {
-		// Check if user manually selected a language
-		if (sessionStorage.getItem('userLanguageChoice')) {
-			// If user chose French, stay on this page
-			if (sessionStorage.getItem('userLanguageChoice') === 'fr') {
-				return;
-			}
-			// If user chose English, redirect to English
-			if (sessionStorage.getItem('userLanguageChoice') === 'en' && 
-				window.location.pathname.indexOf('/fr/') !== -1) {
-				window.location.href = '/';
-				return;
-			}
-		}
-		
-		// Skip if not on French page (we're already where we should be)
-		if (window.location.pathname.indexOf('/fr/') === -1) return;
-		
-		// We're on French page by default, so no need to redirect based on browser language
-	})();
-	</script>
-
 	<title>Yoluko Solutions | Custom Business Automation That Works</title>
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="website" property="og:type" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." property="og:description" />
 	<meta content="" property="og:url" />
-	<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
+	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1391511/1378064/2407024/12774208_large.jpg" property="og:image" />
 	<meta content="Yoluko Solutions | Custom Business Automation That Works" property="og:title" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." name="description" />
 	<meta charset="utf-8" />
 	<meta content="width=device-width" name="viewport" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="/images/favicon.png">
 	<style>
 		.bee-row,
 		.bee-row-content {
@@ -421,7 +394,6 @@
 			padding-top: 5px
 		}
 
-		.bee-row-20 .bee-col-1 .bee-block-2,
 		.bee-row-5 .bee-col-1 .bee-block-1,
 		.bee-row-8 .bee-col-1 .bee-block-2,
 		.bee-row-8 .bee-col-2 .bee-block-2,
@@ -462,18 +434,20 @@
 			text-align: center
 		}
 
-		.bee-row-28 .bee-col-1 .bee-block-3,
-		.bee-row-28 .bee-col-2 .bee-block-3,
-		.bee-row-28 .bee-col-3 .bee-block-3,
-		.bee-row-29 .bee-col-1 .bee-block-3,
-		.bee-row-29 .bee-col-2 .bee-block-3,
-		.bee-row-29 .bee-col-3 .bee-block-3,
+		.bee-row-17 .bee-col-1 .bee-block-1,
+		.bee-row-20 .bee-col-1 .bee-block-1,
+		.bee-row-26 .bee-col-1 .bee-block-1,
+		.bee-row-31 .bee-col-1 .bee-block-1,
+		.bee-row-32 .bee-col-1 .bee-block-3,
+		.bee-row-32 .bee-col-1 .bee-block-6,
+		.bee-row-32 .bee-col-1 .bee-block-8,
+		.bee-row-34 .bee-col-1 .bee-block-1,
+		.bee-row-34 .bee-col-1 .bee-block-2,
 		.bee-row-8 .bee-col-1 .bee-block-3,
 		.bee-row-8 .bee-col-2 .bee-block-3,
 		.bee-row-8 .bee-col-3 .bee-block-3,
 		.bee-row-8 .bee-col-4 .bee-block-3 {
-			padding-bottom: 10px;
-			padding-top: 20px
+			padding: 10px
 		}
 
 		.bee-row-26 .bee-row-content,
@@ -547,11 +521,7 @@
 		.bee-row-14 .bee-col-1 .bee-block-3,
 		.bee-row-14 .bee-col-2 .bee-block-3,
 		.bee-row-14 .bee-col-3 .bee-block-3,
-		.bee-row-14 .bee-col-4 .bee-block-3,
-		.bee-row-16 .bee-col-1 .bee-block-1,
-		.bee-row-16 .bee-col-2 .bee-block-1,
-		.bee-row-18 .bee-col-1 .bee-block-1,
-		.bee-row-18 .bee-col-2 .bee-block-1 {
+		.bee-row-14 .bee-col-4 .bee-block-3 {
 			padding-top: 10px;
 			text-align: center;
 			width: 100%
@@ -568,23 +538,22 @@
 			padding-top: 20px
 		}
 
+		.bee-row-16 .bee-col-1 .bee-block-1,
+		.bee-row-16 .bee-col-2 .bee-block-1,
+		.bee-row-18 .bee-col-1 .bee-block-1,
+		.bee-row-18 .bee-col-2 .bee-block-1,
+		.bee-row-20 .bee-col-1 .bee-block-2 {
+			padding: 20px;
+			text-align: center;
+			width: 100%
+		}
+
 		.bee-row-16 .bee-col-1 .bee-block-2,
 		.bee-row-16 .bee-col-2 .bee-block-2,
-		.bee-row-17 .bee-col-1 .bee-block-1,
 		.bee-row-18 .bee-col-1 .bee-block-2,
 		.bee-row-18 .bee-col-2 .bee-block-2,
-		.bee-row-20 .bee-col-1 .bee-block-1,
-		.bee-row-20 .bee-col-1 .bee-block-3,
-		.bee-row-20 .bee-col-1 .bee-block-4,
-		.bee-row-20 .bee-col-1 .bee-block-5,
-		.bee-row-26 .bee-col-1 .bee-block-1,
-		.bee-row-31 .bee-col-1 .bee-block-1,
-		.bee-row-32 .bee-col-1 .bee-block-3,
-		.bee-row-32 .bee-col-1 .bee-block-6,
-		.bee-row-32 .bee-col-1 .bee-block-8,
-		.bee-row-34 .bee-col-1 .bee-block-1,
-		.bee-row-34 .bee-col-1 .bee-block-2 {
-			padding: 10px
+		.bee-row-20 .bee-col-1 .bee-block-3 {
+			padding: 20px
 		}
 
 		.bee-row-23 .bee-col-1 .bee-block-1,
@@ -619,7 +588,7 @@
 
 		.bee-row-24 .bee-col-1 .bee-block-3,
 		.bee-row-24 .bee-col-2 .bee-block-3 {
-			padding: 10px 10px 10px 60px
+			padding: 10px 60px
 		}
 
 		.bee-row-24 .bee-col-2 {
@@ -653,6 +622,16 @@
 			padding-top: 15px;
 			text-align: center;
 			width: 100%
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-3,
+		.bee-row-28 .bee-col-2 .bee-block-3,
+		.bee-row-28 .bee-col-3 .bee-block-3,
+		.bee-row-29 .bee-col-1 .bee-block-3,
+		.bee-row-29 .bee-col-2 .bee-block-3,
+		.bee-row-29 .bee-col-3 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-top: 20px
 		}
 
 		.bee-row-31 .bee-row-content {
@@ -778,19 +757,99 @@
 			width: auto
 		}
 
-		.bee-row-5 .bee-col-1 .bee-block-1 h1,
-		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
-			font-size: 26px;
-			text-align: center;
-			letter-spacing: normal;
+		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
+			color: #57afb2;
 			direction: ltr;
-			font-weight: 400
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
 		}
 
-		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
-			color: #06d3c5;
-			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-			line-height: 120%
+		.bee-row-2 .bee-col-2 .bee-block-1 li {
+			padding-bottom: 5px;
+			padding-right: 15px
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			img.bee-fullwidthOnMobile {
+				max-width: none !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span,
+			.bee-mobile_hide {
+				display: none
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #feeaa0;
+				border-radius: 50%
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #feeaa0
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+				color: #0b0b0b
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 {
+				text-align: right !important
+			}
 		}
 
 		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
@@ -837,8 +896,13 @@
 
 		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
 			color: #0b0b0b;
+			direction: ltr;
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			line-height: 120%
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
 		}
 
 		.bee-row-28 .bee-col-1 .bee-block-3,
@@ -854,91 +918,6 @@
 			font-size: 16px;
 			line-height: 120%;
 			text-align: center
-		}
-
-		.bee-row-2 .bee-col-2 .bee-block-1 li {
-			padding-bottom: 5px;
-			padding-left: 15px;
-			padding-right: 15px
-		}
-
-		@media (max-width:768px) {
-			.bee-form form {
-				width: 100% !important
-			}
-
-			img.bee-fullwidthOnMobile {
-				max-width: none !important
-			}
-
-			.bee-menu ul.with-bee-hamburger {
-				display: none;
-				padding: 5px 0;
-				position: relative;
-				top: -4px
-			}
-
-			.bee-menu ul.with-bee-hamburger li {
-				display: block;
-				text-align: center
-			}
-
-			.bee-menu ul.with-bee-hamburger li a {
-				text-decoration: none
-			}
-
-			.bee-menu ul.with-bee-hamburger span,
-			.bee-mobile_hide {
-				display: none
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~ul,
-			.bee-row-content:not(.no_stack) {
-				display: block
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
-				width: 36px;
-				height: 36px;
-				background-color: #ffd438;
-				border-radius: 50%
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
-				width: 18px;
-				height: 18px
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
-				background-color: #ffd438
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
-				color: #0b0b0b
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
 		}
 
 		.bee-row-28 .bee-col-1 .bee-block-2 h3,
@@ -958,6 +937,10 @@
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -996,7 +979,6 @@
 		.bee-row-18 .bee-col-1 .bee-block-2 p:not(:last-child),
 		.bee-row-18 .bee-col-2 .bee-block-2 p:not(:last-child),
 		.bee-row-20 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-20 .bee-col-1 .bee-block-5 p:not(:last-child),
 		.bee-row-24 .bee-col-1 .bee-block-3 p:not(:last-child),
 		.bee-row-24 .bee-col-2 .bee-block-3 p:not(:last-child),
 		.bee-row-32 .bee-col-1 .bee-block-3 p:not(:last-child),
@@ -1018,6 +1000,20 @@
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2,
+		.bee-row-13 .bee-col-2 .bee-block-2,
+		.bee-row-13 .bee-col-3 .bee-block-2,
+		.bee-row-13 .bee-col-4 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-4 .bee-block-2 {
+			color: #2274a5;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			line-height: 120%;
+			text-align: left
 		}
 
 		.bee-row-13 .bee-col-1 .bee-block-3 h3,
@@ -1057,20 +1053,6 @@
 			text-align: left
 		}
 
-		.bee-row-13 .bee-col-1 .bee-block-2,
-		.bee-row-13 .bee-col-2 .bee-block-2,
-		.bee-row-13 .bee-col-3 .bee-block-2,
-		.bee-row-13 .bee-col-4 .bee-block-2,
-		.bee-row-14 .bee-col-1 .bee-block-2,
-		.bee-row-14 .bee-col-4 .bee-block-2 {
-			color: #2274a5;
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 1px;
-			line-height: 120%;
-			text-align: left
-		}
-
 		.bee-row-14 .bee-col-2 .bee-block-2,
 		.bee-row-14 .bee-col-3 .bee-block-2 {
 			color: #2274a5;
@@ -1083,8 +1065,7 @@
 		.bee-row-16 .bee-col-1 .bee-block-2,
 		.bee-row-16 .bee-col-2 .bee-block-2,
 		.bee-row-18 .bee-col-1 .bee-block-2,
-		.bee-row-18 .bee-col-2 .bee-block-2,
-		.bee-row-20 .bee-col-1 .bee-block-5 {
+		.bee-row-18 .bee-col-2 .bee-block-2 {
 			color: #101112;
 			direction: ltr;
 			font-size: 16px;
@@ -1098,8 +1079,7 @@
 		.bee-row-16 .bee-col-2 .bee-block-2 a,
 		.bee-row-18 .bee-col-1 .bee-block-2 a,
 		.bee-row-18 .bee-col-2 .bee-block-2 a,
-		.bee-row-20 .bee-col-1 .bee-block-3 a,
-		.bee-row-20 .bee-col-1 .bee-block-5 a {
+		.bee-row-20 .bee-col-1 .bee-block-3 a {
 			color: #7747FF
 		}
 
@@ -1122,15 +1102,6 @@
 			margin-right: 0
 		}
 
-		.bee-row-24 .bee-col-1 .bee-block-2,
-		.bee-row-24 .bee-col-2 .bee-block-2 {
-			color: #0068a5;
-			font-size: 20px;
-			font-weight: 400;
-			line-height: 120%;
-			text-align: center
-		}
-
 		.bee-row-24 .bee-col-1 .bee-block-3,
 		.bee-row-24 .bee-col-2 .bee-block-3 {
 			color: #001524;
@@ -1146,13 +1117,11 @@
 			margin-right: 0
 		}
 
-		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
-			color: #0b0b0b;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 48px;
+		.bee-row-24 .bee-col-1 .bee-block-2,
+		.bee-row-24 .bee-col-2 .bee-block-2 {
+			color: #0068a5;
+			font-size: 20px;
 			font-weight: 400;
-			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
 		}
@@ -1170,6 +1139,17 @@
 			margin-right: 0
 		}
 
+		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
@@ -1182,19 +1162,19 @@
 			margin-right: 0
 		}
 
+		.bee-row-29 .bee-col-2 .bee-block-3 {
+			color: #0b0b0b;
+			font-size: 16px;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
 
 		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
-		}
-
-		.bee-row-29 .bee-col-2 .bee-block-3 {
-			color: #0b0b0b;
-			font-size: 16px;
-			line-height: 120%;
-			text-align: center
 		}
 
 		.bee-row-32 .bee-col-1 .bee-block-3,
@@ -1342,13 +1322,6 @@
 								<li><a href="#module_76f28396-3497-4f8d-a2b3-abfd72a32072" target="_self" title="Show Pricing">Tarifs</a></li>
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact</a></li>
-								<!-- For French version (add to fr/index.html) -->
-								<li style="margin-left: 10px;">
-									<a href="/" onclick="sessionStorage.setItem('userLanguageChoice', 'en');" title="English version" style="display: flex; align-items: center;">
-										<span style="margin-right: 5px;">🇬🇧</span> EN
-									</a>
-								</li>
-
 							</ul>
 						</nav>
 					</div>
@@ -1371,9 +1344,9 @@
 						<h1>Dites adieu aux tâches répétitives </h1>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Des solutions d'automatisation sur mesure adaptées aux besoins réels de votre entreprise</p>
+						<p>Des solutions d'automatisation sur mesure adaptées aux besoins de votre entreprise</p>
 					</div>
-					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Contactez-nous</span></strong></span></a></div>
+					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 18px; line-height: 200%;"><strong style="font-size: 18px;">Discutons de votre projet</strong></span></a></div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
 					<div class="bee-block bee-block-1 bee-image"><img alt="Finance App" class="bee-fixedwidth" src="https://77278b4590.imgdist.com/pub/bfra/ti5bzdbv/sgk/rq0/it2/14%20mai%202025%2C%2013_47_22.png" style="max-width:610px;" /></div>
@@ -1384,7 +1357,7 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h1><span class="tinyMce-placeholder">Nous concevons des solutions personnalisées<br />pour relever les défis spécifiques de votre entreprise <br /></span> </h1>
+						<h1><span class="tinyMce-placeholder">Nous concevons des solutions personnalisées<br />pour relever tous vos défis <br /></span> </h1>
 					</div>
 				</div>
 			</div>
@@ -1421,7 +1394,7 @@
 						<h3>Gagnez du Temps </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Transformez des heures de travail fastidieux en quelques minutes grâce à l'automatisation de vos processus</p>
+						<p>Réduisez le temps consacré aux tâches manuelles grâce à des process entièrement automatisés</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w3">
@@ -1436,7 +1409,7 @@
 						<h3>Aucun frais caché </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Abonnement mensuel transparent, sans investissement initial</p>
+						<p>Tarification mensuelle transparente sans aucun coût initial d'implémentation</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w3">
@@ -1451,7 +1424,7 @@
 						<h3>Compatible avec vos outils </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>S'intègre naturellement avec toutes les plateformes que vous utilisez au quotidien</p>
+						<p>Une intégration qui se connecte à tous vos outils</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-4 bee-col-w3">
@@ -1466,7 +1439,7 @@
 						<h3>IA où c'est pertinent<br /> </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Nous déployons l'IA avec pertinence, uniquement pour créer une valeur business concrète</p>
+						<p>Nous utilisons l'IA de façon stratégique, uniquement lorsqu'elle apporte une réelle valeur ajoutée</p>
 					</div>
 				</div>
 			</div>
@@ -1496,10 +1469,10 @@
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w7">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h2>Détendez-vous, nos solutions s'occupent de tout </h2>
+						<h2>Plus besoin de vous inquiéter, nos solutions prennent le relais </h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>Chez Yoluko Solutions, le 'S' signifie plusieurs solutions personnalisées qui s'adaptent à vos processus uniques - et non l'inverse !</p>
+						<p>Chez Yoluko Solutions, notre philosophie est simple : c'est notre technologie qui s'adapte à votre environnement, pas l'inverse. Nous travaillons avec vos outils actuels sans vous imposer de nouvelles plateformes.</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Parlons de vos besoins</span></strong></span></a></div>
 				</div>
@@ -1512,7 +1485,7 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h2>Des solutions concrètes pour votre entreprise  </h2>
+						<h2>Des solutions concrètes qui répondent aux défis de votre entreprise </h2>
 					</div>
 				</div>
 			</div>
@@ -1525,10 +1498,10 @@
 						<p style="word-break: break-word;">FINANCE</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3>Automatisation des données financières  </h3>
+						<h3>Gestion intelligente de vos données financières </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Recevez vos rapports financiers chaque matin à 7h sans le moindre effort. Gagnez plus de 15 heures mensuelles et éliminez définitivement les erreurs de reporting.</p>
+						<p>Vos rapports financiers livrés automatiquement chaque matin à 7h. Économisez plus de 15 heures par mois et éliminez complètement les erreurs de reporting.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w3">
@@ -1537,10 +1510,10 @@
 						<p style="word-break: break-word;">COMPTABILITÉ<strong> </strong></p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3>Réconciliations bancaires  </h3>
+						<h3>Automatisation des réconciliations bancaires </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Traitez plusieurs semaines de transactions en quelques minutes avec une précision de 99,8%. Notre système gère même les opérations les plus complexes.</p>
+						<p>Traitez des semaines entières de transactions en quelques minutes avec une fiabilité de 99,8%. Notre solution maîtrise même les opérations les plus complexes.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w3">
@@ -1549,10 +1522,10 @@
 						<p style="word-break: break-word;">ANALYSE</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3>Tableaux de bord intelligents  </h3>
+						<h3>Tableaux de bord décisionnels </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Centralisez toutes vos données business en un seul endroit, organisées automatiquement. Prenez des décisions éclairées grâce à des informations actualisées provenant de toutes vos sources.</p>
+						<p>Regroupez toutes vos données business à un seul endroit, structurées automatiquement. Prenez des décisions stratégiques fondées sur des informations à jour de toutes vos sources.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-4 bee-col-w3">
@@ -1564,7 +1537,7 @@
 						<h3>Rapports clients premium </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Proposez des rapports professionnels à vos clients sans travail manuel. Transformez votre reporting d'un centre de coûts en véritable source de revenus.</p>
+						<p>Offrez des rapports professionnels et personnalisés à vos clients ou en interne sans aucun effort manuel. Fini le temps perdu sur leur conception, notre système les génère automatiquement pour vous.</p>
 					</div>
 				</div>
 			</div>
@@ -1580,7 +1553,7 @@
 						<h3>Gestion automatisée des réseaux sociaux  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Assurez votre présence en ligne sans y passer des heures. Augmentez l'engagement de 40% tout en réduisant votre temps de création de contenu de 75%.</p>
+						<p>Maintenez une présence efficace en ligne sans y consacrer des heures. Augmentez votre engagement de 40% tout en réduisant le temps de création de contenu de 75%.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w3">
@@ -1592,7 +1565,7 @@
 						<h3>Assistant IA sur mesure  </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Un chatbot intelligent qui utilise les connaissances spécifiques de votre entreprise. Réduisez vos tickets d'assistance de 70% et libérez du temps pour votre équipe.</p>
+						<p>Un chatbot intelligent qui exploite les connaissances spécifiques de votre entreprise et vos fichiers clients. Laissez-le répondre à toutes vos questions ou assister vos clients en continu.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w3">
@@ -1601,10 +1574,10 @@
 						<p style="word-break: break-word;">TRADING</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3>Systèmes de trading automatisés  </h3>
+						<h3>Systèmes de trading automatisés </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Transformez vos stratégies de trading en systèmes autonomes fonctionnant 24h/24. Testez, optimisez et déployez sans aucune compétence en programmation.</p>
+						<p>Transformez vos stratégies de trading en systèmes autonomes opérationnels 24h/24. Testez, optimisez et déployez sans aucune expertise en programmation.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-4 bee-col-w3">
@@ -1613,10 +1586,10 @@
 						<p style="word-break: break-word;">PRÉSENTATIONS </p>
 					</div>
 					<div class="bee-block bee-block-3 bee-heading">
-						<h3>Présentations professionnelles  </h3>
+						<h3>Présentations optimisées </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Créez des présentations clients hebdomadaires avec des données à jour. Économisez plus de 8 heures par présentation tout en livrant des résultats exceptionnels.</p>
+						<p>Générez des présentations clients hebdomadaires avec des données fraîches et pertinentes. Économisez plus de 8 heures par présentation tout en offrant des résultats a la hauteur de toutes vos envies.</p>
 					</div>
 				</div>
 			</div>
@@ -1628,7 +1601,7 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading" id="module_a937da28-b0fd-4316-b26b-e401e2221e08">
-						<h2>Cas Concrets, Résultats Prouvés</h2>
+						<h2><code>Cas Concrets, Résultats Prouvés</code> </h2>
 					</div>
 				</div>
 			</div>
@@ -1637,11 +1610,11 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w6">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h3><span class="tinyMce-placeholder">🔔 Détection proactive des problèmes clients</span> </h3>
+						<h3><span class="tinyMce-placeholder">🔔 Système d'alerte proactive pour clients</span> </h3>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p><strong>AVANT :</strong> Problèmes clients critiques souvent découverts trop tard, entraînant escalades et insatisfaction.</p>
-						<p><strong>APRÈS :</strong> Système IA surveillant les données Salesforce et Excel, identifiant 83% des problèmes potentiels avant escalade. Fidélisation client améliorée de 24% dès le premier trimestre.</p>
+						<p><strong>AVANT :</strong> Des incidents détectés trop tard, après que les clients aient déjà signalé les problèmes, créant frustration et perte de confiance</p>
+						<p><strong>APRÈS :</strong> Notre système d'alerte surveille en temps réel les données de votre CRM pour vous notifier dès qu'un problème potentiel survient. 83% des incidents sont maintenant traités avant même que les clients ne les remarquent, améliorant la fidélisation.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
@@ -1649,8 +1622,8 @@
 						<h3><span class="tinyMce-placeholder">🛍️ Automatisation d'Analyses E-commerce</span> </h3>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p><strong>AVANT :</strong> Rapports hebdomadaires Shopify et GA4 prenant plus de 8h chaque mardi, avec qualité de données inconstante et sans temps pour l'analyse stratégique.</p>
-						<p><strong>APRÈS :</strong> Pipeline de données automatisé avec tableaux de bord personnalisés a éliminé tout travail manuel de reporting tout en maintenant 100% de précision. L'équipe a récupéré 32+ heures mensuelles pour des activités stratégiques.</p>
+						<p><strong>AVANT :</strong> Les rapports hebdomadaires de la plateforme e-commerce et des outils d'analyse web nécessitaient plus de 8h chaque lundi, avec une qualité de données variable et peu de temps pour l'analyse approfondie.</p>
+						<p><strong>APRÈS :</strong> Notre pipeline de données avec tableaux de bord personnalisés a supprimé tout travail manuel tout en garantissant 100% de précision. L'équipe a récupéré plus de 32 heures par mois.</p>
 					</div>
 				</div>
 			</div>
@@ -1671,8 +1644,8 @@
 						<h3><span class="tinyMce-placeholder">📊 Tableau de Bord Multi-Plateforme</span> </h3>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p><strong>AVANT :</strong> Décideurs dépendants de données éparpillées sur 7 plateformes, incapables d'obtenir une vision complète des performances.</p>
-						<p><strong>APRÈS :</strong> Tableau de bord centralisé récupérant des données en temps réel de toutes sources, permettant des décisions stratégiques basées sur des informations complètes. 120K€ d'opportunités de revenus identifiées dès le premier mois. </p>
+						<p><strong>AVANT :</strong> Les décideurs devaient jongler entre 7 plateformes différentes, sans pouvoir obtenir une vision globale des performances.</p>
+						<p><strong>APRÈS :</strong> Notre tableau de bord centralise les données en temps réel de toutes les sources, permettant des décisions stratégiques basées sur une vue d'ensemble complète.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
@@ -1680,8 +1653,8 @@
 						<h3><strong>📈 Système de trading 100% automatisé</strong> </h3>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p><strong>AVANT :</strong> Trader discrétionnaire s'appuyant sur l'analyse manuelle de graphiques et intuition, sans approche systématique pour tester ou valider ses idées. 20+ heures hebdomadaires à surveiller les graphiques et placer manuellement des ordres.</p>
-						<p><strong>APRÈS :</strong> Système de trading entièrement automatisé avec backtesting complet, entrée et sortie automatisées, position sizing, gestion de portefeuille et des risques. Système fonctionnel 24h/7j !</p>
+						<p><strong>AVANT :</strong> Trader utilisant l'analyse manuelle de graphiques et son intuition, sans méthode structurée pour tester ses stratégies. Plus de 20 heures par semaine consacrées à surveiller les marchés et passer des ordres manuellement.</p>
+						<p><strong>APRÈS :</strong> Système de trading entièrement automatisé avec backtest, entrée et sortie automatisées, position sizing, gestion de portefeuille et des risques. Système fonctionnel 24h/24 !</p>
 					</div>
 				</div>
 			</div>
@@ -1705,13 +1678,8 @@
 						<h2>Compatible avec tous vos outils </h2>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Votre entreprise ne devrait pas changer d'outils - c'est l'automatisation qui s'adapte à vous</p>
-					</div>
-					<div class="bee-block bee-block-4 bee-divider">
-						<div class="spacer" style="height:7px;"></div>
-					</div>
-					<div class="bee-block bee-block-5 bee-paragraph">
-						<p>Vous ne voyez pas vos outils ? Nous nous connectons à TOUS les systèmes que vous utilisez</p>
+						<p>Notre philosophie : c'est à nos solutions de s'adapter à vos outils, jamais l'inverse.</p>
+						<p>Vous utilisez un outil spécifique ? Pas de problème, notre technologie s'intègre avec TOUS les systèmes existants</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
@@ -1741,7 +1709,7 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading" id="module_76f28396-3497-4f8d-a2b3-abfd72a32072">
-						<h2>Une tarification claire et sans engagement </h2>
+						<h2>Une tarification simple, transparente et sans engagement </h2>
 					</div>
 				</div>
 			</div>
@@ -1762,9 +1730,9 @@
 					<div class="bee-block bee-block-3 bee-paragraph">
 						<p>❌ Frais de développement initiaux élevés</p>
 						<p>❌ Paiement avant de voir les résultats</p>
-						<p>❌ Coûts de maintenance supplémentaires</p>
-						<p>❌ Contrats avec engagement</p>
-						<p>❌ Solutions standardisées pour tous</p>
+						<p>❌ Frais de maintenance non inclus</p>
+						<p>❌ Engagements contractuels rigides</p>
+						<p>❌ Solutions standardisées peu adaptables</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
@@ -1781,9 +1749,9 @@
 					<div class="bee-block bee-block-3 bee-paragraph">
 						<p>✅ 0€ de frais de développement initial</p>
 						<p>✅ Paiement uniquement après satisfaction</p>
-						<p>✅ Abonnement tout compris</p>
+						<p>✅ Maintenance et mises à jour incluses</p>
 						<p>✅ Résiliation possible à tout moment</p>
-						<p>✅ Solutions entièrement personnalisées</p>
+						<p>✅ Solutions 100% sur mesure pour vous</p>
 					</div>
 				</div>
 			</div>
@@ -1791,7 +1759,7 @@
 		<div class="bee-row bee-row-25">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="font-size: 18px; word-break: break-word; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Contactez nous pour un devis</span></strong></span></a></div>
+					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 18px; line-height: 200%;"><strong style="font-size: 18px;">Demandez votre devis gratuit</strong></span></a></div>
 				</div>
 			</div>
 		</div>
@@ -1825,10 +1793,10 @@
 						</div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h3>Comment gérez-vous les situations imprévues ? </h3>
+						<h3>C </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">Nos solutions sont surveillées en permanence et nous intervenons sous 24h</p>
+						<p style="word-break: break-word;">Toutes nos solutions bénéficient d'une surveillance proactive 24h/24 avec intervention garantie sous 24h</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w4">
@@ -1838,10 +1806,10 @@
 						</div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h3>Et si nos process changent après l'automatisation ? </h3>
+						<h3>Que se passe-t-il si nos besoins évoluent ? </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">Nos systèmes flexibles s'adaptent à l'évolution de vos besoins sans coûts supplémentaires</p>
+						<p style="word-break: break-word;">Notre équipe reste à votre disposition pour adapter votre solution. Nous implémentons les nouvelles fonctionnalités dont vous avez besoin.</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w4">
@@ -1851,10 +1819,10 @@
 						</div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h3>Mon équipe aura-t-elle besoin de compétences techniques ?  </h3>
+						<h3><span class="tinyMce-placeholder">Faut-il des compétences techniques spécifiques ?</span> </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">Non, nous créons des interfaces intuitives que tout le monde peut utiliser</p>
+						<p style="word-break: break-word;">Aucune expertise technique requise : nos interfaces sont conçues pour être utilisées par tous les collaborateurs</p>
 					</div>
 				</div>
 			</div>
@@ -1884,7 +1852,7 @@
 						<h3>Qu'est-ce qui est inclus dans l'abonnement ? </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">Développement, mises à jour, maintenance, support – tout est compris</p>
+						<p style="word-break: break-word;">Tout est compris : développement, maintenance, mises à jour et assistance technique</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w4">
@@ -1897,7 +1865,7 @@
 						<h3>Combien de temps prend l'implémentation ? </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">2 à 6 semaines selon la complexité, avec un minimum de perturbation</p>
+						<p style="word-break: break-word;">Entre 2 et 6 semaines selon la complexité du projet, avec un impact minimal sur vos opérations quotidiennes</p>
 					</div>
 				</div>
 			</div>
@@ -1924,15 +1892,15 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h2>Envie d'Automatiser Votre Entreprise?</h2>
+						<h2><code>Envie d'Automatiser Votre Entreprise?</code> </h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
-    					<form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
+						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>
+								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="email" /></div>
+								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r31c0m1i7"><label for="r31c0m1i7">Message</label><textarea id="r31c0m1i7" name="message" rows="7"></textarea></div>
@@ -1951,14 +1919,14 @@
 						<div class="spacer" style="height:20px;"></div>
 					</div>
 					<div class="bee-block bee-block-5 bee-heading">
-						<h3>Vous préférez échanger de vive voix ? Organisons un appel ! </h3>
+						<h3>Vous préférez échanger de vive voix ? Réservez un appel gratuit ! </h3>
 					</div>
 					<div class="bee-block bee-block-6 bee-paragraph">
 						<p>Choisissez un créneau de 30 minutes et discutez de vos besoins d'automatisation directement avec notre expert </p>
 					</div>
-					<div class="bee-block bee-block-7 bee-button"><a class="bee-button-content" href="https://calendly.com/yoluko-solutions/30min" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Planifier Votre Appel Gratuit </span></a></div>
+					<div class="bee-block bee-block-7 bee-button"><a class="bee-button-content" href="https://calendly.com/yoluko-solutions/30min" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;"><strong style="font-size: 16px;">Réserver votre consultation gratuite</strong></span></a></div>
 					<div class="bee-block bee-block-8 bee-paragraph">
-						<p>Sans engagement, uniquement des conseils utiles</p>
+						<p><code>Sans engagement, uniquement des conseils utiles</code></p>
 					</div>
 				</div>
 			</div>
@@ -1984,7 +1952,7 @@
 				</div>
 			</div>
 		</div>
-		
+	
 	</div>
 </body>
 

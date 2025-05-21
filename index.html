@@ -10,52 +10,18 @@
 		gtag('js', new Date());
 		gtag('config', 'G-WFSVDY7CP2');
 	</script>
-
-	<script>
-	// Auto-detect language and redirect - with session storage to remember user choice
-	(function() {
-		// Check if user manually selected a language
-		if (sessionStorage.getItem('userLanguageChoice')) {
-			// If user chose English, stay on this page
-			if (sessionStorage.getItem('userLanguageChoice') === 'en') {
-				return;
-			}
-			// If user chose French, redirect to French
-			if (sessionStorage.getItem('userLanguageChoice') === 'fr' && 
-				window.location.pathname.indexOf('/fr/') === -1) {
-				window.location.href = '/fr/';
-				return;
-			}
-		}
-		
-		// Skip if already on language page
-		if (window.location.pathname.indexOf('/fr/') !== -1) return;
-		
-		// Get browser language
-		var userLang = navigator.language || navigator.userLanguage;
-		
-		// Check if browser language starts with "fr"
-		if (userLang.indexOf('fr') === 0) {
-			window.location.href = '/fr/';
-		}
-	})();
-	</script>
-
-
 	<title>Yoluko Solutions | Custom Business Automation That Works</title>
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="website" property="og:type" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." property="og:description" />
 	<meta content="" property="og:url" />
-	<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
+	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1391511/1378064/2407024/12774208_large.jpg" property="og:image" />
 	<meta content="Yoluko Solutions | Custom Business Automation That Works" property="og:title" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." name="description" />
 	<meta charset="utf-8" />
 	<meta content="width=device-width" name="viewport" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="/images/favicon.png">
 	<style>
 		.bee-row,
 		.bee-row-content {
@@ -429,7 +395,6 @@
 			padding-top: 5px
 		}
 
-		.bee-row-20 .bee-col-1 .bee-block-2,
 		.bee-row-5 .bee-col-1 .bee-block-1,
 		.bee-row-8 .bee-col-1 .bee-block-2,
 		.bee-row-8 .bee-col-2 .bee-block-2,
@@ -470,18 +435,20 @@
 			text-align: center
 		}
 
-		.bee-row-28 .bee-col-1 .bee-block-3,
-		.bee-row-28 .bee-col-2 .bee-block-3,
-		.bee-row-28 .bee-col-3 .bee-block-3,
-		.bee-row-29 .bee-col-1 .bee-block-3,
-		.bee-row-29 .bee-col-2 .bee-block-3,
-		.bee-row-29 .bee-col-3 .bee-block-3,
+		.bee-row-17 .bee-col-1 .bee-block-1,
+		.bee-row-20 .bee-col-1 .bee-block-1,
+		.bee-row-26 .bee-col-1 .bee-block-1,
+		.bee-row-31 .bee-col-1 .bee-block-1,
+		.bee-row-32 .bee-col-1 .bee-block-3,
+		.bee-row-32 .bee-col-1 .bee-block-6,
+		.bee-row-32 .bee-col-1 .bee-block-8,
+		.bee-row-34 .bee-col-1 .bee-block-1,
+		.bee-row-34 .bee-col-1 .bee-block-2,
 		.bee-row-8 .bee-col-1 .bee-block-3,
 		.bee-row-8 .bee-col-2 .bee-block-3,
 		.bee-row-8 .bee-col-3 .bee-block-3,
 		.bee-row-8 .bee-col-4 .bee-block-3 {
-			padding-bottom: 10px;
-			padding-top: 20px
+			padding: 10px
 		}
 
 		.bee-row-26 .bee-row-content,
@@ -555,11 +522,7 @@
 		.bee-row-14 .bee-col-1 .bee-block-3,
 		.bee-row-14 .bee-col-2 .bee-block-3,
 		.bee-row-14 .bee-col-3 .bee-block-3,
-		.bee-row-14 .bee-col-4 .bee-block-3,
-		.bee-row-16 .bee-col-1 .bee-block-1,
-		.bee-row-16 .bee-col-2 .bee-block-1,
-		.bee-row-18 .bee-col-1 .bee-block-1,
-		.bee-row-18 .bee-col-2 .bee-block-1 {
+		.bee-row-14 .bee-col-4 .bee-block-3 {
 			padding-top: 10px;
 			text-align: center;
 			width: 100%
@@ -576,23 +539,22 @@
 			padding-top: 20px
 		}
 
+		.bee-row-16 .bee-col-1 .bee-block-1,
+		.bee-row-16 .bee-col-2 .bee-block-1,
+		.bee-row-18 .bee-col-1 .bee-block-1,
+		.bee-row-18 .bee-col-2 .bee-block-1,
+		.bee-row-20 .bee-col-1 .bee-block-2 {
+			padding: 20px;
+			text-align: center;
+			width: 100%
+		}
+
 		.bee-row-16 .bee-col-1 .bee-block-2,
 		.bee-row-16 .bee-col-2 .bee-block-2,
-		.bee-row-17 .bee-col-1 .bee-block-1,
 		.bee-row-18 .bee-col-1 .bee-block-2,
 		.bee-row-18 .bee-col-2 .bee-block-2,
-		.bee-row-20 .bee-col-1 .bee-block-1,
-		.bee-row-20 .bee-col-1 .bee-block-3,
-		.bee-row-20 .bee-col-1 .bee-block-4,
-		.bee-row-20 .bee-col-1 .bee-block-5,
-		.bee-row-26 .bee-col-1 .bee-block-1,
-		.bee-row-31 .bee-col-1 .bee-block-1,
-		.bee-row-32 .bee-col-1 .bee-block-3,
-		.bee-row-32 .bee-col-1 .bee-block-6,
-		.bee-row-32 .bee-col-1 .bee-block-8,
-		.bee-row-34 .bee-col-1 .bee-block-1,
-		.bee-row-34 .bee-col-1 .bee-block-2 {
-			padding: 10px
+		.bee-row-20 .bee-col-1 .bee-block-3 {
+			padding: 20px
 		}
 
 		.bee-row-23 .bee-col-1 .bee-block-1,
@@ -627,7 +589,7 @@
 
 		.bee-row-24 .bee-col-1 .bee-block-3,
 		.bee-row-24 .bee-col-2 .bee-block-3 {
-			padding: 10px 10px 10px 60px
+			padding: 10px 60px
 		}
 
 		.bee-row-24 .bee-col-2 {
@@ -661,6 +623,16 @@
 			padding-top: 15px;
 			text-align: center;
 			width: 100%
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-3,
+		.bee-row-28 .bee-col-2 .bee-block-3,
+		.bee-row-28 .bee-col-3 .bee-block-3,
+		.bee-row-29 .bee-col-1 .bee-block-3,
+		.bee-row-29 .bee-col-2 .bee-block-3,
+		.bee-row-29 .bee-col-3 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-top: 20px
 		}
 
 		.bee-row-31 .bee-row-content {
@@ -727,87 +699,6 @@
 			text-align: left
 		}
 
-		.bee-row-2 .bee-col-2 .bee-block-1 li {
-			padding-bottom: 5px;
-			padding-left: 15px;
-			padding-right: 15px
-		}
-
-		@media (max-width:768px) {
-			.bee-form form {
-				width: 100% !important
-			}
-
-			img.bee-fullwidthOnMobile {
-				max-width: none !important
-			}
-
-			.bee-menu ul.with-bee-hamburger {
-				display: none;
-				padding: 5px 0;
-				position: relative;
-				top: -4px
-			}
-
-			.bee-menu ul.with-bee-hamburger li {
-				display: block;
-				text-align: center
-			}
-
-			.bee-menu ul.with-bee-hamburger li a {
-				text-decoration: none
-			}
-
-			.bee-menu ul.with-bee-hamburger span,
-			.bee-mobile_hide {
-				display: none
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~ul,
-			.bee-row-content:not(.no_stack) {
-				display: block
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
-				width: 36px;
-				height: 36px;
-				background-color: #ffd438;
-				border-radius: 50%
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
-				width: 18px;
-				height: 18px
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
-				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
-				background-color: #ffd438
-			}
-
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
-			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
-				color: #0b0b0b
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
-				transform: translate(-50%, -50%) scaleY(0)
-			}
-
-			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
-				transform: translate(-50%, -50%) scaleY(1)
-			}
-		}
-
 		.bee-row-4 .bee-col-1 .bee-block-2 {
 			color: #001524;
 			font-size: 18px;
@@ -867,34 +758,99 @@
 			width: auto
 		}
 
-		.bee-row-5 .bee-col-1 .bee-block-1 h1,
-		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
-			font-size: 26px;
-			text-align: center;
-			letter-spacing: normal;
-			direction: ltr;
-			font-weight: 400
-		}
-
 		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
-			color: #06d3c5;
+			color: #57afb2;
+			direction: ltr;
 			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-			line-height: 120%
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-3,
-		.bee-row-28 .bee-col-2 .bee-block-3,
-		.bee-row-28 .bee-col-3 .bee-block-3,
-		.bee-row-29 .bee-col-1 .bee-block-3,
-		.bee-row-29 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-3,
-		.bee-row-8 .bee-col-2 .bee-block-3,
-		.bee-row-8 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-4 .bee-block-3 {
-			color: #001524;
-			font-size: 16px;
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-2 .bee-col-2 .bee-block-1 li {
+			padding-bottom: 5px;
+			padding-right: 15px
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			img.bee-fullwidthOnMobile {
+				max-width: none !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span,
+			.bee-mobile_hide {
+				display: none
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #feeaa0;
+				border-radius: 50%
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMGIwYjBiIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #feeaa0
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-2 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+				color: #0b0b0b
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r1c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 {
+				text-align: right !important
+			}
 		}
 
 		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
@@ -939,14 +895,19 @@
 			color: #000000
 		}
 
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
 			color: #0b0b0b;
+			direction: ltr;
 			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			line-height: 120%
+			font-size: 26px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-28 .bee-col-1 .bee-block-2 h3,
@@ -972,8 +933,37 @@
 			margin-right: 0
 		}
 
+		.bee-row-28 .bee-col-1 .bee-block-3,
+		.bee-row-28 .bee-col-2 .bee-block-3,
+		.bee-row-28 .bee-col-3 .bee-block-3,
+		.bee-row-29 .bee-col-1 .bee-block-3,
+		.bee-row-29 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-1 .bee-block-3,
+		.bee-row-8 .bee-col-2 .bee-block-3,
+		.bee-row-8 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-4 .bee-block-3 {
+			color: #001524;
+			font-size: 16px;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-2 h2,
+		.bee-row-15 .bee-col-1 .bee-block-2 h2,
+		.bee-row-23 .bee-col-1 .bee-block-1 h2,
+		.bee-row-32 .bee-col-1 .bee-block-1 h2 {
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
 		}
 
 		.bee-row-11 .bee-col-2 .bee-block-1 h2,
@@ -1004,7 +994,6 @@
 		.bee-row-18 .bee-col-1 .bee-block-2 p:not(:last-child),
 		.bee-row-18 .bee-col-2 .bee-block-2 p:not(:last-child),
 		.bee-row-20 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-20 .bee-col-1 .bee-block-5 p:not(:last-child),
 		.bee-row-24 .bee-col-1 .bee-block-3 p:not(:last-child),
 		.bee-row-24 .bee-col-2 .bee-block-3 p:not(:last-child),
 		.bee-row-32 .bee-col-1 .bee-block-3 p:not(:last-child),
@@ -1012,20 +1001,6 @@
 		.bee-row-32 .bee-col-1 .bee-block-8 p:not(:last-child),
 		.bee-row-34 .bee-col-1 .bee-block-2 p:not(:last-child) {
 			margin-bottom: 16px
-		}
-
-		.bee-row-12 .bee-col-1 .bee-block-2 h2,
-		.bee-row-15 .bee-col-1 .bee-block-2 h2,
-		.bee-row-23 .bee-col-1 .bee-block-1 h2,
-		.bee-row-32 .bee-col-1 .bee-block-1 h2 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 48px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
 		}
 
 		.bee-row-13 .bee-col-1 .bee-block-2,
@@ -1091,8 +1066,7 @@
 		.bee-row-16 .bee-col-1 .bee-block-2,
 		.bee-row-16 .bee-col-2 .bee-block-2,
 		.bee-row-18 .bee-col-1 .bee-block-2,
-		.bee-row-18 .bee-col-2 .bee-block-2,
-		.bee-row-20 .bee-col-1 .bee-block-5 {
+		.bee-row-18 .bee-col-2 .bee-block-2 {
 			color: #101112;
 			direction: ltr;
 			font-size: 16px;
@@ -1106,8 +1080,7 @@
 		.bee-row-16 .bee-col-2 .bee-block-2 a,
 		.bee-row-18 .bee-col-1 .bee-block-2 a,
 		.bee-row-18 .bee-col-2 .bee-block-2 a,
-		.bee-row-20 .bee-col-1 .bee-block-3 a,
-		.bee-row-20 .bee-col-1 .bee-block-5 a {
+		.bee-row-20 .bee-col-1 .bee-block-3 a {
 			color: #7747FF
 		}
 
@@ -1139,10 +1112,6 @@
 			text-align: center
 		}
 
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-24 .bee-col-1 .bee-block-3,
 		.bee-row-24 .bee-col-2 .bee-block-3 {
 			color: #001524;
@@ -1152,6 +1121,10 @@
 			letter-spacing: 0;
 			line-height: 120%;
 			text-align: left
+		}
+
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
@@ -1190,15 +1163,15 @@
 			margin-right: 0
 		}
 
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
 		.bee-row-29 .bee-col-2 .bee-block-3 {
 			color: #0b0b0b;
 			font-size: 16px;
 			line-height: 120%;
 			text-align: center
-		}
-
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
 		}
 
 		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -1350,12 +1323,6 @@
 								<li><a href="#module_76f28396-3497-4f8d-a2b3-abfd72a32072" target="_self" title="Show Pricing">Pricing</a></li>
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact Us</a></li>
-								<!-- For English version (add to index.html) -->
-								<li style="margin-left: 10px;">
-									<a href="/fr/" onclick="sessionStorage.setItem('userLanguageChoice', 'fr');" title="Version française" style="display: flex; align-items: center;">
-										<span style="margin-right: 5px;">🇫🇷</span> FR
-									</a>
-								</li>
 							</ul>
 						</nav>
 					</div>
@@ -1506,7 +1473,7 @@
 						<h2>Relax, Our Solutions Handle Everything </h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-paragraph">
-						<p>At Yoluko Solutions, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!</p>
+						<p>At Yoluko Solution<strong>S</strong>, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!</p>
 					</div>
 					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" style="font-size: 18px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 18px; line-height: 200%;"><strong style="font-size: 18px;"><span style="font-size: 18px;">Discuss your Unique Needs</span></strong></span></a></div>
 				</div>
@@ -1709,16 +1676,11 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading">
-						<h2><span class="tinyMce-placeholder">Works With Your Favorite Tools</span> </h2>
+						<h2>Seamless Integration With Your Tech Ecosystem </h2>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p>Your business shouldn't change tools - automation adapts to you</p>
-					</div>
-					<div class="bee-block bee-block-4 bee-divider">
-						<div class="spacer" style="height:7px;"></div>
-					</div>
-					<div class="bee-block bee-block-5 bee-paragraph">
-						<p><em>Don't see your tools? We connect to ANY system you use</em></p>
+						<p>Our philosophy: Our solutions adapt to your workflow - never the other way around</p>
+						<p>Using a specialized tool? No problem, our technology integrates with EVERY system on the market</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w6">
@@ -1848,7 +1810,7 @@
 						<h3><span class="tinyMce-placeholder">What if we change processes after automation?</span> </h3>
 					</div>
 					<div class="bee-block bee-block-3 bee-paragraph">
-						<p style="word-break: break-word;">Flexible systems adapt to your changing needs at no extra cost</p>
+						<p style="word-break: break-word;">Our team is always here to help. We're happy to implement new features as your business evolves</p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w4">
@@ -1934,12 +1896,12 @@
 						<h2><span class="tinyMce-placeholder">Ready to Automate Your Business?</span> </h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
-						<form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
+						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>
+								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="email" /></div>
+								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r31c0m1i7"><label for="r31c0m1i7">Message</label><textarea id="r31c0m1i7" name="message" rows="7"></textarea></div>
