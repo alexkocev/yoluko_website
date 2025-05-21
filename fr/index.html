@@ -10,18 +10,45 @@
 		gtag('js', new Date());
 		gtag('config', 'G-WFSVDY7CP2');
 	</script>
-	<title>Yoluko Solutions | Custom Business Automation That Works</title>
+
+	<script>
+	// Auto-detect language and redirect - with session storage to remember user choice
+	(function() {
+		// Check if user manually selected a language
+		if (sessionStorage.getItem('userLanguageChoice')) {
+			// If user chose French, stay on this page
+			if (sessionStorage.getItem('userLanguageChoice') === 'fr') {
+				return;
+			}
+			// If user chose English, redirect to English
+			if (sessionStorage.getItem('userLanguageChoice') === 'en' && 
+				window.location.pathname.indexOf('/fr/') !== -1) {
+				window.location.href = '/';
+				return;
+			}
+		}
+		
+		// Skip if not on French page (we're already where we should be)
+		if (window.location.pathname.indexOf('/fr/') === -1) return;
+		
+		// We're on French page by default, so no need to redirect based on browser language
+	})();
+	</script>
+
+	<title>Yoluko Solutions | Automatisation Personnalisée et Efficace pour les Entreprisess</title>
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="website" property="og:type" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." property="og:description" />
-	<meta content="" property="og:url" />
-	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1391511/1378064/2407024/12774208_large.jpg" property="og:image" />
-	<meta content="Yoluko Solutions | Custom Business Automation That Works" property="og:title" />
+	<meta content="https://www.yolukosolutions.com/fr/" property="og:url" />
+	<meta content="https://www.yoluko.com/images/favicon.png" property="og:image" />
+	<meta content="Yoluko Solutions | Automatisation Personnalisée et Efficace pour les Entreprises" property="og:title" />
 	<meta content="Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation." name="description" />
 	<meta charset="utf-8" />
-	<meta content="width=device-width" name="viewport" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="/images/favicon.png">
 	<style>
 		.bee-row,
 		.bee-row-content {
@@ -696,15 +723,132 @@
 			margin-bottom: undefined
 		}
 
+		.bee-row-11 .bee-col-2 .bee-block-3 a,
+		.bee-row-25 .bee-col-1 .bee-block-1 a,
+		.bee-row-4 .bee-col-1 .bee-block-3 a {
+			background-color: #57afb2;
+			border-bottom: 3px solid #57afb2;
+			border-left: 3px solid #57afb2;
+			border-radius: 60px;
+			border-right: 3px solid #57afb2;
+			border-top: 3px solid #57afb2;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 200%;
+			padding: 5px 40px 5px 35px;
+			width: auto
+		}
+
+		.bee-row-5 .bee-col-1 .bee-block-1 h1,
+		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
+			font-size: 26px;
+			text-align: center;
+			letter-spacing: normal;
+			direction: ltr;
+			font-weight: 400
+		}
+
 		.bee-row-5 .bee-col-1 .bee-block-1 h1 {
 			color: #57afb2;
-			direction: ltr;
 			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+			line-height: 120%
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
+			color: #0b0b0b;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			line-height: 120%
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-3,
+		.bee-row-28 .bee-col-2 .bee-block-3,
+		.bee-row-28 .bee-col-3 .bee-block-3,
+		.bee-row-29 .bee-col-1 .bee-block-3,
+		.bee-row-29 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-1 .bee-block-3,
+		.bee-row-8 .bee-col-2 .bee-block-3,
+		.bee-row-8 .bee-col-3 .bee-block-3,
+		.bee-row-8 .bee-col-4 .bee-block-3 {
+			color: #001524;
+			font-size: 16px;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-image,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-image {
+			padding: 0
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-35 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-label a,
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-label a {
+			color: #000000
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-28 .bee-col-1 .bee-block-2 h3,
+		.bee-row-28 .bee-col-2 .bee-block-2 h3,
+		.bee-row-28 .bee-col-3 .bee-block-2 h3,
+		.bee-row-29 .bee-col-1 .bee-block-2 h3,
+		.bee-row-29 .bee-col-2 .bee-block-2 h3,
+		.bee-row-29 .bee-col-3 .bee-block-2 h3,
+		.bee-row-8 .bee-col-2 .bee-block-2 h3,
+		.bee-row-8 .bee-col-3 .bee-block-2 h3,
+		.bee-row-8 .bee-col-4 .bee-block-2 h3 {
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
 			font-size: 26px;
 			font-weight: 400;
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-2 .bee-col-2 .bee-block-1 li {
@@ -791,124 +935,6 @@
 			}
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 a,
-		.bee-row-25 .bee-col-1 .bee-block-1 a,
-		.bee-row-4 .bee-col-1 .bee-block-3 a {
-			background-color: #57afb2;
-			border-bottom: 3px solid #57afb2;
-			border-left: 3px solid #57afb2;
-			border-radius: 60px;
-			border-right: 3px solid #57afb2;
-			border-top: 3px solid #57afb2;
-			color: #ffffff;
-			direction: ltr;
-			font-family: inherit;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 200%;
-			padding: 5px 40px 5px 35px;
-			width: auto
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-image,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-image {
-			padding: 0
-		}
-
-		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-35 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
-			margin-left: 0
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
-		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-28 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-1 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon-label a,
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon-label a {
-			color: #000000
-		}
-
-		.bee-row-8 .bee-col-1 .bee-block-2 h3 {
-			color: #0b0b0b;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 26px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-3,
-		.bee-row-28 .bee-col-2 .bee-block-3,
-		.bee-row-28 .bee-col-3 .bee-block-3,
-		.bee-row-29 .bee-col-1 .bee-block-3,
-		.bee-row-29 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-3,
-		.bee-row-8 .bee-col-2 .bee-block-3,
-		.bee-row-8 .bee-col-3 .bee-block-3,
-		.bee-row-8 .bee-col-4 .bee-block-3 {
-			color: #001524;
-			font-size: 16px;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-8 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
-		.bee-row-28 .bee-col-1 .bee-block-2 h3,
-		.bee-row-28 .bee-col-2 .bee-block-2 h3,
-		.bee-row-28 .bee-col-3 .bee-block-2 h3,
-		.bee-row-29 .bee-col-1 .bee-block-2 h3,
-		.bee-row-29 .bee-col-2 .bee-block-2 h3,
-		.bee-row-29 .bee-col-3 .bee-block-2 h3,
-		.bee-row-8 .bee-col-2 .bee-block-2 h3,
-		.bee-row-8 .bee-col-3 .bee-block-2 h3,
-		.bee-row-8 .bee-col-4 .bee-block-2 h3 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 26px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
-		}
-
-		.bee-row-8 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
-		.bee-row-8 .bee-col-4 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-11 .bee-col-2 .bee-block-1 h2,
 		.bee-row-20 .bee-col-1 .bee-block-2 h2 {
 			color: #001524;
@@ -919,20 +945,6 @@
 			letter-spacing: normal;
 			line-height: 120%;
 			text-align: left
-		}
-
-		.bee-row-12 .bee-col-1 .bee-block-2 h2,
-		.bee-row-15 .bee-col-1 .bee-block-2 h2,
-		.bee-row-23 .bee-col-1 .bee-block-1 h2,
-		.bee-row-32 .bee-col-1 .bee-block-1 h2 {
-			color: #001524;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 48px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
 		}
 
 		.bee-row-11 .bee-col-2 .bee-block-2 {
@@ -958,6 +970,20 @@
 		.bee-row-32 .bee-col-1 .bee-block-8 p:not(:last-child),
 		.bee-row-34 .bee-col-1 .bee-block-2 p:not(:last-child) {
 			margin-bottom: 16px
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-2 h2,
+		.bee-row-15 .bee-col-1 .bee-block-2 h2,
+		.bee-row-23 .bee-col-1 .bee-block-1 h2,
+		.bee-row-32 .bee-col-1 .bee-block-1 h2 {
+			color: #001524;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
 		}
 
 		.bee-row-13 .bee-col-1 .bee-block-2,
@@ -1069,10 +1095,6 @@
 			text-align: center
 		}
 
-		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-24 .bee-col-1 .bee-block-3,
 		.bee-row-24 .bee-col-2 .bee-block-3 {
 			color: #001524;
@@ -1084,15 +1106,8 @@
 			text-align: left
 		}
 
-		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
-			color: #0b0b0b;
-			direction: ltr;
-			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 48px;
-			font-weight: 400;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: center
+		.bee-row-24 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-28 .bee-col-1 .bee-block-1 .bee-icon-image,
@@ -1108,6 +1123,17 @@
 			margin-right: 0
 		}
 
+		.bee-row-27 .bee-col-1 .bee-block-2 h2 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
 		.bee-row-28 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
 			margin-right: 0
 		}
@@ -1120,15 +1146,15 @@
 			margin-right: 0
 		}
 
-		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
-			margin-right: 0
-		}
-
 		.bee-row-29 .bee-col-2 .bee-block-3 {
 			color: #0b0b0b;
 			font-size: 16px;
 			line-height: 120%;
 			text-align: center
+		}
+
+		.bee-row-29 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
 		}
 
 		.bee-row-29 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
@@ -1280,6 +1306,13 @@
 								<li><a href="#module_76f28396-3497-4f8d-a2b3-abfd72a32072" target="_self" title="Show Pricing">Tarifs</a></li>
 								<li><a href="#module_e81937f0-3b1e-4e46-b918-391ac891e579" target="_self" title="Show FAQ">FAQ</a></li>
 								<li><a href="#module_95acb723-dfdb-4b47-967e-c54e0774d65f" target="_self" title="Show contact form">Contact</a></li>
+								<!-- For French version (add to fr/index.html) -->
+								<li style="margin-left: 10px;">
+									<a href="/" onclick="sessionStorage.setItem('userLanguageChoice', 'en');" title="English version" style="display: flex; align-items: center;">
+										<span style="margin-right: 5px;">🇬🇧</span> EN
+									</a>
+								</li>
+							
 							</ul>
 						</nav>
 					</div>
@@ -1547,7 +1580,7 @@
 						<h3>Présentations optimisées </h3>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph">
-						<p>Générez des présentations clients hebdomadaires avec des données fraîches et pertinentes. Économisez plus de 8 heures par présentation tout en offrant des résultats a la hauteur de toutes vos envies.</p>
+						<p>Générez des présentations clients hebdomadaires avec des données fraîches et pertinentes. Économisez plus de 8 heures par présentation tout en offrant des résultats à la hauteur de toutes vos envies.</p>
 					</div>
 				</div>
 			</div>
@@ -1559,7 +1592,7 @@
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-heading" id="module_a937da28-b0fd-4316-b26b-e401e2221e08">
-						<h2><code>Cas Concrets, Résultats Prouvés</code> </h2>
+						<h2>Cas Concrets, Résultats Prouvés</h2>
 					</div>
 				</div>
 			</div>
@@ -1850,15 +1883,15 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h2><code>Envie d'Automatiser Votre Entreprise?</code> </h2>
+						<h2>Envie d'Automatiser Votre Entreprise?</h2>
 					</div>
 					<div class="bee-block bee-block-2 bee-form" id="module_95acb723-dfdb-4b47-967e-c54e0774d65f">
-						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
+    					<form accept-charset="UTF-8" action="https://formspree.io/f/mpwdnjln" method="POST" enctype="multipart/form-data" autocomplete="on" target="_self">
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="firstname" required="" type="text" /></div>
+								<div class="bee-field bee-field-r31c0m1i1"><label for="r31c0m1i1">Nom</label><input id="r31c0m1i1" name="name" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="text" /></div>
+								<div class="bee-field bee-field-r31c0m1i3"><label for="r31c0m1i3">Email</label><input id="r31c0m1i3" name="email" required="" type="email" /></div>
 							</div>
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r31c0m1i7"><label for="r31c0m1i7">Message</label><textarea id="r31c0m1i7" name="message" rows="7"></textarea></div>
@@ -1884,7 +1917,7 @@
 					</div>
 					<div class="bee-block bee-block-7 bee-button"><a class="bee-button-content" href="https://calendly.com/yoluko-solutions/30min" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;"><strong style="font-size: 16px;">Réserver votre consultation gratuite</strong></span></a></div>
 					<div class="bee-block bee-block-8 bee-paragraph">
-						<p><code>Sans engagement, uniquement des conseils utiles</code></p>
+						<p>Sans engagement, uniquement des conseils utiles</p>
 					</div>
 				</div>
 			</div>
@@ -1910,20 +1943,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-35">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><a href="http://designedwithbeefree.com/" target="_blank" title="Designed with Beefree"><img alt="Beefree Logo" height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/assets/Beefree-logo.png" width="auto" /></a></div>
-								<div class="bee-icon-label bee-icon-label-right"><a href="http://designedwithbeefree.com/" target="_blank" title="Designed with Beefree">Designed with Beefree</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </body>
 
