@@ -186,3 +186,31 @@ WITH
 
 
 
+
+
+7. Add meta for social medias
+```html
+<meta content="" property="og:url" />
+```
+
+Fix: Replace content="" with the actual URL where this page will live. 
+"https://www.yolukosolutions.com/" for EN
+or content="https://www.yolukosolutions.com/fr/" for FR
+
+
+8. View port meta tag
+Replace
+```html
+<meta content="width=device-width" name="viewport" />
+```
+with 
+```html
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+```
+
+
+9. Replace in Fr title
+Replace
+<title>Yoluko Solutions | Custom Business Automation That Works</title>
+with
+Yoluko Solutions | Automatisation Personnalisée et Efficace pour les Entreprises
