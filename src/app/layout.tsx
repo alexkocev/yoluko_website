@@ -1,20 +1,10 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google"; // Corrected font import name
+import { GeistSans, GeistMono } from 'geist/font';
 import Script from "next/script";
 import "./globals.css";
 import { getDictionary } from "./dictionaries";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export async function generateMetadata({
   params,
@@ -78,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
       >
         {children}
         <Script
