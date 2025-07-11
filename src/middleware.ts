@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
-let locales = ['en', 'fr'];
-let defaultLocale = 'en';
+const locales = ['en', 'fr'];
+const defaultLocale = 'en';
 
 function getLocale(request: NextRequest): string {
   const negotiatorHeaders: Record<string, string> = {};
@@ -14,6 +14,7 @@ function getLocale(request: NextRequest): string {
   try {
     return match(languages, locales, defaultLocale);
   } catch (e) {
+    console.error(e); // Or just remove 'e' if you don't want to log it
     return defaultLocale;
   }
 }

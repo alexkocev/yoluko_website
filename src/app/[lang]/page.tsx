@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: string };
+  params: { lang:string };
 }): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
