@@ -21,6 +21,7 @@
     "cta": "Discutons de votre projet"
   },
   "ValueProposition": {
+    "title": "Des solutions sur mesure pour les défis uniques de votre entreprise",
     "time": "Gagnez du Temps",
     "time_desc": "Réduisez le temps consacré aux tâches manuelles grâce à des process entièrement automatisés",
     "no_hidden_fees": "Aucun frais caché",
@@ -86,6 +87,7 @@
     "traditional_feature4": "❌ Engagements contractuels rigides",
     "traditional_feature5": "❌ Solutions standardisées peu adaptables",
     "yoluko_approach": "L'approche Yoluko Solutions",
+    "yoluko_recommended": "Recommandé",
     "yoluko_feature1": "✅ 0€ de frais de développement initial",
     "yoluko_feature2": "✅ Paiement uniquement après satisfaction",
     "yoluko_feature3": "✅ Maintenance et mises à jour incluses",
@@ -110,6 +112,7 @@
   },
   "ContactSection": {
     "title": "Envie d'Automatiser Votre Entreprise?",
+    "subtitle": "Parlez-nous de votre défi, et nous vous répondrons dans les 24 heures avec un plan.",
     "name_placeholder": "Votre Nom",
     "email_placeholder": "Votre Email",
     "message_placeholder": "Quelle est la tâche que vous aimeriez ne plus jamais avoir à faire ?",
