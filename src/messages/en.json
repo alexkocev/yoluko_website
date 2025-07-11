@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Yoluko Solutions | Custom Business Automation",
+      "template": "%s | Yoluko Solutions"
+    },
+    "description": "Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation."
+  },
+  "Navigation": {
+    "home": "Yoluko Solutions",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Get a Free Consultation",
+    "ctaMobile": "Get Started"
+  },
+  "HeroSection": {
+    "title": "Stop Wasting Time on Repetitive Tasks",
+    "subtitle": "Custom automation solutions tailored to your business needs. Reclaim your time and focus on what truly matters.",
+    "cta": "Discuss Your Unique Needs"
+  },
+  "ValueProposition": {
+    "title": "Custom Solutions for Your Unique Business Challenges",
+    "time": "Reclaim Your Time",
+    "time_desc": "Transform hours of work into minutes with automation that handles your entire workflow.",
+    "no_hidden_fees": "No Hidden Costs",
+    "no_hidden_fees_desc": "Transparent monthly subscription, no upfront fees.",
+    "compatible": "Works With Your Tools",
+    "compatible_desc": "Connects with any platform you already use.",
+    "ai": "AI Where It Makes Sense",
+    "ai_desc": "We apply AI strategically, only where it delivers real business value."
+  },
+  "YolukoDifference": {
+    "title": "Relax, Our Solutions Handle Everything",
+    "description": "At Yoluko SolutionS, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!",
+    "cta": "Book Your Free Call"
+  },
+  "SolutionsShowcase": {
+    "title": "Your Business Challenges, Solved",
+    "finance_title": "FINANCE",
+    "finance_desc": "Financial Data Automation",
+    "finance_long_desc": "Get morning reports ready by 7AM daily with zero effort. Save 15+ hours monthly while eliminating reporting errors.",
+    "accounting_title": "ACCOUNTING",
+    "accounting_desc": "Automatic Reconciliations",
+    "accounting_long_desc": "Process weeks of transactions in minutes with 99.8% accuracy. Even handles those tricky unusual transactions.",
+    "analysis_title": "ANALYTICS",
+    "analysis_desc": "Data Insights Dashboard",
+    "analysis_long_desc": "All your business data in one place, automatically organized. Make better decisions with up-to-date information from every source.",
+    "reporting_title": "REPORTING",
+    "reporting_desc": "Automated Client Reports",
+    "reporting_long_desc": "Deliver premium-quality reports to clients without the manual work. Turn reporting from a cost center into a revenue stream.",
+    "marketing_title": "MARKETING",
+    "marketing_desc": "Social Media Automation",
+    "marketing_long_desc": "Maintain your social presence consistently without the daily grind. Boost engagement by 40% while reducing content creation time by 75%.",
+    "support_title": "SUPPORT",
+    "support_desc": "Custom AI Assistant",
+    "support_long_desc": "A smart chatbot that leverages your business knowledge and client files. Let it handle inquiries or assist your customers around the clock.",
+    "trading_title": "TRADING",
+    "trading_desc": "Trading Automation",
+    "trading_long_desc": "Turn your trading strategies into automated systems that work 24/7. Backtest, optimize, and deploy without coding knowledge.",
+    "presentations_title": "PRESENTATIONS",
+    "presentations_desc": "Auto-Generated Presentations",
+    "presentations_long_desc": "Generate weekly client presentations with fresh and relevant data. Save 8+ hours per presentation while delivering results that exceed expectations.",
+    "custom_solution_category": "CUSTOM",
+    "custom_solution_title": "Have a Different Challenge?",
+    "custom_solution_desc": "Don't see your specific need listed? If you can describe it, we can automate it. We build completely custom solutions for any business problem.",
+    "custom_solution_cta": "Let's Discuss Your Needs →"
+  },
+  "About": {
+    "title": "The Expert Behind Your Solution",
+    "name": "Alexandre Kocev",
+    "role": "Automation Specialist",
+    "bio": "My journey from developer and data analyst to an AI & automation specialist is driven by one goal: solving your unique business problems. When you partner with Yoluko, you work directly with me to build a custom solution that gives you back your most valuable asset—time."
+  },
+  "TechIntegration": {
+    "title": "Seamless Integration With Your Tech Ecosystem",
+    "description": "Using a specialized tool? No problem, our technology integrates with EVERY system on the market",
+    "subtext": "+ 200 other tools supported"
+  },
+  "PricingModel": {
+    "title": "Risk-Free Pricing That Makes Sense",
+    "traditional_approach": "The Traditional Way",
+    "traditional_feature1": "Large upfront development fees",
+    "traditional_feature2": "Pay before seeing any results",
+    "traditional_feature3": "Unexpected maintenance costs",
+    "traditional_feature4": "Long-term lock-in contracts",
+    "traditional_feature5": "One-size-fits-all solutions",
+    "yoluko_approach": "The Yoluko Way",
+    "yoluko_recommended": "Recommended",
+    "yoluko_feature1": "$0 upfront development",
+    "yoluko_feature2": "Pay only when you're satisfied",
+    "yoluko_feature3": "All-inclusive subscription",
+    "yoluko_feature4": "Cancel anytime, no questions asked",
+    "yoluko_feature5": "Fully customized to your needs",
+    "cta": "Get a Custom Quote"
+  },
+  "FAQ": {
+    "title": "Questions You Might Have",
+    "q1": "How do you handle unexpected scenarios?",
+    "a1": "Our solutions include robust exception handling and automated monitoring to flag any issues, which we promptly address as part of your subscription.",
+    "q2": "What if our business processes change after automation?",
+    "a2": "Our team is here to help! We can easily update and adapt your solution as your business evolves.",
+    "q3": "Will my team need technical skills to use the solution?",
+    "a3": "Absolutely not. We design intuitive, user-friendly interfaces that anyone on your team can use with minimal to no training.",
+    "q4": "How do you ensure our data is secure?",
+    "a4": "We use enterprise-grade security protocols and host our solutions on secure cloud platforms like Google Cloud, ensuring your data is always protected.",
+    "q5": "What's included in the monthly subscription?",
+    "a5": "Everything: initial development, deployment, hosting, ongoing maintenance, security updates, and dedicated support.",
+    "q6": "How long does implementation typically take?",
+    "a6": "Depending on complexity, a custom solution is typically ready in 2-6 weeks, with minimal disruption to your daily operations."
+  },
+  "ContactSection": {
+    "title": "Ready to Automate Your Business?",
+    "subtitle": "Tell us about your challenge, and we'll get back to you within 24 hours with a plan.",
+    "name_placeholder": "Your Name",
+    "email_placeholder": "Your Email",
+    "message_placeholder": "What's the one task you wish you never had to do again?",
+    "send_button": "Send Message",
+    "toast_title": "Message Sent!",
+    "toast_description": "We'll get back to you within 24 hours with a plan.",
+    "voice_chat_prompt_title": "Prefer to talk?",
+    "voice_chat_prompt_desc": "Skip the form. Schedule a free, no-obligation 30-minute consultation directly with an automation expert.",
+    "voice_chat_cta": "Schedule Your Free Call"
+  },
+  "Footer": {
+    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
+    "email": "contact@yoluko.com"
+  }
+} 
