@@ -3,14 +3,10 @@ import {
     Mail, 
     Calendar, 
     CreditCard, 
-    FileSpreadsheet, 
     MessageSquare, 
-    Users, 
     BarChart3,
     Cloud,
     Zap,
-    ShoppingCart,
-    Settings
   } from "lucide-react";
 
   interface TechIntegrationProps {

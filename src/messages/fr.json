@@ -8,10 +8,12 @@
   },
   "Navigation": {
     "home": "Yoluko Solutions",
-    "caseStudies": "Études de Cas",
+    "solutions": "Solutions",
     "pricing": "Tarifs",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Consultation Gratuite",
+    "ctaMobile": "Commencer"
   },
   "HeroSection": {
     "title": "Dites adieu aux tâches répétitives",
@@ -70,21 +72,6 @@
     "role": "Spécialiste en Automatisation",
     "bio": "Mon parcours de développeur et d'analyste de données à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre vos problèmes d'entreprise uniques. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution sur mesure qui vous redonne votre atout le plus précieux : le temps."
   },
-  "ProvenResults": {
-    "title": "Cas Concrets, Résultats Prouvés",
-    "proactive_alerts_title": "Système d'alerte proactive pour clients",
-    "proactive_alerts_before": "AVANT : Des incidents détectés trop tard, après que les clients aient déjà signalé les problèmes, créant frustration et perte de confiance",
-    "proactive_alerts_after": "APRÈS : Notre système d'alerte surveille en temps réel les données de votre CRM pour vous notifier dès qu'un problème potentiel survient. 83% des incidents sont maintenant traités avant même que les clients ne les remarquent, améliorant la fidélisation.",
-    "ecommerce_automation_title": "Automatisation d'Analyses E-commerce",
-    "ecommerce_automation_before": "AVANT : Les rapports hebdomadaires de la plateforme e-commerce et des outils d'analyse web nécessitaient plus de 8h chaque lundi, avec une qualité de données variable et peu de temps pour l'analyse approfondie.",
-    "ecommerce_automation_after": "APRÈS : Notre pipeline de données avec tableaux de bord personnalisés a supprimé tout travail manuel tout en garantissant 100% de précision. L'équipe a récupéré plus de 32 heures par mois.",
-    "multichannel_dashboard_title": "Tableau de Bord Multi-Plateforme",
-    "multichannel_dashboard_before": "AVANT : Les décideurs devaient jongler entre 7 plateformes différentes, sans pouvoir obtenir une vision globale des performances.",
-    "multichannel_dashboard_after": "APRÈS : Notre tableau de bord centralise les données en temps réel de toutes les sources, permettant des décisions stratégiques basées sur une vue d'ensemble complète.",
-    "trading_system_title": "Système de trading 100% automatisé",
-    "trading_system_before": "AVANT : Trader utilisant l'analyse manuelle de graphiques et son intuition, sans méthode structurée pour tester ses stratégies. Plus de 20 heures par semaine consacrées à surveiller les marchés et passer des ordres manuellement.",
-    "trading_system_after": "APRÈS : Système de trading entièrement automatisé avec backtest, entrée et sortie automatisées, position sizing, gestion de portefeuille et des risques. Système fonctionnel 24h/24 !"
-  },
   "TechIntegration": {
     "title": "Compatible avec tous vos outils",
     "description": "Notre philosophie : c'est à nos solutions de s'adapter à vos outils, jamais l'inverse.",
@@ -131,11 +118,10 @@
     "toast_description": "Nous vous répondrons dans les 24 heures avec un plan.",
     "voice_chat_prompt_title": "Vous préférez parler ?",
     "voice_chat_prompt_desc": "Évitez le formulaire. Planifiez une consultation gratuite de 30 minutes, sans engagement, directement avec un expert en automatisation.",
-    "voice_chat_cta": "Réserver votre consultation gratuite",
-    "cta_subtext": "Sans engagement, uniquement des conseils utiles"
+    "voice_chat_cta": "Réserver votre consultation gratuite"
   },
   "Footer": {
-    "copy": "©2025 Yoluko Solutions",
+    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
     "email": "contact@yoluko.com"
   }
 } 

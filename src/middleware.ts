@@ -13,8 +13,7 @@ function getLocale(request: NextRequest): string {
   
   try {
     return match(languages, locales, defaultLocale);
-  } catch (e) {
-    console.error(e); // Or just remove 'e' if you don't want to log it
+  } catch {
     return defaultLocale;
   }
 }
