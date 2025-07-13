@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, ExternalLink } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 
 interface ContactSectionProps {
   t: {
@@ -21,63 +19,10 @@ interface ContactSectionProps {
     voice_chat_prompt_desc: string;
     voice_chat_cta: string;
   };
+  lang: string;
 }
 
-export const ContactSection = ({t}: ContactSectionProps) => {
-  const [formData, setFormData] = useState({
-    name: "John Smith",
-    email: "john@company.com",
-    message: "Tell us more about you, your company, painpoints..."
-  });
-
-  const [isMessageFocused, setIsMessageFocused] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast({
-      title: t.toast_title,
-      description: t.toast_description,
-    });
-    setFormData({ name: "", email: "", message: "" });
-    setIsMessageFocused(false);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleMessageFocus = () => {
-    setIsMessageFocused(true);
-    if (formData.message === "Tell us more about you, your company, painpoints...") {
-      setFormData({
-        ...formData,
-        message: ""
-      });
-    }
-  };
-
-  const handleNameFocus = () => {
-    if (formData.name === "John Smith") {
-      setFormData({
-        ...formData,
-        name: ""
-      });
-    }
-  };
-
-  const handleEmailFocus = () => {
-    if (formData.email === "john@company.com") {
-      setFormData({
-        ...formData,
-        email: ""
-      });
-    }
-  };
-
+export const ContactSection = ({t, lang}: ContactSectionProps) => {
   return (
     <section id="contact" className="py-20 px-4 md:px-6 bg-yoluko-navy">
       <div className="container mx-auto">
@@ -93,19 +38,25 @@ export const ContactSection = ({t}: ContactSectionProps) => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Left Column - Contact Form */}
           <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in h-full flex flex-col">
-            <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
+            <form 
+              acceptCharset="UTF-8" 
+              action="https://formspree.io/f/mpwdnjln" 
+              method="POST" 
+              encType="multipart/form-data" 
+              autoComplete="on" 
+              target="_self"
+              className="space-y-6 flex-1 flex flex-col"
+              key={lang}
+            >
+              <input type="hidden" name="_next" value={`/${lang}/success`} />
               <div>
                 <Input
                   type="text"
                   name="name"
                   placeholder={t.name_placeholder}
-                  value={formData.name}
-                  onChange={handleChange}
-                  onFocus={handleNameFocus}
                   required
-                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
-                    formData.name === "John Smith" ? 'text-gray-400' : 'text-gray-900'
-                  }`}
+                  autoComplete="off"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange text-gray-900 placeholder:text-gray-500"
                 />
               </div>
               <div>
@@ -113,27 +64,17 @@ export const ContactSection = ({t}: ContactSectionProps) => {
                   type="email"
                   name="email"
                   placeholder={t.email_placeholder}
-                  value={formData.email}
-                  onChange={handleChange}
-                  onFocus={handleEmailFocus}
                   required
-                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
-                    formData.email === "john@company.com" ? 'text-gray-400' : 'text-gray-900'
-                  }`}
+                  autoComplete="off"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange text-gray-900 placeholder:text-gray-500"
                 />
               </div>
               <div className="flex-1">
                 <Textarea
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  onFocus={handleMessageFocus}
                   required
-                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none h-full min-h-[150px] ${
-                    !isMessageFocused && formData.message === "Tell us more about you, your company, painpoints..." 
-                      ? 'text-gray-400' 
-                      : 'text-gray-900'
-                  }`}
+                  autoComplete="off"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none h-full min-h-[150px] text-gray-900 placeholder:text-gray-500"
                   placeholder={t.message_placeholder}
                 />
               </div>

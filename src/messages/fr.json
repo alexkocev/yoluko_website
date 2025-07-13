@@ -38,33 +38,51 @@
   },
   "SolutionsShowcase": {
     "title": "Des solutions concrètes qui répondent aux défis de votre entreprise",
-    "finance_title": "FINANCE",
-    "finance_desc": "Gestion intelligente de vos données financières",
-    "finance_long_desc": "Vos rapports financiers livrés automatiquement chaque matin à 7h. Économisez plus de 15 heures par mois et éliminez complètement les erreurs de reporting.",
-    "accounting_title": "COMPTABILITÉ",
-    "accounting_desc": "Automatisation des réconciliations bancaires",
-    "accounting_long_desc": "Traitez des semaines entières de transactions en quelques minutes avec une fiabilité de 99,8%. Notre solution maîtrise même les opérations les plus complexes.",
-    "analysis_title": "ANALYSE",
-    "analysis_desc": "Tableaux de bord décisionnels",
-    "analysis_long_desc": "Regroupez toutes vos données business à un seul endroit, structurées automatiquement. Prenez des décisions stratégiques fondées sur des informations à jour de toutes vos sources.",
-    "reporting_title": "REPORTING",
-    "reporting_desc": "Rapports clients premium",
-    "reporting_long_desc": "Offrez des rapports professionnels et personnalisés à vos clients ou en interne sans aucun effort manuel. Fini le temps perdu sur leur conception, notre système les génère automatiquement pour vous.",
-    "marketing_title": "MARKETING",
-    "marketing_desc": "Gestion automatisée des réseaux sociaux",
-    "marketing_long_desc": "Maintenez une présence efficace en ligne sans y consacrer des heures. Augmentez votre engagement de 40% tout en réduisant le temps de création de contenu de 75%.",
-    "support_title": "SUPPORT",
-    "support_desc": "Assistant IA sur mesure",
-    "support_long_desc": "Un chatbot intelligent qui exploite les connaissances spécifiques de votre entreprise et vos fichiers clients. Laissez-le répondre à toutes vos questions ou assister vos clients en continu.",
-    "trading_title": "TRADING",
-    "trading_desc": "Systèmes de trading automatisés",
-    "trading_long_desc": "Transformez vos stratégies de trading en systèmes autonomes opérationnels 24h/24. Testez, optimisez et déployez sans aucune expertise en programmation.",
-    "presentations_title": "PRÉSENTATIONS",
-    "presentations_desc": "Présentations optimisées",
-    "presentations_long_desc": "Générez des présentations clients hebdomadaires avec des données fraîches et pertinentes. Économisez plus de 8 heures par présentation tout en offrant des résultats à la hauteur de toutes vos envies.",
+    "solutions": [
+      {
+        "category": "ANALYSE",
+        "title": "Tableaux de Bord Décisionnels",
+        "description": "Regroupez toutes vos données business en un seul endroit, structurées automatiquement. Prenez des décisions stratégiques fondées sur des informations à jour de toutes vos sources."
+      },
+      {
+        "category": "REPORTING",
+        "title": "Rapports de Performance Automatisés",
+        "description": "Un assistant qui livre vos rapports de performance clés directement dans votre boîte mail, de manière journalière, hebdomadaire ou mensuelle."
+      },
+      {
+        "category": "COMPTABILITÉ",
+        "title": "Automatisation des Rapprochements Bancaires",
+        "description": "Un spécialiste virtuel qui traite des semaines de transactions en quelques minutes avec une fiabilité de 99,8%, maîtrisant même les opérations les plus complexes."
+      },
+      {
+        "category": "OPÉRATIONS",
+        "title": "Superviseur Opérationnel 24/7",
+        "description": "Un superviseur automatisé qui envoie des notifications instantanées via Slack ou e-mail pour vos indicateurs clés, avant que les petits problèmes ne deviennent critiques."
+      },
+      {
+        "category": "STRATÉGIE",
+        "title": "Assistant IA à la Demande",
+        "description": "Une IA conversationnelle et sécurisée à qui vous pouvez poser n'importe quelle question stratégique et obtenir des réponses instantanées basées sur vos données."
+      },
+      {
+        "category": "MARKETING",
+        "title": "Gestion Automatisée des Réseaux Sociaux",
+        "description": "Un gestionnaire IA pour maintenir une présence en ligne constante sans effort. Augmentez l'engagement de 40% tout en réduisant le temps de création de contenu de 75%."
+      },
+      {
+        "category": "RH",
+        "title": "Assistant RH Automatisé",
+        "description": "Un assistant automatisé pour vous aider à trouver, filtrer et présélectionner les meilleurs candidats pour n'importe quel poste."
+      },
+      {
+        "category": "TRADING",
+        "title": "Système de Trading Automatisé",
+        "description": "Un stratège 24h/24 et 7j/7 qui transforme vos idées de trading en un système entièrement automatisé. Testez, optimisez et déployez avec précision."
+      }
+    ],
     "custom_solution_category": "PERSONNALISÉ",
-    "custom_solution_title": "Un Défi Différent ?",
-    "custom_solution_desc": "Vous ne trouvez pas votre besoin spécifique dans la liste ? Si vous pouvez le décrire, nous pouvons l'automatiser. Nous créons des solutions entièrement sur mesure pour n'importe quel problème métier.",
+    "custom_solution_title": "Un autre défis?",
+    "custom_solution_desc": "Vous ne trouvez pas votre besoin spécifique dans la liste ? Si vous pouvez le décrire, nous pouvons l'automatiser. Nous créons des solutions entièrement sur mesure pour répondre à n'importe quelle problématique.",
     "custom_solution_cta": "Discutons de vos besoins →"
   },
   "About": {
@@ -111,20 +129,27 @@
     "a6": "Entre 2 et 6 semaines selon la complexité du projet, avec un impact minimal sur vos opérations quotidiennes"
   },
   "ContactSection": {
-    "title": "Envie d'Automatiser Votre Entreprise?",
-    "subtitle": "Parlez-nous de votre défi, et nous vous répondrons dans les 24 heures avec un plan.",
-    "name_placeholder": "Votre Nom",
-    "email_placeholder": "Votre Email",
-    "message_placeholder": "Quelle est la tâche que vous aimeriez ne plus jamais avoir à faire ?",
-    "send_button": "Envoyer",
-    "toast_title": "Message Envoyé !",
-    "toast_description": "Nous vous répondrons dans les 24 heures avec un plan.",
-    "voice_chat_prompt_title": "Vous préférez parler ?",
-    "voice_chat_prompt_desc": "Évitez le formulaire. Planifiez une consultation gratuite de 30 minutes, sans engagement, directement avec un expert en automatisation.",
-    "voice_chat_cta": "Réserver votre consultation gratuite"
+    "title": "Automatisez votre entreprise",
+    "subtitle": "Remplissez le formulaire ci-dessous ou planifiez un appel directement avec notre équipe.",
+    "name_placeholder": "Nom",
+    "email_placeholder": "Email",
+    "message_placeholder": "Parlez-nous de votre entreprise et du process que vous souhaitez automatiser...",
+    "send_button": "Envoyer le message",
+    "toast_title": "Message envoyé !",
+    "toast_description": "Nous vous répondrons bientôt.",
+    "voice_chat_prompt_title": "Vous préférez un chat vocal ?",
+    "voice_chat_prompt_desc": "Planifiez un appel de 30 minutes pour discuter de votre projet en détail.",
+    "voice_chat_cta": "Planifier un appel"
+  },
+  "success_page": {
+    "title": "Message Envoyé !",
+    "message": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.",
+    "back_button": "Retour à l'accueil"
   },
   "Footer": {
     "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
-    "email": "contact@yoluko.com"
+    "email": "contact@yoluko.com",
+    "description": "Des solutions logicielles personnalisées pour développer votre entreprise.",
+    "contact_email": "E-mail de contact"
   }
 } 

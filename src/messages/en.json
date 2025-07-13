@@ -38,30 +38,48 @@
   },
   "SolutionsShowcase": {
     "title": "Your Business Challenges, Solved",
-    "finance_title": "FINANCE",
-    "finance_desc": "Financial Data Automation",
-    "finance_long_desc": "Get morning reports ready by 7AM daily with zero effort. Save 15+ hours monthly while eliminating reporting errors.",
-    "accounting_title": "ACCOUNTING",
-    "accounting_desc": "Automatic Reconciliations",
-    "accounting_long_desc": "Process weeks of transactions in minutes with 99.8% accuracy. Even handles those tricky unusual transactions.",
-    "analysis_title": "ANALYTICS",
-    "analysis_desc": "Data Insights Dashboard",
-    "analysis_long_desc": "All your business data in one place, automatically organized. Make better decisions with up-to-date information from every source.",
-    "reporting_title": "REPORTING",
-    "reporting_desc": "Automated Client Reports",
-    "reporting_long_desc": "Deliver premium-quality reports to clients without the manual work. Turn reporting from a cost center into a revenue stream.",
-    "marketing_title": "MARKETING",
-    "marketing_desc": "Social Media Automation",
-    "marketing_long_desc": "Maintain your social presence consistently without the daily grind. Boost engagement by 40% while reducing content creation time by 75%.",
-    "support_title": "SUPPORT",
-    "support_desc": "Custom AI Assistant",
-    "support_long_desc": "A smart chatbot that leverages your business knowledge and client files. Let it handle inquiries or assist your customers around the clock.",
-    "trading_title": "TRADING",
-    "trading_desc": "Trading Automation",
-    "trading_long_desc": "Turn your trading strategies into automated systems that work 24/7. Backtest, optimize, and deploy without coding knowledge.",
-    "presentations_title": "PRESENTATIONS",
-    "presentations_desc": "Auto-Generated Presentations",
-    "presentations_long_desc": "Generate weekly client presentations with fresh and relevant data. Save 8+ hours per presentation while delivering results that exceed expectations.",
+    "solutions": [
+      {
+        "category": "ANALYTICS",
+        "title": "Data Insights Dashboard",
+        "description": "All your business data in one place, automatically organized. Make better decisions with up-to-date information from every source."
+      },
+      {
+        "category": "REPORTING",
+        "title": "Automated Reporting Assistant",
+        "description": "An assistant that delivers your key performance summaries directly to your team's inbox on a daily, weekly, or monthly schedule."
+      },
+      {
+        "category": "ACCOUNTING",
+        "title": "Automated Reconciliation Specialist",
+        "description": "A virtual specialist that processes weeks of financial transactions in minutes with 99.8% accuracy, even handling tricky, unusual cases."
+      },
+      {
+        "category": "OPERATIONS",
+        "title": "Live Operations Monitor",
+        "description": "An automated monitor that sends instant notifications via Slack or email for the metrics that matter most, before small issues become big problems."
+      },
+      {
+        "category": "STRATEGY",
+        "title": "On-Demand AI Business Analyst",
+        "description": "A secure, conversational AI you can ask any strategic question about your business and get instant, data-backed answers."
+      },
+      {
+        "category": "MARKETING",
+        "title": "AI Social Media Manager",
+        "description": "An AI manager to maintain your social presence consistently without the daily grind. Boost engagement by 40% while reducing content creation time by 75%."
+      },
+      {
+        "category": "HR",
+        "title": "Automated HR Assistant",
+        "description": "An automated assistant to help you find, screen, and shortlist the best candidates for any open role."
+      },
+      {
+        "category": "TRADING",
+        "title": "Automated Trading Strategist",
+        "description": "A 24/7 strategist that turns your trading ideas into a fully automated system. Backtest, optimize, and deploy with precision."
+      }
+    ],
     "custom_solution_category": "CUSTOM",
     "custom_solution_title": "Have a Different Challenge?",
     "custom_solution_desc": "Don't see your specific need listed? If you can describe it, we can automate it. We build completely custom solutions for any business problem.",
@@ -111,17 +129,22 @@
     "a6": "Depending on complexity, a custom solution is typically ready in 2-6 weeks, with minimal disruption to your daily operations."
   },
   "ContactSection": {
-    "title": "Ready to Automate Your Business?",
-    "subtitle": "Tell us about your challenge, and we'll get back to you within 24 hours with a plan.",
-    "name_placeholder": "Your Name",
-    "email_placeholder": "Your Email",
-    "message_placeholder": "What's the one task you wish you never had to do again?",
+    "title": "Automate Your Business",
+    "subtitle": "Fill out the form below or schedule a direct call with our team.",
+    "name_placeholder": "Name",
+    "email_placeholder": "Email",
+    "message_placeholder": "Tell us a bit about your business and the process you'd like to automate...",
     "send_button": "Send Message",
     "toast_title": "Message Sent!",
-    "toast_description": "We'll get back to you within 24 hours with a plan.",
-    "voice_chat_prompt_title": "Prefer to talk?",
-    "voice_chat_prompt_desc": "Skip the form. Schedule a free, no-obligation 30-minute consultation directly with an automation expert.",
-    "voice_chat_cta": "Schedule Your Free Call"
+    "toast_description": "We'll get back to you soon.",
+    "voice_chat_prompt_title": "Prefer a Voice Chat?",
+    "voice_chat_prompt_desc": "Schedule a 30-minute call to discuss your project in detail.",
+    "voice_chat_cta": "Schedule a Call"
+  },
+  "success_page": {
+    "title": "Message Sent!",
+    "message": "Thank you for contacting us. We will get back to you shortly.",
+    "back_button": "Back to Home"
   },
   "Footer": {
     "copy": "© 2025 Yoluko Solutions | All Rights Reserved",

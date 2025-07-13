@@ -40,7 +40,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
       <TechIntegration t={dict.TechIntegration} />
       <PricingModel t={dict.PricingModel} />
       <FAQ t={dict.FAQ} />
-      <ContactSection t={dict.ContactSection} />
+      <ContactSection t={dict.ContactSection} lang={lang} />
       <Footer t={dict.Footer} />
     </div>
   );
