@@ -49,18 +49,18 @@ export const PricingModel = ({t}: PricingModelProps) => {
   };
 
   return (
-    <section id="pricing" className="py-20 px-6 bg-yoluko-cream">
+    <section id="pricing" className="py-20 px-4 md:px-6 bg-yoluko-cream">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
             {t.title}
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Traditional Approach */}
-          <div className="bg-white rounded-xl p-8 shadow-lg animate-fade-in">
-            <h3 className="text-2xl font-bold text-yoluko-navy mb-6 text-center">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg animate-fade-in">
+            <h3 className="text-xl sm:text-2xl font-bold text-yoluko-navy mb-6 text-center">
               {t.traditional_approach}
             </h3>
             <div className="space-y-4">
@@ -74,12 +74,12 @@ export const PricingModel = ({t}: PricingModelProps) => {
           </div>
 
           {/* Yoluko Approach */}
-          <div className="bg-gradient-to-br from-white to-yoluko-cream rounded-xl p-8 shadow-lg border-2 border-yoluko-orange animate-fade-in relative">
+          <div className="bg-gradient-to-br from-white to-yoluko-cream rounded-xl p-6 md:p-8 shadow-lg border-2 border-yoluko-orange animate-fade-in relative">
             <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yoluko-orange text-white px-4 py-1 text-sm font-semibold">
               <Star className="h-4 w-4 mr-1" />
               {t.yoluko_recommended}
             </Badge>
-            <h3 className="text-2xl font-bold text-yoluko-navy mb-6 text-center mt-2">
+            <h3 className="text-xl sm:text-2xl font-bold text-yoluko-navy mb-6 text-center mt-2">
               {t.yoluko_approach}
             </h3>
             <div className="space-y-4">
@@ -96,7 +96,7 @@ export const PricingModel = ({t}: PricingModelProps) => {
         <div className="text-center animate-fade-in">
           <Button 
             onClick={scrollToContact}
-            className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-8 py-4 text-lg rounded-lg font-semibold transition-all hover-scale"
+            className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold transition-all hover-scale"
           >
             {t.cta}
           </Button>

@@ -97,10 +97,10 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
   };
 
   return (
-    <section id="solutions" className="py-20 px-6 bg-white">
+    <section id="solutions" className="py-20 px-4 md:px-6 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
             {t.title}
           </h2>
         </div>
@@ -125,7 +125,7 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
                     {solution.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-yoluko-navy mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-yoluko-navy mb-3">
                   {solution.title}
                 </h3>
                 <p className="text-yoluko-slate leading-relaxed">
@@ -148,7 +148,7 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
                   {t.custom_solution_category}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-yoluko-navy mb-3">
+              <h3 className="text-lg sm:text-xl font-bold text-yoluko-navy mb-3">
                 {t.custom_solution_title}
               </h3>
               <p className="text-yoluko-slate leading-relaxed mb-4">

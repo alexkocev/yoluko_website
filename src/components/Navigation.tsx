@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 interface NavigationProps {
   t: {
@@ -20,12 +22,18 @@ export const Navigation = ({ t }: NavigationProps) => {
   const pathname = usePathname();
   const currentLang = pathname.split("/")[1];
   const otherLang = currentLang === "en" ? "fr" : "en";
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleLinkClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+    setIsSheetOpen(false);
   };
 
   return (
@@ -79,17 +87,45 @@ export const Navigation = ({ t }: NavigationProps) => {
             </Button>
           </div>
 
-          <div className="md:hidden flex items-center space-x-2">
-            <Link href={`/${otherLang}`} className="flex items-center space-x-1 text-yoluko-navy hover:text-yoluko-teal transition-colors font-medium px-2">
-              <Globe className="h-4 w-4" />
-              <span className="text-sm">{otherLang.toUpperCase()}</span>
-            </Link>
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-4 py-2 text-sm"
-            >
-              {t.cta}
-            </Button>
+          <div className="md:hidden flex items-center">
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6 text-yoluko-navy" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-white p-6 flex flex-col">
+                <SheetHeader className="mb-8 text-left">
+                  <SheetTitle>
+                    <img 
+                      src="/images/LOGO Yoluko.svg" 
+                      alt="Yoluko Solutions" 
+                      className="h-8 w-auto"
+                    />
+                  </SheetTitle>
+                </SheetHeader>
+                
+                <div className="flex flex-col space-y-6 text-center">
+                  <button onClick={() => handleLinkClick("solutions")} className="text-xl text-yoluko-navy hover:text-yoluko-teal transition-colors">{t.solutions}</button>
+                  <button onClick={() => handleLinkClick("pricing")} className="text-xl text-yoluko-navy hover:text-yoluko-teal transition-colors">{t.pricing}</button>
+                  <button onClick={() => handleLinkClick("faq")} className="text-xl text-yoluko-navy hover:text-yoluko-teal transition-colors">{t.faq}</button>
+                  <button onClick={() => handleLinkClick("contact")} className="text-xl text-yoluko-navy hover:text-yoluko-teal transition-colors">{t.contact}</button>
+                </div>
+
+                <div className="mt-auto space-y-4">
+                  <Link href={`/${otherLang}`} className="flex items-center justify-center space-x-2 text-yoluko-navy hover:text-yoluko-teal transition-colors font-medium">
+                    <Globe className="h-5 w-5" />
+                    <span>{otherLang.toUpperCase()}</span>
+                  </Link>
+                  <Button 
+                    onClick={() => handleLinkClick("contact")}
+                    className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 rounded-lg font-semibold transition-all hover-scale"
+                  >
+                    {t.cta}
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

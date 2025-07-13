@@ -12,7 +12,7 @@ interface AboutProps {
 
 export const About = ({t}: AboutProps) => {
   return (
-    <section id="about" className="py-16 px-6 bg-background">
+    <section id="about" className="py-16 px-4 md:px-6 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-yoluko-navy mb-4">

@@ -1,10 +1,15 @@
 // src/app/layout.tsx
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans, GeistMono } from 'geist/font';
 import Script from "next/script";
 import "./globals.css";
 import { getDictionary } from "./dictionaries";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export async function generateMetadata({
   params,
@@ -52,7 +57,7 @@ export async function generateMetadata({
       images: [`${baseUrl}/images/Hero section transparent.png`],
     },
     icons: {
-      icon: '/images/Flavicon Yoluko.svg',
+      icon: '/images/Favicon Yoluko.svg',
     }
   };
 }

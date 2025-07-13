@@ -79,20 +79,20 @@ export const ContactSection = ({t}: ContactSectionProps) => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-yoluko-navy">
+    <section id="contact" className="py-20 px-4 md:px-6 bg-yoluko-navy">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             {t.title}
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
             {t.subtitle}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Left Column - Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-2xl animate-fade-in h-full flex flex-col">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in h-full flex flex-col">
             <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
               <div>
                 <Input
@@ -103,7 +103,7 @@ export const ContactSection = ({t}: ContactSectionProps) => {
                   onChange={handleChange}
                   onFocus={handleNameFocus}
                   required
-                  className={`w-full p-4 text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
+                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
                     formData.name === "John Smith" ? 'text-gray-400' : 'text-gray-900'
                   }`}
                 />
@@ -117,7 +117,7 @@ export const ContactSection = ({t}: ContactSectionProps) => {
                   onChange={handleChange}
                   onFocus={handleEmailFocus}
                   required
-                  className={`w-full p-4 text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
+                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange ${
                     formData.email === "john@company.com" ? 'text-gray-400' : 'text-gray-900'
                   }`}
                 />
@@ -129,7 +129,7 @@ export const ContactSection = ({t}: ContactSectionProps) => {
                   onChange={handleChange}
                   onFocus={handleMessageFocus}
                   required
-                  className={`w-full p-4 text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none h-full min-h-[150px] ${
+                  className={`w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none h-full min-h-[150px] ${
                     !isMessageFocused && formData.message === "Tell us more about you, your company, painpoints..." 
                       ? 'text-gray-400' 
                       : 'text-gray-900'
@@ -139,7 +139,7 @@ export const ContactSection = ({t}: ContactSectionProps) => {
               </div>
               <Button 
                 type="submit"
-                className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-4 text-lg font-semibold transition-all hover-scale"
+                className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 text-base sm:py-4 sm:text-lg font-semibold transition-all hover-scale"
               >
                 {t.send_button}
               </Button>
@@ -148,10 +148,10 @@ export const ContactSection = ({t}: ContactSectionProps) => {
 
           {/* Right Column - Direct Call Scheduling */}
           <div className="text-center space-y-8 animate-fade-in h-full flex flex-col">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 flex-1 flex flex-col justify-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 flex-1 flex flex-col justify-center">
               <div className="mb-6">
-                <Calendar className="h-16 w-16 text-yoluko-orange mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <Calendar className="h-12 sm:h-16 w-12 sm:w-16 text-yoluko-orange mx-auto mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                   {t.voice_chat_prompt_title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -162,7 +162,7 @@ export const ContactSection = ({t}: ContactSectionProps) => {
               <Button 
                 onClick={() => window.open("https://calendly.com/alexandre-kocev-yoluko/30min", "_blank")}
                 variant="outline"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-yoluko-navy px-8 py-4 text-lg font-semibold group transition-all hover-scale"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-yoluko-navy px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg font-semibold group transition-all hover-scale"
               >
                 {t.voice_chat_cta}
                 <ExternalLink className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />

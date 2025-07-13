@@ -12,7 +12,7 @@ interface YolukoDifferenceProps {
 
 export const YolukoDifference = ({t}: YolukoDifferenceProps) => {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-4 md:px-6 bg-white">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image */}
@@ -29,17 +29,17 @@ export const YolukoDifference = ({t}: YolukoDifferenceProps) => {
           {/* Right Column - Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-bold text-yoluko-navy leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yoluko-navy leading-tight">
                 {t.title}
               </h2>
-              <p className="text-xl text-yoluko-slate leading-relaxed">
+              <p className="text-lg sm:text-xl text-yoluko-slate leading-relaxed">
                 {t.description}
               </p>
             </div>
             
             <Button 
               onClick={() => window.open("https://calendly.com/alexandre-kocev-yoluko/30min", "_blank")}
-              className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-8 py-4 text-lg rounded-lg font-semibold group transition-all hover-scale"
+              className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold group transition-all hover-scale"
             >
               {t.cta}
               <ExternalLink className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />

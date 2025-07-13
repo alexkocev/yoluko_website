@@ -30,7 +30,7 @@ import {
   
   export const TechIntegration = ({t}: TechIntegrationProps) => {
     return (
-      <section className="py-12 px-6 bg-gray-50">
+      <section className="py-12 px-4 md:px-6 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-8 animate-fade-in">
             <h2 className="text-2xl lg:text-3xl font-bold text-yoluko-navy mb-4">

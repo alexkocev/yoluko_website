@@ -35,10 +35,10 @@ import {
     ];
 
     return (
-      <section id="faq" className="py-20 px-6 bg-white">
+      <section id="faq" className="py-20 px-4 md:px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
               {t.title}
             </h2>
           </div>
@@ -49,9 +49,9 @@ import {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-gray-50 rounded-lg px-6 border-none"
+                  className="bg-gray-50 rounded-lg px-4 sm:px-6 border-none"
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-yoluko-navy hover:text-yoluko-teal transition-colors">
+                  <AccordionTrigger className="text-left text-base sm:text-lg font-semibold text-yoluko-navy hover:text-yoluko-teal transition-colors">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-yoluko-slate pt-2 pb-6 leading-relaxed">

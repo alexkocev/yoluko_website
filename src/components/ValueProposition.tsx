@@ -39,10 +39,10 @@ export const ValueProposition = ({ t }: ValuePropositionProps) => {
   const icons = [Clock, Shield, Puzzle, Brain];
 
   return (
-    <section className="py-20 px-6 bg-yoluko-cream">
+    <section className="py-20 px-4 md:px-6 bg-yoluko-cream">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yoluko-navy mb-6">
             {t.title}
           </h2>
         </div>
@@ -59,7 +59,7 @@ export const ValueProposition = ({ t }: ValuePropositionProps) => {
                   {React.createElement(icons[index], { className: "h-8 w-8 text-white" })}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-yoluko-navy mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-yoluko-navy mb-4">
                 {point.title}
               </h3>
               <p className="text-yoluko-slate leading-relaxed">

@@ -76,23 +76,23 @@
   "TechIntegration": {
     "title": "Compatible avec tous vos outils",
     "description": "Notre philosophie : c'est à nos solutions de s'adapter à vos outils, jamais l'inverse.",
-    "subtext": "Vous utilisez un outil spécifique ? Pas de problème, notre technologie s'intègre avec TOUS les systèmes existants"
+    "subtext": "+ 200 autres outils pris en charge"
   },
   "PricingModel": {
     "title": "Une tarification simple, transparente et sans engagement",
     "traditional_approach": "Approche traditionnelle",
-    "traditional_feature1": "❌ Frais de développement initiaux élevés",
-    "traditional_feature2": "❌ Paiement avant de voir les résultats",
-    "traditional_feature3": "❌ Frais de maintenance non inclus",
-    "traditional_feature4": "❌ Engagements contractuels rigides",
-    "traditional_feature5": "❌ Solutions standardisées peu adaptables",
+    "traditional_feature1": "Frais de développement initiaux élevés",
+    "traditional_feature2": "Paiement avant de voir les résultats",
+    "traditional_feature3": "Frais de maintenance non inclus",
+    "traditional_feature4": "Engagements contractuels rigides",
+    "traditional_feature5": "Solutions standardisées peu adaptables",
     "yoluko_approach": "L'approche Yoluko Solutions",
     "yoluko_recommended": "Recommandé",
-    "yoluko_feature1": "✅ 0€ de frais de développement initial",
-    "yoluko_feature2": "✅ Paiement uniquement après satisfaction",
-    "yoluko_feature3": "✅ Maintenance et mises à jour incluses",
-    "yoluko_feature4": "✅ Résiliation possible à tout moment",
-    "yoluko_feature5": "✅ Solutions 100% sur mesure pour vous",
+    "yoluko_feature1": "0€ de frais de développement initial",
+    "yoluko_feature2": "Paiement uniquement après satisfaction",
+    "yoluko_feature3": "Maintenance et mises à jour incluses",
+    "yoluko_feature4": "Résiliation possible à tout moment",
+    "yoluko_feature5": "Solutions 100% sur mesure pour vous",
     "cta": "Demandez votre devis gratuit"
   },
   "FAQ": {
