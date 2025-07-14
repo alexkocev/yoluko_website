@@ -21,7 +21,7 @@
     "cta": "Discutons de votre projet"
   },
   "ValueProposition": {
-    "title": "Des solutions sur mesure pour les défis uniques de votre entreprise",
+    "title": "Nous concevons des solutions personnalisées pour relever tous vos défis",
     "time": "Gagnez du Temps",
     "time_desc": "Réduisez le temps consacré aux tâches manuelles grâce à des process entièrement automatisés",
     "no_hidden_fees": "Aucun frais caché",
@@ -77,19 +77,19 @@
       {
         "category": "TRADING",
         "title": "Système de Trading Automatisé",
-        "description": "Un stratège 24h/24 et 7j/7 qui transforme vos idées de trading en un système entièrement automatisé. Testez, optimisez et déployez avec précision."
+        "description": "Transformez vos stratégies de trading en systèmes autonomes opérationnels 24h/24. Testez, optimisez et déployez sans aucune expertise en programmation."
       }
     ],
     "custom_solution_category": "PERSONNALISÉ",
     "custom_solution_title": "Un autre défis?",
-    "custom_solution_desc": "Vous ne trouvez pas votre besoin spécifique dans la liste ? Si vous pouvez le décrire, nous pouvons l'automatiser. Nous créons des solutions entièrement sur mesure pour répondre à n'importe quelle problématique.",
+    "custom_solution_desc": "Vous ne trouvez pas votre besoin spécifique dans la liste ? Si vous pouvez le décrire, nous pouvons l'automatiser. Nous créons des solutions sur mesure pour répondre à n'importe quelle problématique.",
     "custom_solution_cta": "Discutons de vos besoins →"
   },
   "About": {
     "title": "L'Expert Derrière Votre Solution",
     "name": "Alexandre Kocev",
     "role": "Spécialiste en Automatisation",
-    "bio": "Mon parcours de développeur et d'analyste de données à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre vos problèmes d'entreprise uniques. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution sur mesure qui vous redonne votre atout le plus précieux : le temps."
+    "bio": "Mon parcours de développeur et data analyst à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre tous vos problèmes d'entreprise. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution sur mesure qui vous redonne votre atout le plus précieux : le temps."
   },
   "TechIntegration": {
     "title": "Compatible avec tous vos outils",

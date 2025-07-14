@@ -50,7 +50,7 @@
 
 @layer base {
   :root {
-    --background: 250 250 250; /* Clean off-white */
+    --background: 0 0% 100%; /* Clean off-white */
     --foreground: 27 31 59; /* Yoluko Navy */
 
     --card: 0 0% 100%;
@@ -91,7 +91,7 @@
   }
 
   .dark {
-    --background: 27 31 59;
+    --background: 222.2 84% 4.9%;
     --foreground: 250 250 250;
 
     --card: 27 31 59;

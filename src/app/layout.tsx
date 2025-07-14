@@ -39,14 +39,6 @@ export async function generateMetadata({
       description: dict.metadata.description,
       url: `${baseUrl}/${lang}`,
       siteName: "Yoluko Solutions",
-      images: [
-        {
-          url: `${baseUrl}/images/Hero section transparent.png`,
-          width: 1200,
-          height: 630,
-          alt: dict.metadata.title.default,
-        },
-      ],
       locale: lang === 'en' ? 'en_US' : 'fr_FR',
       type: "website",
     },
@@ -54,11 +46,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dict.metadata.title.default,
       description: dict.metadata.description,
-      images: [`${baseUrl}/images/Hero section transparent.png`],
     },
-    icons: {
-      icon: '/images/Favicon Yoluko.svg',
-    }
   };
 }
 
