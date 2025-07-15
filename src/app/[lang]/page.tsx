@@ -13,15 +13,14 @@ import { getDictionary } from "@/app/dictionaries";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
-  params,
+  params: { lang },
 }: {
-  params: { lang:string };
+  params: { lang: string };
 }): Promise<Metadata> {
-  const { lang } = await params;
   const dict = await getDictionary(lang);
   return {
-    title: dict.HeroSection.title,
-    description: dict.HeroSection.subtitle,
+    title: dict.metadata.title.default,
+    description: dict.metadata.description,
   };
 }
 
