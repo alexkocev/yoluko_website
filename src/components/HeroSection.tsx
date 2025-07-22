@@ -1,6 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Lottie from "lottie-react";
+import React, { useState } from "react";
+import animationData from "./Animation_HeroSection.json";
 
 interface HeroSectionProps {
   t: {
@@ -9,6 +12,29 @@ interface HeroSectionProps {
     cta: string;
   };
 }
+
+const LottieAnimation = () => {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return (
+      <img
+        src="/images/Hero section transparent__.png"
+        alt="Fallback"
+        className="w-full max-w-md h-auto"
+      />
+    );
+  }
+
+  return (
+    <Lottie
+      animationData={animationData}
+      loop={true}
+      className="w-full max-w-md h-auto"
+      onError={() => setHasError(true)}
+    />
+  );
+};
 
 export const HeroSection = ({ t }: HeroSectionProps) => {
   const scrollToContact = () => {
@@ -42,13 +68,9 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
             </Button>
           </div>
 
-          {/* Right Column - Updated Hero Image */}
+          {/* Right Column - Updated Hero Video */}
           <div className="relative animate-scale-in flex justify-center items-center">
-            <img 
-              src="/images/Hero section transparent.png" 
-              alt="Modern 3D automation workflow illustration" 
-              className="w-full max-w-md h-auto"
-            />
+            <LottieAnimation />
           </div>
         </div>
       </div>
