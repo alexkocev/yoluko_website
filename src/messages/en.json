@@ -147,6 +147,8 @@
     "back_button": "Back to Home"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | AI Automation Agency in Lyon, France | All Rights Reserved | contact@yoluko.com"
+    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
+    "email": "contact@yoluko.com",
+    "address": "AI Automation Agency in Lyon, France"
   }
 } 

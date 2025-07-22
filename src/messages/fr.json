@@ -147,6 +147,8 @@
     "back_button": "Retour à l'accueil"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | Agence d'automatisation IA à Lyon, France | Tous droits réservés | contact@yoluko.com"
+    "copy": "© 2025 Yoluko Solutions | Tous droits réservés",
+    "email": "contact@yoluko.com",
+    "address": "Agence d'automatisation IA à Lyon, France"
   }
 } 
