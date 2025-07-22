@@ -6,17 +6,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const languages = ['en', 'fr'];
 
   const sitemapEntries = pages.flatMap(page => 
-    languages.map(lang => ({
-      url: `${baseUrl}/${lang}${page}`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          'x-default': `${baseUrl}/en${page}`,
-          'en': `${baseUrl}/en${page}`,
-          'fr': `${baseUrl}/fr${page}`,
+    languages.map(lang => {
+      const url = `${baseUrl}/${lang}${page}`;
+      const alternates: { [key: string]: string } = {};
+      languages.forEach(altLang => {
+        alternates[altLang] = `${baseUrl}/${altLang}${page}`;
+      });
+
+      return {
+        url,
+        lastModified: new Date(),
+        alternates: {
+          languages: {
+            ...alternates,
+            'x-default': `${baseUrl}/en${page}`,
+          },
         },
-      },
-    }))
+      };
+    })
   );
 
   return sitemapEntries;

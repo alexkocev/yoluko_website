@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": {
-      "default": "Yoluko Solutions | Custom Business Automation",
+      "default": "AI Automation Agency | Custom Business Automation | Yoluko Solutions",
       "template": "%s | Yoluko Solutions"
     },
-    "description": "Transform repetitive tasks into automated workflows with Yoluko Solutions. Custom business automation with no hidden costs, flexible integration, and AI where it matters. Free consultation."
+    "description": "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency. Contact our automation agency in Lyon, France for a free consultation."
   },
   "Navigation": {
     "home": "Yoluko Solutions",
@@ -116,7 +116,7 @@
   "FAQ": {
     "title": "Questions You Might Have",
     "q1": "How do you handle unexpected scenarios?",
-    "a1": "Our solutions include robust exception handling and automated monitoring to flag any issues, which we promptly address as part of your subscription.",
+    "a1": "Our AI automation solutions include robust exception handling and automated monitoring to flag any issues, which we promptly address as part of your subscription.",
     "q2": "What if our business processes change after automation?",
     "a2": "Our team is here to help! We can easily update and adapt your solution as your business evolves.",
     "q3": "Will my team need technical skills to use the solution?",
@@ -126,7 +126,7 @@
     "q5": "What's included in the monthly subscription?",
     "a5": "Everything: initial development, deployment, hosting, ongoing maintenance, security updates, and dedicated support.",
     "q6": "How long does implementation typically take?",
-    "a6": "Depending on complexity, a custom solution is typically ready in 2-6 weeks, with minimal disruption to your daily operations."
+    "a6": "Depending on complexity, a custom automation solution is typically ready in 2-6 weeks, with minimal disruption to your daily operations."
   },
   "ContactSection": {
     "title": "Automate Your Business",
@@ -147,7 +147,6 @@
     "back_button": "Back to Home"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
-    "email": "contact@yoluko.com"
+    "copy": "© 2025 Yoluko Solutions | AI Automation Agency in Lyon, France | All Rights Reserved | contact@yoluko.com"
   }
 } 

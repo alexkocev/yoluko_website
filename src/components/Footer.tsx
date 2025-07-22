@@ -3,6 +3,7 @@ interface FooterProps {
   t: {
     copy: string;
     email: string;
+    address: string;
   };
 }
 
@@ -20,6 +21,9 @@ export const Footer = ({t}: FooterProps) => {
             >
               {t.email}
             </a>
+            <p className="text-gray-400 text-sm">
+              {t.address}
+            </p>
           </div>
         </div>
       </footer>

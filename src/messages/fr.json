@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": {
-      "default": "Yoluko Solutions | Automatisation d'Entreprise sur Mesure",
+      "default": "Agence d'Automatisation IA | Automatisation sur Mesure | Yoluko Solutions",
       "template": "%s | Yoluko Solutions"
     },
-    "description": "Transformez les tâches répétitives en flux de travail automatisés avec Yoluko Solutions. Automatisation d'entreprise sur mesure sans coûts cachés, intégration flexible et IA là où c'est pertinent. Consultation gratuite."
+    "description": "Yoluko est une agence d'automatisation IA qui crée des solutions sur mesure pour votre entreprise. Des rapports automatisés aux assistants IA, nous vous aidons à gagner du temps et à améliorer votre efficacité. Contactez notre agence d'automatisation à Lyon, France pour une consultation gratuite."
   },
   "Navigation": {
     "home": "Yoluko Solutions",
@@ -23,7 +23,7 @@
   "ValueProposition": {
     "title": "Nous concevons des solutions personnalisées pour relever tous vos défis",
     "time": "Gagnez du Temps",
-    "time_desc": "Réduisez le temps consacré aux tâches manuelles grâce à des process entièrement automatisés",
+    "time_desc": "Réduisez le temps consacré aux tâches manuelles grâce à des process d'automatisation d'entreprise entièrement automatisés",
     "no_hidden_fees": "Aucun frais caché",
     "no_hidden_fees_desc": "Tarification mensuelle transparente sans aucun coût initial d'implémentation",
     "compatible": "Compatible avec vos outils",
@@ -88,8 +88,8 @@
   "About": {
     "title": "L'Expert Derrière Votre Solution",
     "name": "Alexandre Kocev",
-    "role": "Spécialiste en Automatisation",
-    "bio": "Mon parcours de développeur et data analyst à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre tous vos problèmes d'entreprise. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution sur mesure qui vous redonne votre atout le plus précieux : le temps."
+    "role": "Spécialiste en Automatisation IA",
+    "bio": "Mon parcours de développeur et data analyst à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre tous vos problèmes d'entreprise. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution d'automatisation IA sur mesure qui vous redonne votre atout le plus précieux : le temps."
   },
   "TechIntegration": {
     "title": "Compatible avec tous vos outils",
@@ -116,7 +116,7 @@
   "FAQ": {
     "title": "Questions Fréquentes",
     "q1": "Comment gérez-vous les situations imprévues ?",
-    "a1": "Toutes nos solutions bénéficient d'une surveillance proactive 24h/24 avec intervention garantie sous 24h",
+    "a1": "Toutes nos solutions d'automatisation IA bénéficient d'une surveillance proactive 24h/24 avec intervention garantie sous 24h",
     "q2": "Que se passe-t-il si nos besoins évoluent ?",
     "a2": "Notre équipe reste à votre disposition pour adapter votre solution. Nous implémentons les nouvelles fonctionnalités dont vous avez besoin.",
     "q3": "Faut-il des compétences techniques spécifiques ?",
@@ -126,10 +126,10 @@
     "q5": "Qu'est-ce qui est inclus dans l'abonnement ?",
     "a5": "Tout est compris : développement, maintenance, mises à jour et assistance technique",
     "q6": "Combien de temps prend l'implémentation ?",
-    "a6": "Entre 2 et 6 semaines selon la complexité du projet, avec un impact minimal sur vos opérations quotidiennes"
+    "a6": "Entre 2 et 6 semaines selon la complexité du projet, avec un impact minimal sur vos opérations quotidiennes pour une solution d'automatisation sur mesure."
   },
   "ContactSection": {
-    "title": "Automatisez votre entreprise",
+    "title": "Automatisez votre entreprise avec une agence d'automatisation IA de premier plan",
     "subtitle": "Remplissez le formulaire ci-dessous ou planifiez un appel directement avec notre équipe.",
     "name_placeholder": "Nom",
     "email_placeholder": "Email",
@@ -147,9 +147,6 @@
     "back_button": "Retour à l'accueil"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
-    "email": "contact@yoluko.com",
-    "description": "Des solutions logicielles personnalisées pour développer votre entreprise.",
-    "contact_email": "E-mail de contact"
+    "copy": "© 2025 Yoluko Solutions | Agence d'automatisation IA à Lyon, France | Tous droits réservés | contact@yoluko.com"
   }
 } 
