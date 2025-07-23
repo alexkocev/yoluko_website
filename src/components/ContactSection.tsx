@@ -40,7 +40,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
           <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in h-full flex flex-col">
             <form 
               acceptCharset="UTF-8" 
-              action="https://formspree.io/f/mpwdnjln" 
+              action="https://formspree.io/f/manbebwo" 
               method="POST" 
               encType="multipart/form-data" 
               autoComplete="on" 
