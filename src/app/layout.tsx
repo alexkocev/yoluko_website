@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yoluko.com";
 
   return {
     title: {
@@ -72,8 +72,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Yoluko Solutions",
-              "url": process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
-              "logo": `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/images/LOGO Yoluko.svg`,
+              "url": "https://yoluko.com",
+              "logo": "https://yoluko.com/images/LOGO Yoluko.svg",
             }),
           }}
         />

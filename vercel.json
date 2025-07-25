@@ -1,9 +1,20 @@
 {
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.yoluko.com"
+        }
+      ],
+      "destination": "https://yoluko.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/call",
       "destination": "https://calendly.com/alexandre-kocev-yoluko/30min",
       "permanent": true
     }
   ]
-} 
+}
