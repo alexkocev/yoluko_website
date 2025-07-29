@@ -18,9 +18,39 @@ export async function generateMetadata({
   params: { lang: string };
 }): Promise<Metadata> {
   const dict = await getDictionary(lang);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yoluko.com";
+  const locales = ["en", "fr"];
+  const languages = locales.reduce(
+    (acc: Record<string, string>, locale: string) => {
+      acc[locale] = `${baseUrl}/${locale}`;
+      return acc;
+    },
+    {}
+  );
   return {
     title: dict.metadata.title.default,
     description: dict.metadata.description,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `${baseUrl}/${lang}`,
+      languages: {
+        "x-default": `${baseUrl}/en`,
+        ...languages,
+      },
+    },
+    openGraph: {
+      title: dict.metadata.title.default,
+      description: dict.metadata.description,
+      url: `${baseUrl}/${lang}`,
+      siteName: "Yoluko Solutions",
+      locale: lang === "en" ? "en_US" : "fr_FR",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.metadata.title.default,
+      description: dict.metadata.description,
+    },
   };
 }
 

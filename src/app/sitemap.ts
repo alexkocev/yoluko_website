@@ -5,12 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ['', '/success'];
   const languages = ['en', 'fr'];
 
-  const sitemapEntries = pages.flatMap(page => 
-    languages.map(lang => {
-      const url = `${baseUrl}/${lang}${page}`;
+  const sitemapEntries = pages.flatMap(page => {
+    const isHomePage = page === '';
+    return languages.map(lang => {
+      const url = isHomePage ? `${baseUrl}/${lang}` : `${baseUrl}/${lang}${page}`;
       const alternates: { [key: string]: string } = {};
       languages.forEach(altLang => {
-        alternates[altLang] = `${baseUrl}/${altLang}${page}`;
+        alternates[altLang] = isHomePage ? `${baseUrl}/${altLang}` : `${baseUrl}/${altLang}${page}`;
       });
 
       return {
@@ -19,12 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: {
             ...alternates,
-            'x-default': `${baseUrl}/en${page}`,
+            'x-default': isHomePage ? `${baseUrl}/en` : `${baseUrl}/en${page}`,
           },
         },
       };
-    })
-  );
+    });
+  });
 
   return sitemapEntries;
 } 

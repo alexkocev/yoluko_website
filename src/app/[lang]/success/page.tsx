@@ -10,9 +10,39 @@ export async function generateMetadata({
   params: { lang: string };
 }): Promise<Metadata> {
   const dict = await getDictionary(lang);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yoluko.com";
+  const locales = ["en", "fr"];
+  const languages = locales.reduce(
+    (acc: Record<string, string>, locale: string) => {
+      acc[locale] = `${baseUrl}/${locale}/success`;
+      return acc;
+    },
+    {}
+  );
   return {
     title: dict.success_page.title,
     description: dict.success_page.message,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `${baseUrl}/${lang}/success`,
+      languages: {
+        "x-default": `${baseUrl}/en/success`,
+        ...languages,
+      },
+    },
+    openGraph: {
+      title: dict.success_page.title,
+      description: dict.success_page.message,
+      url: `${baseUrl}/${lang}/success`,
+      siteName: "Yoluko Solutions",
+      locale: lang === "en" ? "en_US" : "fr_FR",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.success_page.title,
+      description: dict.success_page.message,
+    },
   };
 }
 

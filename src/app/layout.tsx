@@ -11,46 +11,6 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string };
-}): Promise<Metadata> {
-  const { lang } = await params;
-  const dict = await getDictionary(lang);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yoluko.com";
-
-  return {
-    title: {
-      default: dict.metadata.title.default,
-      template: dict.metadata.title.template,
-    },
-    description: dict.metadata.description,
-    metadataBase: new URL(baseUrl),
-    alternates: {
-      canonical: `${baseUrl}/${lang}`,
-      languages: {
-        "en-US": `${baseUrl}/en`,
-        "fr-FR": `${baseUrl}/fr`,
-      },
-    },
-    openGraph: {
-      title: dict.metadata.title.default,
-      description: dict.metadata.description,
-      url: `${baseUrl}/${lang}`,
-      siteName: "Yoluko Solutions",
-      locale: lang === 'en' ? 'en_US' : 'fr_FR',
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.metadata.title.default,
-      description: dict.metadata.description,
-    },
-  };
-}
-
-
 export default function RootLayout({
   children,
   params,
