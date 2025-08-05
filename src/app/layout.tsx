@@ -6,6 +6,17 @@ import Script from "next/script";
 import "./globals.css";
 import { getDictionary } from "./dictionaries";
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://yoluko.com"),
+  alternates: {
+    canonical: "https://yoluko.com",
+    languages: {
+      "en": "https://yoluko.com/en",
+      "fr": "https://yoluko.com/fr",
+    },
+  },
+};
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,

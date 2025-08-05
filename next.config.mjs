@@ -13,11 +13,6 @@ const nextConfig = {
         destination: 'https://yoluko.com/:path*',
         permanent: true,
       },
-      {
-        source: '/undefined',
-        destination: '/',
-        permanent: true,
-      },
     ];
   },
 };

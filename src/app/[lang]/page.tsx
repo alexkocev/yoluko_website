@@ -28,16 +28,12 @@ export async function generateMetadata({
     {}
   );
   return {
-    title: dict.metadata.title.default,
-    description: dict.metadata.description,
-    metadataBase: new URL(baseUrl),
-    alternates: {
-      canonical: `${baseUrl}/${lang}`,
-      languages: {
-        "x-default": `${baseUrl}/en`,
-        ...languages,
-      },
+    title: {
+      default: dict.metadata.title.default,
+      template: `%s | ${dict.metadata.title.template}`,
     },
+    description: dict.metadata.description,
+    
     openGraph: {
       title: dict.metadata.title.default,
       description: dict.metadata.description,
