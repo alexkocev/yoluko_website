@@ -8,6 +8,11 @@ import { getDictionary } from "./dictionaries";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yoluko.com"),
+  icons: {
+    icon: "/images/Favicon Yoluko.svg",
+    shortcut: "/images/Favicon Yoluko.svg",
+    apple: "/images/Favicon Yoluko.svg",
+  },
 };
 
 export const viewport: Viewport = {
