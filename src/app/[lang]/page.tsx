@@ -33,7 +33,13 @@ export async function generateMetadata({
       template: `%s | ${dict.metadata.title.template}`,
     },
     description: dict.metadata.description,
-    
+    alternates: {
+      canonical: `${baseUrl}/${lang}`,
+      languages: {
+        "x-default": `${baseUrl}/en`,
+        ...languages,
+      },
+    },
     openGraph: {
       title: dict.metadata.title.default,
       description: dict.metadata.description,

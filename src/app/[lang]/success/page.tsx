@@ -22,7 +22,6 @@ export async function generateMetadata({
   return {
     title: dict.success_page.title,
     description: dict.success_page.message,
-    metadataBase: new URL(baseUrl),
     alternates: {
       canonical: `${baseUrl}/${lang}/success`,
       languages: {
