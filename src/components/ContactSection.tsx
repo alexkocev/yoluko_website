@@ -101,7 +101,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
               </div>
               
               <Button 
-                onClick={() => window.open("https://calendly.com/alexandre-kocev-yoluko/30min", "_blank")}
+                onClick={() => window.open("https://calendly.com/alexandre-yoluko/30min", "_blank")}
                 variant="outline"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-yoluko-navy px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg font-semibold group transition-all hover-scale"
               >
