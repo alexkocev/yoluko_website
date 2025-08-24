@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
+import { SITE_CONFIG } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yoluko.com';
+  const baseUrl = SITE_CONFIG.baseUrl;
   const pages = ['', '/success'];
-  const languages = ['en', 'fr'];
+  const languages = SITE_CONFIG.locales;
 
   const sitemapEntries = pages.flatMap(page => {
     const isHomePage = page === '';

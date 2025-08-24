@@ -3,11 +3,12 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans, GeistMono } from 'geist/font';
 import Script from "next/script";
+import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 import { getDictionary } from "./dictionaries";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yoluko.com"),
+  metadataBase: new URL(SITE_CONFIG.baseUrl),
   icons: {
     icon: "/images/Favicon Yoluko.svg",
     shortcut: "/images/Favicon Yoluko.svg",
@@ -41,8 +42,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Yoluko Solutions",
-              "url": "https://yoluko.com",
-              "logo": "https://yoluko.com/images/LOGO Yoluko.svg",
+              "url": SITE_CONFIG.baseUrl,
+              "logo": `${SITE_CONFIG.baseUrl}/images/LOGO Yoluko.svg`,
             }),
           }}
         />

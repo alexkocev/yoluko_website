@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getDictionary } from "@/app/dictionaries";
+import { SITE_CONFIG } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
@@ -10,8 +11,8 @@ export async function generateMetadata({
   params: { lang: string };
 }): Promise<Metadata> {
   const dict = await getDictionary(lang);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yoluko.com";
-  const locales = ["en", "fr"];
+  const baseUrl = SITE_CONFIG.baseUrl;
+  const locales = SITE_CONFIG.locales;
   const languages = locales.reduce(
     (acc: Record<string, string>, locale: string) => {
       acc[locale] = `${baseUrl}/${locale}/success`;

@@ -1,6 +1,16 @@
 User-agent: *
-Allow: /favicon.ico
-Allow: /images/Favicon Yoluko.svg
+Allow: /
+
+# Block crawling of redirect endpoints and undefined paths
+Disallow: /call
 Disallow: /undefined
 
+# Allow important assets
+Allow: /favicon.ico
+Allow: /images/
+
+# Sitemap location
 Sitemap: https://yoluko.com/sitemap.xml
+
+# Canonical domain preference
+Host: yoluko.com
