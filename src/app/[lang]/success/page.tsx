@@ -23,6 +23,17 @@ export async function generateMetadata({
   return {
     title: dict.success_page.title,
     description: dict.success_page.message,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     alternates: {
       canonical: `${baseUrl}/${lang}/success`,
       languages: {
@@ -37,11 +48,18 @@ export async function generateMetadata({
       siteName: "Yoluko Solutions",
       locale: lang === "en" ? "en_US" : "fr_FR",
       type: "website",
+      images: [{
+        url: `${baseUrl}/images/LOGO Yoluko.svg`,
+        width: 1200,
+        height: 630,
+        alt: dict.success_page.title,
+      }],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.success_page.title,
       description: dict.success_page.message,
+      images: [`${baseUrl}/images/LOGO Yoluko.svg`],
     },
   };
 }

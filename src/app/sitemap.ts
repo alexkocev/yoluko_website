@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       return {
         url,
         lastModified: new Date(),
+        changeFrequency: (isHomePage ? 'monthly' : 'yearly') as 'monthly' | 'yearly',
+        priority: isHomePage ? 1.0 : 0.8,
         alternates: {
           languages: {
             ...alternates,

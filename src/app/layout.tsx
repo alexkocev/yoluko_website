@@ -9,6 +9,14 @@ import { getDictionary } from "./dictionaries";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.baseUrl),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: "/images/Favicon Yoluko.svg",
     shortcut: "/images/Favicon Yoluko.svg",

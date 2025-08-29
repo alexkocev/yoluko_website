@@ -34,6 +34,17 @@ export async function generateMetadata({
       template: `%s | ${dict.metadata.title.template}`,
     },
     description: dict.metadata.description,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     alternates: {
       canonical: `${baseUrl}/${lang}`,
       languages: {
@@ -48,11 +59,18 @@ export async function generateMetadata({
       siteName: "Yoluko Solutions",
       locale: lang === "en" ? "en_US" : "fr_FR",
       type: "website",
+      images: [{
+        url: `${baseUrl}/images/LOGO Yoluko.svg`,
+        width: 1200,
+        height: 630,
+        alt: dict.metadata.title.default,
+      }],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.metadata.title.default,
       description: dict.metadata.description,
+      images: [`${baseUrl}/images/LOGO Yoluko.svg`],
     },
   };
 }

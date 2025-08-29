@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false, // Consistent URL structure without trailing slashes
   async redirects() {
     return [
-      // WWW to non-WWW redirect
+      // WWW to non-WWW redirect with language preservation
       {
         source: '/:path*',
         has: [
@@ -18,6 +19,12 @@ const nextConfig = {
       {
         source: '/',
         destination: '/en',
+        permanent: true,
+      },
+      // Handle legacy URLs without language prefix
+      {
+        source: '/success',
+        destination: '/en/success',
         permanent: true,
       },
     ];

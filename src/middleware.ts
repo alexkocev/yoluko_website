@@ -26,6 +26,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Skip special Next.js paths and static files
+  if (pathname.startsWith('/_next') || 
+      pathname.startsWith('/api') || 
+      pathname.includes('.') ||
+      pathname === '/robots.txt' ||
+      pathname === '/sitemap.xml' ||
+      pathname === '/favicon.ico') {
+    return NextResponse.next();
+  }
+
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
