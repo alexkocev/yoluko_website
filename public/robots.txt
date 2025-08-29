@@ -1,25 +1,5 @@
 User-agent: *
-Allow: /
-
-# Block crawling of redirect endpoints and undefined paths
 Disallow: /call
-Disallow: /undefined
 Disallow: /api/
 Disallow: /_next/
-
-# Explicitly allow important pages
-Allow: /en
-Allow: /fr
-Allow: /en/success
-Allow: /fr/success
-
-# Allow important assets
-Allow: /favicon.ico
-Allow: /images/
-Allow: /sitemap.xml
-
-# Sitemap location
 Sitemap: https://yoluko.com/sitemap.xml
-
-# Canonical domain preference
-Host: yoluko.com
