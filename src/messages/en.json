@@ -142,7 +142,7 @@
     "name_label": "Full Name*",
     "email_placeholder": "Work Email*",
     "email_label": "Work Email*",
-    "challenge_placeholder": "Your Challenge*",
+    "challenge_placeholder": "Describe your processes, let's see together how to automate your business.",
     "challenge_label": "Your Challenge*",
     "send_button": "Request My Free Session",
     "quick_chat_link": "Prefer a quick chat first? Book a 15-Minute Intro Call",
@@ -155,7 +155,6 @@
     "back_button": "Back to Home"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
-    "address": "AI Automation Agency in Lyon, France"
+    "copy": "© 2025 Yoluko Solutions | AI Automation Agency in Lyon, France | All Rights Reserved"
   }
 } 

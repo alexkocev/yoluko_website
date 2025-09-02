@@ -131,13 +131,13 @@
   "ContactSection": {
     "header": "CONTACT",
     "title": "Votre session stratégique offerte",
-    "subtitle": "Planifions un appel pour définir ensemble un plan d'action concret pour automatiser votre entreprise.",
+    "subtitle": "Planifions un appel pour définir ensemble un plan d'action pour automatiser votre entreprise.",
     "process_step1_title": "Expliquez votre défi",
-    "process_step1_desc": "En 2 minutes, décrivez la/les tâche(s) qui vous fait perdre le plus de temps.",
+    "process_step1_desc": "Décrivez les tâches qui vous font perdre le plus de temps.",
     "process_step2_title": "Réservez votre créneau",
     "process_step2_desc": "Choisissez un appel de 30 minutes qui vous arrange. Sans engagement.",
     "process_step3_title": "Recevez votre plan d'action",
-    "process_step3_desc": "Nous analysons votre besoin et arrivons préparés avec des premières pistes et une feuille de route pour vous aider.",
+    "process_step3_desc": "Nous analysons votre besoin et arrivons préparés avec des premières pistes et une feuille de route.",
     "name_placeholder": "Nom",
     "name_label": "Nom*",
     "email_placeholder": "Email",
@@ -155,7 +155,6 @@
     "back_button": "Retour à l'accueil"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | Tous droits réservés",
-    "address": "Agence d'automatisation IA à Lyon, France"
+    "copy": "© 2025 Yoluko Solutions | Agence d'automatisation IA à Lyon, France | Tous droits réservés"
   }
 } 
