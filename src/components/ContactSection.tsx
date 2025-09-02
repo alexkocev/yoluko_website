@@ -17,8 +17,11 @@ interface ContactSectionProps {
     process_step3_title: string;
     process_step3_desc: string;
     name_placeholder: string;
+    name_label: string;
     email_placeholder: string;
+    email_label: string;
     challenge_placeholder: string;
+    challenge_label: string;
     send_button: string;
     quick_chat_link: string;
     toast_title: string;
@@ -37,7 +40,13 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
             {t.header}
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            {t.title}
+            {lang === 'fr' ? (
+              <>
+                Votre Session Stratégique <span className="text-yoluko-orange">Offerte</span>
+              </>
+            ) : (
+              t.title
+            )}
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
             {t.subtitle}
@@ -126,6 +135,9 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
             >
               <input type="hidden" name="_next" value={`/${lang}/success`} />
               <div>
+                <label className="block text-gray-700 text-sm font-medium mb-2">
+                  {t.name_label}
+                </label>
                 <Input
                   type="text"
                   name="name"
@@ -136,6 +148,9 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                 />
               </div>
               <div>
+                <label className="block text-gray-700 text-sm font-medium mb-2">
+                  {t.email_label}
+                </label>
                 <Input
                   type="email"
                   name="email"
@@ -146,6 +161,9 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                 />
               </div>
               <div className="flex-1 flex flex-col">
+                <label className="block text-gray-700 text-sm font-medium mb-2">
+                  {t.challenge_label}
+                </label>
                 <Textarea
                   name="challenge"
                   required

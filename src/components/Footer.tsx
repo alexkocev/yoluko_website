@@ -2,7 +2,6 @@
 interface FooterProps {
   t: {
     copy: string;
-    email: string;
     address: string;
   };
 }
@@ -15,12 +14,6 @@ export const Footer = ({t}: FooterProps) => {
             <p className="text-gray-400 text-sm">
               {t.copy}
             </p>
-            <a 
-              href="mailto:contact@yoluko.com"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              {t.email}
-            </a>
             <p className="text-gray-400 text-sm">
               {t.address}
             </p>

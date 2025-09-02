@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -23,6 +23,10 @@ export const Navigation = ({ t }: NavigationProps) => {
   const currentLang = pathname.split("/")[1];
   const otherLang = currentLang === "en" ? "fr" : "en";
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const getFlagEmoji = (lang: string) => {
+    return lang === "en" ? "🇬🇧" : "🇫🇷";
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -74,8 +78,8 @@ export const Navigation = ({ t }: NavigationProps) => {
               {t.contact}
             </button>
             
-            <Link href={`/${otherLang}`} className="flex items-center space-x-1 text-yoluko-navy hover:text-yoluko-teal transition-colors font-medium">
-              <Globe className="h-4 w-4" />
+            <Link href={`/${otherLang}`} className="flex items-center space-x-2 text-yoluko-navy hover:text-yoluko-teal transition-colors font-medium">
+              <span className="text-lg">{getFlagEmoji(otherLang)}</span>
               <span>{otherLang.toUpperCase()}</span>
             </Link>
 
@@ -114,7 +118,7 @@ export const Navigation = ({ t }: NavigationProps) => {
 
                 <div className="mt-auto space-y-4">
                   <Link href={`/${otherLang}`} className="flex items-center justify-center space-x-2 text-yoluko-navy hover:text-yoluko-teal transition-colors font-medium">
-                    <Globe className="h-5 w-5" />
+                    <span className="text-xl">{getFlagEmoji(otherLang)}</span>
                     <span>{otherLang.toUpperCase()}</span>
                   </Link>
                   <Button 

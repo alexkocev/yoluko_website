@@ -139,8 +139,11 @@
     "process_step3_title": "Receive Your Custom Roadmap",
     "process_step3_desc": "We'll analyze your needs and come to the call prepared with initial ideas and a plan to solve your problem.",
     "name_placeholder": "Full Name*",
+    "name_label": "Full Name*",
     "email_placeholder": "Work Email*",
+    "email_label": "Work Email*",
     "challenge_placeholder": "Your Challenge*",
+    "challenge_label": "Your Challenge*",
     "send_button": "Request My Free Session",
     "quick_chat_link": "Prefer a quick chat first? Book a 15-Minute Intro Call",
     "toast_title": "Message Sent!",
@@ -153,7 +156,6 @@
   },
   "Footer": {
     "copy": "© 2025 Yoluko Solutions | All Rights Reserved",
-    "email": "contact@yoluko.com",
     "address": "AI Automation Agency in Lyon, France"
   }
 } 
