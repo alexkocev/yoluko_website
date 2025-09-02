@@ -3,21 +3,26 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface ContactSectionProps {
   t: {
+    header: string;
     title: string;
     subtitle: string;
+    process_step1_title: string;
+    process_step1_desc: string;
+    process_step2_title: string;
+    process_step2_desc: string;
+    process_step3_title: string;
+    process_step3_desc: string;
     name_placeholder: string;
     email_placeholder: string;
-    message_placeholder: string;
+    challenge_placeholder: string;
     send_button: string;
+    quick_chat_link: string;
     toast_title: string;
     toast_description: string;
-    voice_chat_prompt_title: string;
-    voice_chat_prompt_desc: string;
-    voice_chat_cta: string;
   };
   lang: string;
 }
@@ -25,19 +30,90 @@ interface ContactSectionProps {
 export const ContactSection = ({t, lang}: ContactSectionProps) => {
   return (
     <section id="contact" className="py-20 px-4 md:px-6 bg-yoluko-navy">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
+      <div className="container mx-auto max-w-7xl">
+        {/* Header */}
+        <div className="text-center mb-6 animate-fade-in">
+          <p className="text-yoluko-orange text-sm sm:text-base font-semibold tracking-wider uppercase mb-4">
+            {t.header}
+          </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             {t.title}
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left Column - Contact Form */}
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in h-full flex flex-col">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto lg:items-stretch">
+          {/* Left Column - Process Steps */}
+          <div className="animate-fade-in pt-8 flex flex-col h-full">
+            <div className="space-y-8 flex-1">
+              {/* Step 1 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    1
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
+                    {t.process_step1_title}
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {t.process_step1_desc}
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    2
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
+                    {t.process_step2_title}
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {t.process_step2_desc}
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    3
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
+                    {t.process_step3_title}
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {t.process_step3_desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Chat Link */}
+            <div className="pt-8">
+              <button 
+                onClick={() => window.open("https://calendly.com/alexandre-yoluko/1to1", "_blank")}
+                className="text-yoluko-orange hover:text-yoluko-orange/80 underline underline-offset-4 transition-colors flex items-center gap-2 group"
+              >
+                {t.quick_chat_link}
+                <ExternalLink className="h-4 w-4 group-hover:scale-110 transition-transform" />
+              </button>
+            </div>
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in flex flex-col">
             <form 
               acceptCharset="UTF-8" 
               action="https://formspree.io/f/manbebwo" 
@@ -45,7 +121,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
               encType="multipart/form-data" 
               autoComplete="on" 
               target="_self"
-              className="space-y-6 flex-1 flex flex-col"
+              className="space-y-6 flex flex-col h-full"
               key={lang}
             >
               <input type="hidden" name="_next" value={`/${lang}/success`} />
@@ -69,13 +145,13 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                   className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange text-gray-900 placeholder:text-gray-500"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col">
                 <Textarea
-                  name="message"
+                  name="challenge"
                   required
                   autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none h-full min-h-[150px] text-gray-900 placeholder:text-gray-500"
-                  placeholder={t.message_placeholder}
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none flex-1 min-h-[120px] text-gray-900 placeholder:text-gray-500"
+                  placeholder={t.challenge_placeholder}
                 />
               </div>
               <Button 
@@ -85,30 +161,6 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                 {t.send_button}
               </Button>
             </form>
-          </div>
-
-          {/* Right Column - Direct Call Scheduling */}
-          <div className="text-center space-y-8 animate-fade-in h-full flex flex-col">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 flex-1 flex flex-col justify-center">
-              <div className="mb-6">
-                <Calendar className="h-12 sm:h-16 w-12 sm:w-16 text-yoluko-orange mx-auto mb-4" />
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                  {t.voice_chat_prompt_title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {t.voice_chat_prompt_desc}
-                </p>
-              </div>
-              
-              <Button 
-                onClick={() => window.open("https://calendly.com/alexandre-yoluko/30min", "_blank")}
-                variant="outline"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-yoluko-navy px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg font-semibold group transition-all hover-scale"
-              >
-                {t.voice_chat_cta}
-                <ExternalLink className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              </Button>
-            </div>
           </div>
         </div>
       </div>

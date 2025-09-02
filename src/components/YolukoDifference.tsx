@@ -38,7 +38,7 @@ export const YolukoDifference = ({t}: YolukoDifferenceProps) => {
             </div>
             
             <Button 
-              onClick={() => window.open("https://calendly.com/alexandre-yoluko/30min", "_blank")}
+              onClick={() => window.open("https://calendly.com/alexandre-yoluko/1to1", "_blank")}
               className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold group transition-all hover-scale"
             >
               {t.cta}

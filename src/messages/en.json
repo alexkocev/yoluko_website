@@ -129,17 +129,22 @@
     "a6": "Depending on complexity, a custom automation solution is typically ready in 2-6 weeks, with minimal disruption to your daily operations."
   },
   "ContactSection": {
-    "title": "Automate Your Business",
-    "subtitle": "Fill out the form below or schedule a direct call with our team.",
-    "name_placeholder": "Name",
-    "email_placeholder": "Email",
-    "message_placeholder": "Tell us a bit about your business and the process you'd like to automate...",
-    "send_button": "Send Message",
+    "header": "CONTACT US",
+    "title": "Start with a Free Strategy Session",
+    "subtitle": "This is a one-on-one discovery call, not a sales pitch. We'll dive into your biggest operational challenge and map out a custom automation plan, completely free of charge.",
+    "process_step1_title": "Tell Us Your Challenge",
+    "process_step1_desc": "Takes 2 minutes. Briefly describe the repetitive task that wastes the most time.",
+    "process_step2_title": "Book Your Discovery Call",
+    "process_step2_desc": "Pick a 30-minute slot from the calendar that works for you. No obligation.",
+    "process_step3_title": "Receive Your Custom Roadmap",
+    "process_step3_desc": "We'll analyze your needs and come to the call prepared with initial ideas and a plan to solve your problem.",
+    "name_placeholder": "Full Name*",
+    "email_placeholder": "Work Email*",
+    "challenge_placeholder": "Your Challenge*",
+    "send_button": "Request My Free Session",
+    "quick_chat_link": "Prefer a quick chat first? Book a 15-Minute Intro Call",
     "toast_title": "Message Sent!",
-    "toast_description": "We'll get back to you soon.",
-    "voice_chat_prompt_title": "Prefer a Voice Chat?",
-    "voice_chat_prompt_desc": "Schedule a 30-minute call to discuss your project in detail.",
-    "voice_chat_cta": "Schedule a Call"
+    "toast_description": "We'll get back to you soon."
   },
   "success_page": {
     "title": "Message Sent!",

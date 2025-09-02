@@ -129,17 +129,22 @@
     "a6": "Entre 2 et 6 semaines selon la complexité du projet, avec un impact minimal sur vos opérations quotidiennes pour une solution d'automatisation sur mesure."
   },
   "ContactSection": {
-    "title": "Automatisez votre entreprise avec une agence d'automatisation IA de premier plan",
-    "subtitle": "Remplissez le formulaire ci-dessous ou planifiez un appel directement avec notre équipe.",
-    "name_placeholder": "Nom",
-    "email_placeholder": "Email",
-    "message_placeholder": "Parlez-nous de votre entreprise et du process que vous souhaitez automatiser...",
-    "send_button": "Envoyer le message",
+    "header": "CONTACTEZ-NOUS",
+    "title": "Commencez par une Session Stratégique Gratuite",
+    "subtitle": "Il s'agit d'un appel de découverte en tête-à-tête, pas d'un argumentaire de vente. Nous analyserons votre plus grand défi opérationnel et élaborerons un plan d'automatisation personnalisé, entièrement gratuit.",
+    "process_step1_title": "Décrivez-nous Votre Défi",
+    "process_step1_desc": "Prend 2 minutes. Décrivez brièvement la tâche répétitive qui vous fait perdre le plus de temps.",
+    "process_step2_title": "Réservez Votre Appel de Découverte",
+    "process_step2_desc": "Choisissez un créneau de 30 minutes dans le calendrier qui vous convient. Aucune obligation.",
+    "process_step3_title": "Recevez Votre Feuille de Route Personnalisée",
+    "process_step3_desc": "Nous analyserons vos besoins et viendrons à l'appel préparés avec des idées initiales et un plan pour résoudre votre problème.",
+    "name_placeholder": "Nom Complet*",
+    "email_placeholder": "Email Professionnel*",
+    "challenge_placeholder": "Votre Défi*",
+    "send_button": "Demander Ma Session Gratuite",
+    "quick_chat_link": "Vous préférez un chat rapide d'abord ? Réservez un Appel d'Introduction de 15 Minutes",
     "toast_title": "Message envoyé !",
-    "toast_description": "Nous vous répondrons bientôt.",
-    "voice_chat_prompt_title": "Vous préférez un chat vocal ?",
-    "voice_chat_prompt_desc": "Planifiez un appel de 30 minutes pour discuter de votre projet en détail.",
-    "voice_chat_cta": "Planifier un appel"
+    "toast_description": "Nous vous répondrons bientôt."
   },
   "success_page": {
     "title": "Message Envoyé !",

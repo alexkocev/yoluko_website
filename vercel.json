@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/call",
-      "destination": "https://calendly.com/alexandre-yoluko/30min",
+      "destination": "https://calendly.com/alexandre-yoluko/1to1",
       "permanent": true
     }
   ]
