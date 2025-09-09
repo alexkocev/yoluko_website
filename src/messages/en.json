@@ -86,10 +86,23 @@
     "custom_solution_cta": "Let's Discuss Your Needs →"
   },
   "About": {
-    "title": "The Expert Behind Your Solution",
-    "name": "Alexandre Kocev",
-    "role": "Automation Specialist",
-    "bio": "My journey from developer and data analyst to an AI & automation specialist is driven by one goal: solving your unique business problems. When you partner with Yoluko, you work directly with me to build a custom solution that gives you back your most valuable asset—time."
+    "title": "Your Dedicated Experts",
+    "profiles": [
+      {
+        "name": "Alexandre Kocev",
+        "role": "Founder & Head of Automation",
+        "bio": "I’m the builder. You bring a vision or a frustrating challenge, and my passion is turning it into a real, working solution with code. I handle the complex tech so you can focus on what you do best: growing your business.",
+        "image": "/images/Profile Alex.png",
+        "linkedin": "https://www.linkedin.com/in/alexandre-kocev"
+      },
+      {
+        "name": "Yahya Lahlou",
+        "role": "Partner & Head of Client Strategy",
+        "bio": "I love finding the hidden bottlenecks and revenue opportunities that most businesses miss. I'm your strategic partner, focused on one thing: making sure the solution we build makes a real, practical difference to your business.",
+        "image": "/images/Profile Yahya.jpeg",
+        "linkedin": "https://www.linkedin.com/in/yahya-lahlou-080a24163"
+      }
+    ]
   },
   "TechIntegration": {
     "title": "Seamless Integration With Your Tech Ecosystem",

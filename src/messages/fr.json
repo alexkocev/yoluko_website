@@ -86,10 +86,23 @@
     "custom_solution_cta": "Discutons de vos besoins →"
   },
   "About": {
-    "title": "L'Expert Derrière Votre Solution",
-    "name": "Alexandre Kocev",
-    "role": "Spécialiste en Automatisation IA",
-    "bio": "Mon parcours de développeur et data analyst à spécialiste en IA et automatisation est motivé par un seul objectif : résoudre tous vos problèmes d'entreprise. Lorsque vous vous associez à Yoluko, vous travaillez directement avec moi pour construire une solution d'automatisation IA sur mesure qui vous redonne votre atout le plus précieux : le temps."
+    "title": "Vos Experts",
+    "profiles": [
+      {
+        "name": "Alexandre Kocev",
+        "role": "Fondateur & Architecte d'Automatisation",
+        "bio": "En tant que fondateur et architecte, je conçois personnellement les automatisations sur mesure qui répondent à vos défis spécifiques. Mon objectif est de transformer vos besoins opérationnels en une solution technique puissante et parfaitement intégrée.",
+        "image": "/images/Profile Alex.png",
+        "linkedin": "https://www.linkedin.com/in/alexandre-kocev"
+      },
+      {
+        "name": "Yahya Lahlou",
+        "role": "Partenaire & Responsable Stratégie Client",
+        "bio": "Fort de mon expérience en stratégie d'entreprise et partenariats chez Dell, je m'assure que la solution que nous construisons est parfaitement alignée sur vos objectifs. J'agis en tant que partenaire stratégique pour définir la feuille de route et garantir un retour sur investissement clair.",
+        "image": "/images/Profile Yahya.jpeg",
+        "linkedin": "https://www.linkedin.com/in/yahya-lahlou-080a24163"
+      }
+    ]
   },
   "TechIntegration": {
     "title": "Compatible avec tous vos outils",
