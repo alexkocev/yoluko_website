@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": {
-      "default": "Agence d'Automatisation IA | Automatisation sur Mesure | Yoluko Solutions",
-      "template": "%s | Yoluko Solutions"
+      "default": "Solutions d'Automatisation IA | Automatisation sur Mesure | Yoluko Solutions",
+      "template": "%s | Yoluko Automatisation IA"
     },
-    "description": "Yoluko est une agence d'automatisation IA qui crée des solutions sur mesure pour votre entreprise. Des rapports automatisés aux assistants IA, nous vous aidons à gagner du temps et à améliorer votre efficacité. Contactez notre agence d'automatisation à Lyon, France pour une consultation gratuite."
+    "description": "Yoluko est une agence d'automatisation et IA qui crée des solutions sur mesure pour votre entreprise. Des rapports automatisés aux assistants IA, nous vous aidons à gagner du temps et à améliorer votre efficacité. Contactez notre agence d'automatisation à Lyon, France pour une consultation gratuite."
   },
   "Navigation": {
     "home": "Yoluko Solutions",
@@ -17,15 +17,15 @@
   },
   "HeroSection": {
     "title": "Dites adieu aux tâches répétitives",
-    "subtitle": "Des solutions d'automatisation sur mesure adaptées aux besoins de votre entreprise",
+    "subtitle": "Des solutions d'automatisation et IA sur mesure adaptées aux besoins de votre entreprise",
     "cta": "Dites-nous vos besoins"
   },
   "ValueProposition": {
-    "title": "Nous concevons des solutions personnalisées pour relever tous vos défis",
-    "time": "Gagnez du Temps",
-    "time_desc": "Réduisez le temps consacré aux tâches manuelles grâce à des process d'automatisation d'entreprise entièrement automatisés",
+    "title": "Solutions d'automatisation IA personnalisées pour relever vos défis business",
+    "time": "Éliminez le travail manuel",
+    "time_desc": "Transformez des heures de travail manuel en minutes avec une automatisation intelligente qui gère vos workflows de manière autonome",
     "no_hidden_fees": "Aucun frais caché",
-    "no_hidden_fees_desc": "Tarification mensuelle transparente sans aucun coût initial d'implémentation",
+    "no_hidden_fees_desc": "Tarification mensuelle transparente, aucun coût initial d'implémentation",
     "compatible": "Compatible avec vos outils",
     "compatible_desc": "Une intégration qui se connecte à tous vos outils",
     "ai": "L'IA quand c'est pertinent",
@@ -37,7 +37,7 @@
     "cta": "Parlons de vos besoins"
   },
   "SolutionsShowcase": {
-    "title": "Des solutions concrètes qui répondent aux défis de votre entreprise",
+    "title": "Solutions d'automatisation et IA pour chaque défi de votre entreprise",
     "solutions": [
       {
         "category": "ANALYSE",

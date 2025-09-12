@@ -17,13 +17,13 @@
   },
   "HeroSection": {
     "title": "Stop Wasting Time on Repetitive Tasks",
-    "subtitle": "Custom automation solutions tailored to your business needs. Reclaim your time and focus on what truly matters.",
+    "subtitle": "Custom automation and AI solutions tailored to your business needs. Reclaim your time and focus on what truly matters.",
     "cta": "Tell us what you need"
   },
   "ValueProposition": {
-    "title": "Custom Solutions for Your Unique Business Challenges",
-    "time": "Reclaim Your Time",
-    "time_desc": "Transform hours of work into minutes with automation that handles your entire workflow.",
+    "title": "Custom AI Automation Solutions for Your Business Challenges",
+    "time": "Eliminate Manual Work",
+    "time_desc": "Transform hours of manual work into minutes with intelligent automation that handles your entire workflow autonomously.",
     "no_hidden_fees": "No Hidden Costs",
     "no_hidden_fees_desc": "Transparent monthly subscription, no upfront fees.",
     "compatible": "Works With Your Tools",
@@ -37,7 +37,7 @@
     "cta": "Let's meet & discuss"
   },
   "SolutionsShowcase": {
-    "title": "Your Business Challenges, Solved",
+    "title": "AI Automation Solutions for every business challenge",
     "solutions": [
       {
         "category": "ANALYTICS",
