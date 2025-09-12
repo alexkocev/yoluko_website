@@ -12,13 +12,13 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Get a Free Consultation",
-    "ctaMobile": "Get Started"
+    "cta": "Get a free consultation",
+    "ctaMobile": "Get started"
   },
   "HeroSection": {
     "title": "Stop Wasting Time on Repetitive Tasks",
     "subtitle": "Custom automation solutions tailored to your business needs. Reclaim your time and focus on what truly matters.",
-    "cta": "Discuss Your Unique Needs"
+    "cta": "Tell us what you need"
   },
   "ValueProposition": {
     "title": "Custom Solutions for Your Unique Business Challenges",
@@ -34,7 +34,7 @@
   "YolukoDifference": {
     "title": "Relax, Our Solutions Handle Everything",
     "description": "At Yoluko SolutionS, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!",
-    "cta": "Book Your Free Call"
+    "cta": "Let's meet & discuss"
   },
   "SolutionsShowcase": {
     "title": "Your Business Challenges, Solved",
@@ -91,7 +91,7 @@
       {
         "name": "Alexandre Kocev",
         "role": "Founder & Head of Automation",
-        "bio": "I’m the builder. You bring a vision or a frustrating challenge, and my passion is turning it into a real, working solution with code. I handle the complex tech so you can focus on what you do best: growing your business.",
+        "bio": "I’m the builder. You bring a vision or a frustrating challenge and my mission is turning it into a real, working solution with code. I handle the complex tech so you can focus on what you do best: growing your business.",
         "image": "/images/Profile Alex.png",
         "linkedin": "https://www.linkedin.com/in/alexandre-kocev"
       },
@@ -124,7 +124,7 @@
     "yoluko_feature3": "All-inclusive subscription",
     "yoluko_feature4": "Cancel anytime, no questions asked",
     "yoluko_feature5": "Fully customized to your needs",
-    "cta": "Get a Custom Quote"
+    "cta": "Get a custom quote"
   },
   "FAQ": {
     "title": "Questions You Might Have",

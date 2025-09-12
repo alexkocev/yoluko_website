@@ -1,6 +1,5 @@
 "use client";
 import { Plus } from "lucide-react";
-import Image from "next/image";
 
 interface SolutionsShowcaseProps {
   t: {
@@ -60,11 +59,10 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
+                <img 
                   src={solution.image}
                   alt={solution.title}
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
