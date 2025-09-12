@@ -143,7 +143,7 @@
   },
   "ContactSection": {
     "header": "CONTACT",
-    "title": "Votre session stratégique offerte",
+    "title": "Votre audit automatisation et IA offert",
     "subtitle": "Planifions un appel pour définir ensemble un plan d'action pour automatiser votre entreprise.",
     "process_step1_title": "Expliquez votre défi",
     "process_step1_desc": "Décrivez les tâches qui vous font perdre le plus de temps.",
@@ -168,6 +168,6 @@
     "back_button": "Retour à l'accueil"
   },
   "Footer": {
-    "copy": "© 2025 Yoluko Solutions | Agence d'automatisation IA à Lyon, France | Tous droits réservés"
+    "copy": "© 2025 Yoluko Solutions | Agence d'automatisation et IA, basé à Lyon, France | Tous droits réservés"
   }
 } 
