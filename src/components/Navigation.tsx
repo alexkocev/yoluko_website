@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -85,9 +85,10 @@ export const Navigation = ({ t }: NavigationProps) => {
 
             <Button 
               onClick={() => scrollToSection("contact")}
-              className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-2 rounded-lg font-medium transition-all hover-scale"
+              className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-2 rounded-lg font-medium group transition-all hover-scale"
             >
               {t.cta}
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
@@ -123,9 +124,10 @@ export const Navigation = ({ t }: NavigationProps) => {
                   </Link>
                   <Button 
                     onClick={() => handleLinkClick("contact")}
-                    className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 rounded-lg font-semibold transition-all hover-scale"
+                    className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 rounded-lg font-semibold group transition-all hover-scale"
                   >
                     {t.cta}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </SheetContent>

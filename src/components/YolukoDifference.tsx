@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface YolukoDifferenceProps {
   t: {
@@ -42,7 +42,7 @@ export const YolukoDifference = ({t}: YolukoDifferenceProps) => {
               className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold group transition-all hover-scale"
             >
               {t.cta}
-              <ExternalLink className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>

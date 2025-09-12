@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X, Check, Star } from "lucide-react";
+import { X, Check, Star, ArrowRight } from "lucide-react";
 
 interface PricingModelProps {
   t: {
@@ -96,9 +96,10 @@ export const PricingModel = ({t}: PricingModelProps) => {
         <div className="text-center animate-fade-in">
           <Button 
             onClick={scrollToContact}
-            className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold transition-all hover-scale"
+            className="bg-yoluko-orange hover:bg-yoluko-orange/90 text-white px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-lg font-semibold group transition-all hover-scale"
           >
             {t.cta}
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

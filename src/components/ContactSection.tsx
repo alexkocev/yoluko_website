@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 
 interface ContactSectionProps {
   t: {
@@ -174,9 +174,10 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
               </div>
               <Button 
                 type="submit"
-                className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 text-base sm:py-4 sm:text-lg font-semibold transition-all hover-scale"
+                className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 text-base sm:py-4 sm:text-lg font-semibold group transition-all hover-scale"
               >
                 {t.send_button}
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
           </div>
