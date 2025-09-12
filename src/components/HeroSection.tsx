@@ -29,7 +29,8 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/images/floating_curve.mov" type="video/mp4" />
+        <source src="/images/floating_curve.webm" type="video/webm" />
+        <source src="/images/floating_curve.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
