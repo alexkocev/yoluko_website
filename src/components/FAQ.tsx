@@ -49,7 +49,7 @@ import {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-gray-50 rounded-lg px-4 sm:px-6 border-none"
+                  className="glass-card px-4 sm:px-6 border-none"
                 >
                   <AccordionTrigger className="text-left text-base sm:text-lg font-semibold text-yoluko-navy hover:text-yoluko-teal transition-colors">
                     {faq.question}

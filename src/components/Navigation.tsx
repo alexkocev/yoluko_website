@@ -41,7 +41,7 @@ export const Navigation = ({ t }: NavigationProps) => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 glass-nav`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -99,7 +99,7 @@ export const Navigation = ({ t }: NavigationProps) => {
                   <Menu className="h-6 w-6 text-yoluko-navy" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] bg-white p-6 flex flex-col">
+              <SheetContent side="right" className="w-[300px] glass-card p-6 flex flex-col border-l border-white/20">
                 <SheetHeader className="mb-8 text-left">
                   <SheetTitle>
                     <img 

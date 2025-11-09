@@ -55,7 +55,7 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
           {solutions.map((solution, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale overflow-hidden animate-fade-in"
+              className="glass-card overflow-hidden animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-48 overflow-hidden">
@@ -82,7 +82,7 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
           ))}
 
           {/* Custom Solution Card */}
-          <div className="bg-gradient-to-br from-yoluko-cream to-white rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale overflow-hidden animate-fade-in border-2 border-dashed border-yoluko-teal">
+          <div className="glass-card overflow-hidden animate-fade-in border-2 border-dashed border-yoluko-teal/50 bg-gradient-to-br from-yoluko-teal/10 to-white/10">
             <div className="h-48 flex items-center justify-center">
               <div className="w-20 h-20 bg-yoluko-teal rounded-full flex items-center justify-center">
                 <Plus className="h-10 w-10 text-white" />

@@ -59,7 +59,7 @@ export const PricingModel = ({t}: PricingModelProps) => {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Traditional Approach */}
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg animate-fade-in">
+          <div className="glass-card p-6 md:p-8 animate-fade-in">
             <h3 className="text-xl sm:text-2xl font-bold text-yoluko-navy mb-6 text-center">
               {t.traditional_approach}
             </h3>
@@ -74,7 +74,7 @@ export const PricingModel = ({t}: PricingModelProps) => {
           </div>
 
           {/* Yoluko Approach */}
-          <div className="bg-gradient-to-br from-white to-yoluko-cream rounded-xl p-6 md:p-8 shadow-lg border-2 border-yoluko-orange animate-fade-in relative">
+          <div className="glass-card p-6 md:p-8 animate-fade-in relative border-2 border-yoluko-orange/50 bg-gradient-to-br from-white/15 to-yoluko-orange/10">
             <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yoluko-orange text-white px-4 py-1 text-sm font-semibold">
               <Star className="h-4 w-4 mr-1" />
               {t.yoluko_recommended}

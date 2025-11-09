@@ -122,7 +122,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl animate-fade-in flex flex-col">
+          <div className="glass-card p-6 md:p-8 animate-fade-in flex flex-col">
             <form 
               acceptCharset="UTF-8" 
               action="https://formspree.io/f/manbebwo" 
@@ -135,7 +135,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
             >
               <input type="hidden" name="_next" value={`/${lang}/success`} />
               <div>
-                <label className="block text-gray-700 text-sm font-medium mb-2">
+                <label className="block text-white text-sm font-medium mb-2">
                   {t.name_label}
                 </label>
                 <Input
@@ -144,11 +144,11 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                   placeholder={t.name_placeholder}
                   required
                   autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange text-gray-900 placeholder:text-gray-500"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange text-white placeholder:text-gray-300"
                 />
               </div>
               <div>
-                <label className="block text-gray-700 text-sm font-medium mb-2">
+                <label className="block text-white text-sm font-medium mb-2">
                   {t.email_label}
                 </label>
                 <Input
@@ -157,18 +157,18 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
                   placeholder={t.email_placeholder}
                   required
                   autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange text-gray-900 placeholder:text-gray-500"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange text-white placeholder:text-gray-300"
                 />
               </div>
               <div className="flex-1 flex flex-col">
-                <label className="block text-gray-700 text-sm font-medium mb-2">
+                <label className="block text-white text-sm font-medium mb-2">
                   {t.challenge_label}
                 </label>
                 <Textarea
                   name="challenge"
                   required
                   autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg border-gray-300 focus:border-yoluko-orange focus:ring-yoluko-orange resize-none flex-1 min-h-[120px] text-gray-900 placeholder:text-gray-500"
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange resize-none flex-1 min-h-[120px] text-white placeholder:text-gray-300"
                   placeholder={t.challenge_placeholder}
                 />
               </div>

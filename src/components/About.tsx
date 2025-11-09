@@ -42,7 +42,7 @@ export const About = ({t}: AboutProps) => {
           {t.profiles.map((profile, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale p-8 animate-fade-in"
+              className="glass-card p-8 animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Profile Photo */}

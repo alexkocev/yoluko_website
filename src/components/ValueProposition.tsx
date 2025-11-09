@@ -51,7 +51,7 @@ export const ValueProposition = ({ t }: ValuePropositionProps) => {
           {valuePoints.map((point, index) => (
             <div 
               key={index}
-              className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale animate-fade-in"
+              className="text-center p-6 glass-card animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6 flex justify-center">

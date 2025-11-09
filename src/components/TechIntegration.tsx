@@ -49,7 +49,7 @@ import {
                 className="flex flex-col items-center group hover-scale animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mb-2 group-hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 glass-button flex items-center justify-center mb-2">
                   <platform.icon className={`h-6 w-6 ${platform.color}`} />
                 </div>
                 <span className="text-xs text-yoluko-slate text-center font-medium hidden md:block">

@@ -155,4 +155,25 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-xl transition-all duration-300 hover:bg-white/15 hover:shadow-2xl hover:scale-[1.02];
+  }
+  
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-md border border-white/30 shadow-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-xl hover:scale-105;
+  }
+  
+  .glass-nav {
+    @apply bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-lg;
+  }
+  
+  .glass-input {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-lg transition-all duration-300 focus:bg-white/15 focus:border-white/40;
+  }
 }
