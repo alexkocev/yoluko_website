@@ -16,12 +16,12 @@
     "ctaMobile": "Get started"
   },
   "HeroSection": {
-    "title": "Stop Wasting Time on Repetitive Tasks",
+    "title": "Automate your business & stop wasting time on repetitive tasks",
     "subtitle": "Custom automation and AI solutions tailored to your business needs. Reclaim your time and focus on what truly matters.",
     "cta": "Tell us what you need"
   },
   "ValueProposition": {
-    "title": "Custom AI Automation Solutions for Your Business Challenges",
+    "title": "Custom AI automation solutions for your business challenges",
     "time": "Eliminate manual work",
     "time_desc": "Transform hours of manual work into minutes with intelligent automation that handles your entire workflow autonomously.",
     "no_hidden_fees": "No hidden costs",
@@ -32,72 +32,72 @@
     "ai_desc": "We apply AI strategically, only where it delivers real business value."
   },
   "YolukoDifference": {
-    "title": "Relax, Our Solutions Handle Everything",
-    "description": "At Yoluko SolutionS, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!",
+    "title": "Relax, our solutions handle everything",
+    "description": "At Yoluko Solutions, the 'S' means multiple customized solutions that adapt to your unique processes - not the other way around!",
     "cta": "Let's meet & discuss"
   },
   "SolutionsShowcase": {
-    "title": "AI Automation Solutions for every business challenge",
+    "title": "AI automation solutions for every business challenge",
     "solutions": [
       {
         "category": "ANALYTICS",
-        "title": "Data Insights Dashboard",
+        "title": "Data insights dashboard",
         "description": "All your business data in one place, automatically organized. Make better decisions with up-to-date information from every source."
       },
       {
         "category": "REPORTING",
-        "title": "Automated Reporting Assistant",
+        "title": "Automated reporting assistant",
         "description": "An assistant that delivers your key performance summaries directly to your team's inbox on a daily, weekly, or monthly schedule."
       },
       {
         "category": "ACCOUNTING",
-        "title": "Automated Reconciliation Specialist",
+        "title": "Automated reconciliation specialist",
         "description": "A virtual specialist that processes weeks of financial transactions in minutes with 99.8% accuracy, even handling tricky, unusual cases."
       },
       {
         "category": "OPERATIONS",
-        "title": "Live Operations Monitor",
+        "title": "Live operations monitor",
         "description": "An automated monitor that sends instant notifications via Slack or email for the metrics that matter most, before small issues become big problems."
       },
       {
         "category": "STRATEGY",
-        "title": "On-Demand AI Business Analyst",
+        "title": "On-demand AI business analyst",
         "description": "A secure, conversational AI you can ask any strategic question about your business and get instant, data-backed answers."
       },
       {
         "category": "MARKETING",
-        "title": "AI Social Media Manager",
+        "title": "AI social media manager",
         "description": "An AI manager to maintain your social presence consistently without the daily grind. Boost engagement by 40% while reducing content creation time by 75%."
       },
       {
         "category": "HR",
-        "title": "Automated HR Assistant",
+        "title": "Automated HR assistant",
         "description": "An automated assistant to help you find, screen, and shortlist the best candidates for any open role."
       },
       {
         "category": "TRADING",
-        "title": "Automated Trading Strategist",
+        "title": "Automated trading strategist",
         "description": "A 24/7 strategist that turns your trading ideas into a fully automated system. Backtest, optimize, and deploy with precision."
       }
     ],
     "custom_solution_category": "CUSTOM",
-    "custom_solution_title": "Have a Different Challenge?",
+    "custom_solution_title": "Have a different challenge?",
     "custom_solution_desc": "Don't see your specific need listed? If you can describe it, we can automate it. We build completely custom solutions for any business problem.",
-    "custom_solution_cta": "Let's Discuss Your Needs →"
+    "custom_solution_cta": "Let's discuss your needs →"
   },
   "About": {
-    "title": "Your Dedicated Experts",
+    "title": "Your dedicated experts",
     "profiles": [
       {
         "name": "Alexandre Kocev",
-        "role": "Founder & Head of Automation",
+        "role": "Founder & head of automation",
         "bio": "I’m the builder. You bring a vision or a frustrating challenge and my mission is turning it into a real, working solution with code. I handle the complex tech so you can focus on what you do best: growing your business.",
         "image": "/images/Profile Alex.png",
         "linkedin": "https://www.linkedin.com/in/alexandre-kocev"
       },
       {
         "name": "Yahya Lahlou",
-        "role": "Partner & Head of Client Strategy",
+        "role": "Partner & head of client strategy",
         "bio": "I love finding the hidden bottlenecks and revenue opportunities that most businesses miss. I'm your strategic partner, focused on one thing: making sure the solution we build makes a real, practical difference to your business.",
         "image": "/images/Profile Yahya.jpeg",
         "linkedin": "https://www.linkedin.com/in/yahya-lahlou-080a24163"
@@ -105,12 +105,12 @@
     ]
   },
   "TechIntegration": {
-    "title": "Seamless Integration With Your Tech Ecosystem",
+    "title": "Seamless integration with your tech ecosystem",
     "description": "Using a specialized tool? No problem, our technology integrates with every system on the market",
     "subtext": "+ 200 other tools supported"
   },
   "PricingModel": {
-    "title": "Risk-Free Pricing That Makes Sense",
+    "title": "Risk-free pricing that makes sense",
     "traditional_approach": "The traditional way",
     "traditional_feature1": "Large upfront development fees",
     "traditional_feature2": "Pay before seeing any results",
@@ -127,7 +127,7 @@
     "cta": "Get a custom quote"
   },
   "FAQ": {
-    "title": "Questions You Might Have",
+    "title": "Questions you might have",
     "q1": "How do you handle unexpected scenarios?",
     "a1": "Our AI automation solutions include robust exception handling and automated monitoring to flag any issues, which we promptly address as part of your subscription.",
     "q2": "What if our business processes change after automation?",

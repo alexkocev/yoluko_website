@@ -41,63 +41,63 @@
     "solutions": [
       {
         "category": "ANALYSE",
-        "title": "Tableaux de Bord Décisionnels",
+        "title": "Tableaux de bord décisionnels",
         "description": "Regroupez toutes vos données business en un seul endroit, structurées automatiquement. Prenez des décisions stratégiques fondées sur des informations à jour de toutes vos sources."
       },
       {
         "category": "REPORTING",
-        "title": "Rapports de Performance Automatisés",
+        "title": "Rapports de performance automatisés",
         "description": "Un assistant qui livre vos rapports de performance clés directement dans votre boîte mail, de manière journalière, hebdomadaire ou mensuelle."
       },
       {
         "category": "COMPTABILITÉ",
-        "title": "Automatisation des Rapprochements Bancaires",
+        "title": "Automatisation des rapprochements bancaires",
         "description": "Un spécialiste virtuel qui traite des semaines de transactions en quelques minutes avec une fiabilité de 99,8%, maîtrisant même les opérations les plus complexes."
       },
       {
         "category": "OPÉRATIONS",
-        "title": "Superviseur Opérationnel 24/7",
+        "title": "Superviseur opérationnel 24/7",
         "description": "Un superviseur automatisé qui envoie des notifications instantanées via Slack ou e-mail pour vos indicateurs clés, avant que les petits problèmes ne deviennent critiques."
       },
       {
         "category": "STRATÉGIE",
-        "title": "Assistant IA à la Demande",
+        "title": "Assistant IA à la demande",
         "description": "Une IA conversationnelle et sécurisée à qui vous pouvez poser n'importe quelle question stratégique et obtenir des réponses instantanées basées sur vos données."
       },
       {
         "category": "MARKETING",
-        "title": "Gestion Automatisée des Réseaux Sociaux",
+        "title": "Gestion automatisée des réseaux sociaux",
         "description": "Un gestionnaire IA pour maintenir une présence en ligne constante sans effort. Augmentez l'engagement de 40% tout en réduisant le temps de création de contenu de 75%."
       },
       {
         "category": "RH",
-        "title": "Assistant RH Automatisé",
+        "title": "Assistant RH automatisé",
         "description": "Un assistant automatisé pour vous aider à trouver, filtrer et présélectionner les meilleurs candidats pour n'importe quel poste."
       },
       {
         "category": "TRADING",
-        "title": "Système de Trading Automatisé",
+        "title": "Système de trading automatisé",
         "description": "Transformez vos stratégies de trading en systèmes autonomes opérationnels 24h/24. Testez, optimisez et déployez sans aucune expertise en programmation."
       }
     ],
     "custom_solution_category": "PERSONNALISÉ",
-    "custom_solution_title": "Un autre défis?",
+    "custom_solution_title": "Un autre défi?",
     "custom_solution_desc": "Vous ne trouvez pas votre besoin spécifique dans la liste ? Si vous pouvez le décrire, nous pouvons l'automatiser. Nous créons des solutions sur mesure pour répondre à n'importe quelle problématique.",
     "custom_solution_cta": "Discutons de vos besoins →"
   },
   "About": {
-    "title": "Vos Experts",
+    "title": "Vos experts",
     "profiles": [
       {
         "name": "Alexandre Kocev",
-        "role": "Fondateur & Responsable Automatisation",
+        "role": "Fondateur & responsable automatisation",
         "bio": "Je suis le 'builder'. Vous avez une vision, un défi? Ma mission: vous coder la solution. Je gère la complexité technique pour que vous puissiez vous concentrer la croissance de votre business.",
         "image": "/images/Profile Alex.png",
         "linkedin": "https://www.linkedin.com/in/alexandre-kocev"
       },
       {
         "name": "Yahya Lahlou",
-        "role": "Associé & Responsable Stratégie Client",
+        "role": "Associé & responsable stratégie client",
         "bio": "J'adore dénicher les points de blocage et les opportunités de revenus cachées. Mon rôle en tant que partenaire stratégique est simple : garantir que la solution que nous créons ait un impact réel et mesurable sur votre activité.",
         "image": "/images/Profile Yahya.jpeg",
         "linkedin": "https://www.linkedin.com/in/yahya-lahlou-080a24163"
@@ -127,7 +127,7 @@
     "cta": "Demandez votre devis gratuit"
   },
   "FAQ": {
-    "title": "Questions Fréquentes",
+    "title": "Questions fréquentes",
     "q1": "Comment gérez-vous les situations imprévues ?",
     "a1": "Toutes nos solutions d'automatisation IA bénéficient d'une surveillance proactive 24h/24 avec intervention garantie sous 24h",
     "q2": "Que se passe-t-il si nos besoins évoluent ?",
