@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /call
+Allow: /
+
 Disallow: /api/
 Disallow: /_next/
+Disallow: /_vercel/
+
 Sitemap: https://yoluko.com/sitemap.xml
