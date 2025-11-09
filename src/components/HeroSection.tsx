@@ -43,7 +43,7 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
           {/* Centered Content */}
           <div className="text-center space-y-8 animate-fade-in max-w-4xl">
             <div className="space-y-6">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-lg">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                 {t.title}
               </h1>
               <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 leading-relaxed drop-shadow-md">
