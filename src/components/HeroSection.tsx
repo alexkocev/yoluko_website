@@ -39,9 +39,9 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
       
       {/* Content */}
       <div className="relative z-20 container mx-auto">
-        <div className="flex items-center justify-center min-h-[80vh]">
-          {/* Centered Content */}
-          <div className="text-center space-y-8 animate-fade-in max-w-4xl">
+        <div className="flex items-center justify-start min-h-[80vh]">
+          {/* Left-aligned Content */}
+          <div className="text-left space-y-8 animate-fade-in max-w-4xl">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                 {t.title}

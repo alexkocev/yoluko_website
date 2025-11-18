@@ -35,7 +35,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
     <section id="contact" className="py-20 px-4 md:px-6 bg-yoluko-navy">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-6 animate-fade-in">
+        <div className="text-left mb-6 animate-fade-in">
           <p className="text-yoluko-orange text-sm sm:text-base font-semibold tracking-wider uppercase mb-4">
             {t.header}
           </p>
@@ -48,7 +48,7 @@ export const ContactSection = ({t, lang}: ContactSectionProps) => {
               t.title
             )}
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-4xl">
             {t.subtitle}
           </p>
         </div>
