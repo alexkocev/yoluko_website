@@ -35,7 +35,7 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
       </video>
       
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
       
       {/* Content */}
       <div className="relative z-20 container mx-auto">
