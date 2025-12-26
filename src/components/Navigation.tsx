@@ -99,7 +99,7 @@ export const Navigation = ({ t }: NavigationProps) => {
                   <Menu className="h-6 w-6 text-yoluko-navy" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] glass-card p-6 flex flex-col border-l border-white/20">
+              <SheetContent side="right" className="w-[300px] bg-white/95 backdrop-blur-xl border-l border-white/30 shadow-xl p-6 flex flex-col">
                 <SheetHeader className="mb-8 text-left">
                   <SheetTitle>
                     <img 
