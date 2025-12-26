@@ -29,14 +29,14 @@ export const SolutionsShowcase = ({t}: SolutionsShowcaseProps) => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const images = [
-    "/images/gallery dashboard.png",
-    "/images/gallery reporting system.png",
-    "/images/gallery collaboration.png",
-    "/images/gallery finance.png",
-    "/images/gallery assistant.png",
-    "/images/gallery social media.png",
-    "/images/gallery presentation.png",
-    "/images/gallery trading.png"
+    "/images/gallery dashboard.jpeg",
+    "/images/gallery reporting system.jpeg",
+    "/images/gallery collaboration.jpeg",
+    "/images/gallery finance.jpeg",
+    "/images/gallery assistant.jpeg",
+    "/images/gallery social media.jpeg",
+    "/images/gallery presentation.jpeg",
+    "/images/gallery trading.jpeg"
   ];
 
   const solutions = t.solutions.map((solution, index) => ({

@@ -19,7 +19,7 @@ export const YolukoDifference = ({t}: YolukoDifferenceProps) => {
           <div className="animate-fade-in">
             <div className="relative">
               <img 
-                src="/images/section relax.png"
+                src="/images/section_relax.jpeg"
                 alt="Relaxed business owner"
                 className="w-full rounded-2xl shadow-2xl"
               />

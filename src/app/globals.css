@@ -170,7 +170,7 @@
   }
   
   .glass-nav {
-    @apply bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-lg;
+    @apply bg-white/85 backdrop-blur-xl border-b border-white/30 shadow-lg;
   }
   
   .glass-input {

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface HeroSectionProps {
   t: {
@@ -12,6 +12,18 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ t }: HeroSectionProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    // Load video only when page is ready and user is likely to see it
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.load();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -23,10 +35,12 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
     <section className="relative pt-24 pb-16 px-4 md:px-6 min-h-screen overflow-hidden">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/images/floating_curve.webm" type="video/webm" />
@@ -35,7 +49,7 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
       </video>
       
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20 z-10"></div>
+      <div className="absolute inset-0 bg-black/45 z-10"></div>
       
       {/* Content */}
       <div className="relative z-20 container mx-auto">
