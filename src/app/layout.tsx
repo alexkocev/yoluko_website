@@ -2,10 +2,25 @@
 
 import type { Metadata, Viewport } from "next";
 import { GeistSans, GeistMono } from 'geist/font';
+import { Poppins, Inter } from 'next/font/google';
 import Script from "next/script";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 import { getDictionary } from "./dictionaries";
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.baseUrl),
@@ -63,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning={true}>
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable} ${inter.variable} antialiased`}
       >
         <Script
           id="whatsapp-og-image-itemprop"

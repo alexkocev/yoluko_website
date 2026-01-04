@@ -81,11 +81,18 @@ export default {
     			sm: 'calc(var(--radius) - 4px)'
     		},
     		fontFamily: {
+    			sans: [
+    				'var(--font-inter)',
+    				'Inter',
+    				'sans-serif'
+    			],
     			poppins: [
+    				'var(--font-poppins)',
     				'Poppins',
     				'sans-serif'
     			],
     			inter: [
+    				'var(--font-inter)',
     				'Inter',
     				'sans-serif'
     			]

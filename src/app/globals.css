@@ -134,16 +134,24 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-inter;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-bold;
-  }
-
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), 'Inter', sans-serif;
+  }
+
+  /* Ensure all text elements use Inter by default */
+  p, span, div, a, li, td, th, label, input, textarea, select, button {
+    font-family: inherit;
+  }
+
+  /* Headings use Poppins */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), 'Poppins', sans-serif;
+    @apply font-bold;
   }
 }
 
