@@ -9,6 +9,8 @@ import { getDictionary } from "./dictionaries";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.baseUrl),
+  title: "Yoluko Solutions",
+  description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
   robots: {
     index: true,
     follow: true,
@@ -21,6 +23,28 @@ export const metadata: Metadata = {
     icon: "/images/Favicon Yoluko.svg",
     shortcut: "/images/Favicon Yoluko.svg",
     apple: "/images/Favicon Yoluko.svg",
+  },
+  openGraph: {
+    title: "Yoluko Solutions",
+    description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+    url: SITE_CONFIG.baseUrl,
+    siteName: "Yoluko Solutions",
+    images: [
+      {
+        url: `${SITE_CONFIG.baseUrl}/images/og-image.jpg`,
+        width: 1200,
+        height: 1200,
+        alt: "Yoluko Solutions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Yoluko Solutions",
+    description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+    images: [`${SITE_CONFIG.baseUrl}/images/og-image.jpg`],
   },
 };
 
@@ -41,6 +65,26 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
       >
+        <Script
+          id="whatsapp-og-image-itemprop"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const existingOgImage = document.querySelector('meta[property="og:image"]');
+                if (existingOgImage) {
+                  existingOgImage.setAttribute('itemProp', 'image');
+                } else {
+                  const meta = document.createElement('meta');
+                  meta.setAttribute('property', 'og:image');
+                  meta.setAttribute('content', '${SITE_CONFIG.baseUrl}/images/og-image.jpg');
+                  meta.setAttribute('itemProp', 'image');
+                  document.head.appendChild(meta);
+                }
+              })();
+            `,
+          }}
+        />
         {children}
         <Script
           id="structured-data"

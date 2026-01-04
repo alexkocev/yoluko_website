@@ -53,24 +53,24 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: dict.metadata.title.default,
+      title: "Yoluko Solutions",
       description: dict.metadata.description,
       url: `${baseUrl}/${lang}`,
       siteName: "Yoluko Solutions",
       locale: lang === "en" ? "en_US" : "fr_FR",
       type: "website",
       images: [{
-        url: `${baseUrl}/images/LOGO Yoluko.svg`,
+        url: `${baseUrl}/images/og-image.jpg`,
         width: 1200,
-        height: 630,
-        alt: dict.metadata.title.default,
+        height: 1200,
+        alt: "Yoluko Solutions",
       }],
     },
     twitter: {
-      card: "summary_large_image",
-      title: dict.metadata.title.default,
+      card: "summary",
+      title: "Yoluko Solutions",
       description: dict.metadata.description,
-      images: [`${baseUrl}/images/LOGO Yoluko.svg`],
+      images: [`${baseUrl}/images/og-image.jpg`],
     },
   };
 }
