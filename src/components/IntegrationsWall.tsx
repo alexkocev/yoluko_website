@@ -11,7 +11,7 @@ export const IntegrationsWall = () => {
         Built to scale on your stack
       </p>
       <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex animate-[scroll_30s_linear_infinite] w-max gap-16 hover:[animation-play-state:paused]">
+        <div className="flex animate-[scroll_50s_linear_infinite] w-max gap-16 hover:[animation-play-state:paused]">
           {[...integrations, ...integrations].map((name, i) => (
             <span
               key={`${name}-${i}`}

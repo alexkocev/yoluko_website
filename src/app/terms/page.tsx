@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Yoluko Terms of Service — the terms and conditions governing use of our website and services.",
+  description: "Yoluko Terms of Service. The terms and conditions governing use of our website and services.",
 };
 
 export default function TermsOfService() {

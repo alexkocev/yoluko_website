@@ -24,8 +24,11 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-        <div className="text-2xl font-black text-primary-container tracking-tighter font-headline">
-          Yoluko
+        <div className="flex items-center gap-3">
+          <img src="/images/Yoluko_logo_gen2.png" alt="Yoluko" className="h-[58px] w-auto object-contain drop-shadow-[0_2px_8px_rgba(254,203,0,0.3)]" />
+          <span className="text-lg font-bold text-primary-container tracking-[0.25em] font-body uppercase">
+            Yoluko
+          </span>
         </div>
 
         {/* Desktop Nav */}

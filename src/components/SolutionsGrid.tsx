@@ -10,8 +10,8 @@ export const SolutionsGrid = () => {
               Omnichannel <span className="text-primary">Intelligence</span>
             </h2>
             <p className="text-on-surface-variant text-lg">
-              We don&apos;t just &quot;do AI&quot;. We deploy targeted automation
-              modules that solve specific operational bottlenecks.
+              If it involves copy-pasting, spreadsheets, or repetitive manual work
+              we can automate it. Custom-built from scratch, not off-the-shelf.
             </p>
           </div>
         </div>
@@ -25,11 +25,10 @@ export const SolutionsGrid = () => {
                 Flagship Solution
               </span>
               <h3 className="text-3xl font-headline font-bold mb-4">
-                Real-time Analytics
+                Unified Dashboard
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Unified data streams across your entire stack. Predictive
-                modeling for growth and churn prevention.
+                All your data sources, one live dashboard. Decide with clarity, not gut feeling.
               </p>
             </div>
             <div className="flex-grow flex items-center justify-center w-full relative group-hover:scale-105 transition-transform duration-700">
@@ -112,11 +111,10 @@ export const SolutionsGrid = () => {
           <div className="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col md:flex-row gap-8 group overflow-hidden relative items-center">
             <div className="flex-grow text-left order-2 md:order-1">
               <h3 className="text-2xl font-headline font-bold mb-3">
-                Auto-Reporting
+                Hands-Free Reporting
               </h3>
               <p className="text-on-surface-variant">
-                Automated stakeholder reports delivered weekly via Slack, Email,
-                or Notion.
+                Automated summaries delivered to your inbox, Slack, or Notion. On your schedule.
               </p>
             </div>
             <div className="flex-shrink-0 w-48 h-48 order-1 md:order-2 flex items-center justify-center relative group-hover:scale-110 transition-transform duration-500">
@@ -166,10 +164,10 @@ export const SolutionsGrid = () => {
             </div>
             <div>
               <h3 className="text-xl font-headline font-bold mb-2">
-                Accounting
+                Smart Alerting
               </h3>
               <p className="text-on-surface-variant text-sm">
-                Auto-matching invoices and expenses.
+                Real-time alerts for anomalies, sales drops, and low inventory before they hurt.
               </p>
             </div>
           </div>
@@ -192,10 +190,10 @@ export const SolutionsGrid = () => {
             </div>
             <div>
               <h3 className="text-xl font-headline font-bold mb-2">
-                Operations
+                AI Analyst
               </h3>
               <p className="text-on-surface-variant text-sm">
-                24/7 internal process oversight.
+                Ask anything about your business and get instant, data-backed answers.
               </p>
             </div>
           </div>

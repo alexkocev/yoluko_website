@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Yoluko Privacy Policy — how we collect, use, and protect your personal data.",
+  description: "Yoluko Privacy Policy. How we collect, use, and protect your personal data.",
 };
 
 export default function PrivacyPolicy() {

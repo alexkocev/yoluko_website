@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/Favicon Yoluko.svg",
-    shortcut: "/images/Favicon Yoluko.svg",
-    apple: "/images/Favicon Yoluko.svg",
+    icon: "/images/Yoluko_logo_gen2.ico",
+    shortcut: "/images/Yoluko_logo_gen2.ico",
+    apple: "/images/Yoluko_logo_gen2.ico",
   },
   openGraph: {
     title: "Yoluko | AI & Automation Agency",
