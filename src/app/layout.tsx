@@ -1,17 +1,14 @@
-// src/app/layout.tsx
-
 import type { Metadata, Viewport } from "next";
-import { GeistSans, GeistMono } from 'geist/font';
-import { Poppins, Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import Script from "next/script";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
-import { getDictionary } from "./dictionaries";
 
-const poppins = Poppins({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -24,14 +21,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.baseUrl),
-  title: "Yoluko Solutions",
-  description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+  title: {
+    default: "Yoluko | AI & Automation Agency",
+    template: "%s | Yoluko",
+  },
+  description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost. We only win when you grow.",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   icons: {
@@ -40,16 +43,16 @@ export const metadata: Metadata = {
     apple: "/images/Favicon Yoluko.svg",
   },
   openGraph: {
-    title: "Yoluko Solutions",
-    description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+    title: "Yoluko | AI & Automation Agency",
+    description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost. We only win when you grow.",
     url: SITE_CONFIG.baseUrl,
-    siteName: "Yoluko Solutions",
+    siteName: "Yoluko",
     images: [
       {
         url: `${SITE_CONFIG.baseUrl}/images/og-image.jpg`,
         width: 1200,
         height: 1200,
-        alt: "Yoluko Solutions",
+        alt: "Yoluko - AI & Automation Agency",
       },
     ],
     locale: "en_US",
@@ -57,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Yoluko Solutions",
-    description: "Yoluko is an AI automation agency that builds custom solutions for your business. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+    title: "Yoluko | AI & Automation Agency",
+    description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost.",
     images: [`${SITE_CONFIG.baseUrl}/images/og-image.jpg`],
   },
 };
@@ -70,16 +73,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: string };
 }>) {
   return (
-    <html lang={params.lang} suppressHydrationWarning={true}>
-      <body
-        className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable} ${inter.variable} antialiased`}
-      >
+    <html lang="en" className="dark" suppressHydrationWarning={true}>
+      <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
         <Script
           id="whatsapp-og-image-itemprop"
           strategy="afterInteractive"
@@ -111,8 +110,8 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   "@id": `${SITE_CONFIG.baseUrl}/#organization`,
-                  "name": "Yoluko Solutions",
-                  "alternateName": "Yoluko",
+                  "name": "Yoluko",
+                  "alternateName": "Yoluko AI & Automation",
                   "url": SITE_CONFIG.baseUrl,
                   "logo": {
                     "@type": "ImageObject",
@@ -121,111 +120,55 @@ export default function RootLayout({
                     "height": 400
                   },
                   "image": `${SITE_CONFIG.baseUrl}/images/LOGO Yoluko.svg`,
-                  "description": "AI automation agency that builds custom solutions for businesses. From automated reporting to AI assistants, we help you save time and improve efficiency.",
+                  "description": "AI & Automation agency building custom solutions for businesses. AI agents, software engineering, automation, and data science.",
                   "foundingDate": "2024",
                   "founders": [
                     {
                       "@type": "Person",
                       "name": "Alexandre Kocev",
-                      "jobTitle": "Founder & Head of Automation",
+                      "jobTitle": "Tech Lead & AI Architect",
                       "sameAs": "https://www.linkedin.com/in/alexandre-kocev"
                     },
                     {
-                      "@type": "Person", 
+                      "@type": "Person",
                       "name": "Yahya Lahlou",
-                      "jobTitle": "Partner & Head of Client Strategy",
+                      "jobTitle": "Strategy & Ops Director",
                       "sameAs": "https://www.linkedin.com/in/yahya-lahlou-080a24163"
                     }
                   ],
                   "address": {
                     "@type": "PostalAddress",
-                    "addressLocality": "Lyon",
-                    "addressRegion": "Auvergne-Rhône-Alpes",
+                    "addressLocality": "Paris",
                     "addressCountry": "FR"
                   },
                   "areaServed": [
-                    {
-                      "@type": "Country",
-                      "name": "France"
-                    },
-                    {
-                      "@type": "Country", 
-                      "name": "Europe"
-                    }
+                    { "@type": "Country", "name": "France" },
+                    { "@type": "Country", "name": "Europe" }
                   ],
                   "serviceType": [
-                    "AI Automation",
-                    "Business Process Automation", 
-                    "Custom Software Development",
-                    "AI Assistant Development",
-                    "Automated Reporting Systems",
-                    "Data Analytics Automation"
-                  ],
-                  "knowsAbout": [
-                    "Artificial Intelligence",
+                    "AI Agents",
+                    "Software Engineering",
                     "Business Automation",
-                    "Process Optimization",
-                    "Custom Software Development",
-                    "Data Analytics",
-                    "Workflow Automation"
-                  ]
-                },
-                {
-                  "@type": "LocalBusiness",
-                  "@id": `${SITE_CONFIG.baseUrl}/#localbusiness`,
-                  "name": "Yoluko Solutions",
-                  "image": `${SITE_CONFIG.baseUrl}/images/LOGO Yoluko.svg`,
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Lyon",
-                    "addressRegion": "Auvergne-Rhône-Alpes",
-                    "addressCountry": "FR"
-                  },
-                  "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 45.7640,
-                    "longitude": 4.8357
-                  },
-                  "url": SITE_CONFIG.baseUrl,
-                  "telephone": "+33-XXX-XXX-XXX",
-                  "priceRange": "€€",
-                  "openingHoursSpecification": {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                      "Monday",
-                      "Tuesday", 
-                      "Wednesday",
-                      "Thursday",
-                      "Friday"
-                    ],
-                    "opens": "09:00",
-                    "closes": "18:00"
-                  }
+                    "Data Science",
+                    "Custom Software Development"
+                  ],
                 },
                 {
                   "@type": "WebSite",
                   "@id": `${SITE_CONFIG.baseUrl}/#website`,
                   "url": SITE_CONFIG.baseUrl,
-                  "name": "Yoluko Solutions - AI Automation Agency",
-                  "description": "Custom AI automation solutions for businesses. Eliminate manual work with intelligent automation tailored to your needs.",
+                  "name": "Yoluko - AI & Automation Agency",
+                  "description": "Custom AI agents and automated workflows. $0 upfront cost.",
                   "publisher": {
                     "@id": `${SITE_CONFIG.baseUrl}/#organization`
                   },
-                  "inLanguage": ["en", "fr"],
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": {
-                      "@type": "EntryPoint",
-                      "urlTemplate": `${SITE_CONFIG.baseUrl}/search?q={search_term_string}`
-                    },
-                    "query-input": "required name=search_term_string"
-                  }
+                  "inLanguage": "en",
                 },
                 {
                   "@type": "Service",
-                  "@id": `${SITE_CONFIG.baseUrl}/#service-ai-automation`,
-                  "name": "AI Business Automation",
-                  "description": "Custom AI automation solutions that eliminate manual work and optimize business processes",
+                  "@id": `${SITE_CONFIG.baseUrl}/#service`,
+                  "name": "AI & Automation Solutions",
+                  "description": "Custom AI agents, software engineering, automation, and data science solutions",
                   "provider": {
                     "@id": `${SITE_CONFIG.baseUrl}/#organization`
                   },
@@ -233,59 +176,7 @@ export default function RootLayout({
                     "@type": "Country",
                     "name": "France"
                   },
-                  "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "AI Automation Services",
-                    "itemListElement": [
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Service",
-                          "name": "Data Insights Dashboard",
-                          "description": "Automated business data organization and visualization"
-                        }
-                      },
-                      {
-                        "@type": "Offer", 
-                        "itemOffered": {
-                          "@type": "Service",
-                          "name": "Automated Reporting Assistant",
-                          "description": "AI-powered performance reporting delivered automatically"
-                        }
-                      },
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Service", 
-                          "name": "AI Business Analyst",
-                          "description": "Conversational AI for strategic business insights"
-                        }
-                      },
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "Service",
-                          "name": "Automated Trading System",
-                          "description": "24/7 automated trading strategy implementation"
-                        }
-                      }
-                    ]
-                  }
                 },
-                {
-                  "@type": "ProfessionalService",
-                  "@id": `${SITE_CONFIG.baseUrl}/#professional-service`,
-                  "name": "Custom Business Automation Consulting",
-                  "description": "Expert consultation and development of tailored automation solutions for businesses",
-                  "provider": {
-                    "@id": `${SITE_CONFIG.baseUrl}/#organization`
-                  },
-                  "serviceType": "Business Consulting",
-                  "areaServed": {
-                    "@type": "Country",
-                    "name": "France"
-                  }
-                }
               ]
             }),
           }}

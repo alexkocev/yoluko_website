@@ -3,32 +3,19 @@ import { SITE_CONFIG } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.baseUrl;
-  const pages = ['', '/success'];
-  const languages = SITE_CONFIG.locales;
 
-  const sitemapEntries = pages.flatMap(page => {
-    const isHomePage = page === '';
-    return languages.map(lang => {
-      const url = isHomePage ? `${baseUrl}/${lang}` : `${baseUrl}/${lang}${page}`;
-      const alternates: { [key: string]: string } = {};
-      languages.forEach(altLang => {
-        alternates[altLang] = isHomePage ? `${baseUrl}/${altLang}` : `${baseUrl}/${altLang}${page}`;
-      });
-
-      return {
-        url,
-        lastModified: new Date(),
-        changeFrequency: (isHomePage ? 'monthly' : 'yearly') as 'monthly' | 'yearly',
-        priority: isHomePage ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            ...alternates,
-            'x-default': isHomePage ? `${baseUrl}/en` : `${baseUrl}/en${page}`,
-          },
-        },
-      };
-    });
-  });
-
-  return sitemapEntries;
-} 
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/success`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+  ];
+}

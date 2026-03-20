@@ -1,137 +1,17 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system with Yoluko brand colors */
-
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Clean off-white */
-    --foreground: 27 31 59; /* Yoluko Navy */
-
-    --card: 0 0% 100%;
-    --card-foreground: 27 31 59;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 27 31 59;
-
-    --primary: 242 121 31; /* Yoluko Orange */
-    --primary-foreground: 255 255 255;
-
-    --secondary: 49 196 164; /* Yoluko Teal */
-    --secondary-foreground: 255 255 255;
-
-    --muted: 96 123 136; /* Yoluko Slate */
-    --muted-foreground: 156 163 175; /* A lighter, more neutral gray for placeholders */
-
-    --accent: 250 240 202; /* Yoluko Cream */
-    --accent-foreground: 27 31 59;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 242 121 31;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;  
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 45 100% 74%;
+    --radius: 1rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 250 250 250;
-
-    --card: 27 31 59;
-    --card-foreground: 250 250 250;
-
-    --popover: 27 31 59;
-    --popover-foreground: 250 250 250;
-
-    --primary: 242 121 31;
-    --primary-foreground: 255 255 255;
-
-    --secondary: 49 196 164;
-    --secondary-foreground: 255 255 255;
-
-    --muted: 96 123 136;
-    --muted-foreground: 156 163 175; /* A lighter, more neutral gray for placeholders */
-
-    --accent: 250 240 202;
-    --accent-foreground: 27 31 59;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
   * {
-    @apply border-border;
+    @apply border-outline-variant/15;
   }
 
   html {
@@ -139,49 +19,43 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-inter), 'Inter', sans-serif;
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Ensure all text elements use Inter by default */
-  p, span, div, a, li, td, th, label, input, textarea, select, button {
-    font-family: inherit;
+  ::selection {
+    @apply bg-primary text-on-primary;
   }
 
-  /* Headings use Poppins */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-poppins), 'Poppins', sans-serif;
-    @apply font-bold;
+    font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(38, 38, 38, 0.8);
+    backdrop-filter: blur(20px);
+  }
+
+  .terminal-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  }
+
+  .glow-line {
+    background: linear-gradient(90deg, transparent, #ffdd7c, transparent);
   }
 }
 
 @layer utilities {
-  .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
-  }
-  
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 
-  /* Glassmorphism utilities */
-  .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
-  }
-  
-  .glass-card {
-    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-xl transition-all duration-300 hover:bg-white/15 hover:shadow-2xl hover:scale-[1.02];
-  }
-  
-  .glass-button {
-    @apply bg-white/10 backdrop-blur-md border border-white/30 shadow-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-xl hover:scale-105;
-  }
-  
-  .glass-nav {
-    @apply bg-white/85 backdrop-blur-xl border-b border-white/30 shadow-lg;
-  }
-  
-  .glass-input {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-lg transition-all duration-300 focus:bg-white/15 focus:border-white/40;
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

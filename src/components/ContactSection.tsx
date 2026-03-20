@@ -1,186 +1,105 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { useForm } from "@formspree/react";
+import { Mail, MapPin, CheckCircle } from "lucide-react";
 
-interface ContactSectionProps {
-  t: {
-    header: string;
-    title: string;
-    subtitle: string;
-    process_step1_title: string;
-    process_step1_desc: string;
-    process_step2_title: string;
-    process_step2_desc: string;
-    process_step3_title: string;
-    process_step3_desc: string;
-    name_placeholder: string;
-    name_label: string;
-    email_placeholder: string;
-    email_label: string;
-    challenge_placeholder: string;
-    challenge_label: string;
-    send_button: string;
-    quick_chat_link: string;
-    toast_title: string;
-    toast_description: string;
-  };
-  lang: string;
-}
+export const ContactSection = () => {
+  const [state, handleSubmit] = useForm("xvzwyqjv");
 
-export const ContactSection = ({t, lang}: ContactSectionProps) => {
   return (
-    <section id="contact" className="py-20 px-4 md:px-6 bg-yoluko-navy">
-      <div className="container mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="text-left mb-6 animate-fade-in">
-          <p className="text-yoluko-orange text-sm sm:text-base font-semibold tracking-wider uppercase mb-4">
-            {t.header}
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            {lang === 'fr' ? (
-              <>
-                Votre Session Stratégique <span className="text-yoluko-orange">Offerte</span>
-              </>
-            ) : (
-              t.title
-            )}
+    <section id="contact" className="py-24 px-6 lg:px-8 bg-surface">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+        <div>
+          <h2 className="text-5xl font-headline font-black mb-8 leading-tight">
+            Ready to <span className="text-primary">Automate</span> your
+            growth?
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-4xl">
-            {t.subtitle}
+          <p className="text-on-surface-variant text-lg mb-10">
+            Fill out the form and our team will get back to you with a custom
+            automation audit within 24 hours.
           </p>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+                <Mail className="h-4 w-4" />
+              </div>
+              <span className="font-label font-bold text-sm tracking-wider">
+                contact@yoluko.com
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+                <MapPin className="h-4 w-4" />
+              </div>
+              <span className="font-label font-bold text-sm tracking-wider">
+                France &amp; Remote Worldwide
+              </span>
+            </div>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto lg:items-stretch">
-          {/* Left Column - Process Steps */}
-          <div className="animate-fade-in pt-8 flex flex-col h-full">
-            <div className="space-y-8 flex-1">
-              {/* Step 1 */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    1
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
-                    {t.process_step1_title}
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    {t.process_step1_desc}
-                  </p>
-                </div>
-              </div>
+        <div className="bg-surface-container-high p-8 lg:p-12 rounded-2xl border border-outline-variant/10 shadow-2xl relative min-h-[460px]">
+          <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-3xl" />
 
-              {/* Step 2 */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    2
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
-                    {t.process_step2_title}
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    {t.process_step2_desc}
-                  </p>
-                </div>
+          {state.succeeded ? (
+            <div className="flex flex-col items-center justify-center h-full min-h-[380px] gap-6 relative text-center">
+              <div className="w-20 h-20 rounded-full bg-tertiary/20 flex items-center justify-center">
+                <CheckCircle className="h-10 w-10 text-tertiary" />
               </div>
-
-              {/* Step 3 */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-yoluko-orange rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    3
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
-                    {t.process_step3_title}
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    {t.process_step3_desc}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-3xl font-headline font-black text-on-surface">
+                Message Sent!
+              </h3>
+              <p className="text-on-surface-variant text-lg max-w-sm">
+                Thank you for reaching out. We&apos;ll get back to you within 24 hours with your custom automation audit.
+              </p>
             </div>
-
-            {/* Quick Chat Link */}
-            <div className="pt-8">
-              <button 
-                onClick={() => window.open("https://calendly.com/alexandre-yoluko/1to1", "_blank")}
-                className="text-yoluko-orange hover:text-yoluko-orange/80 underline underline-offset-4 transition-colors flex items-center gap-2 group"
-              >
-                {t.quick_chat_link}
-                <ExternalLink className="h-4 w-4 group-hover:scale-110 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          {/* Right Column - Contact Form */}
-          <div className="glass-card p-6 md:p-8 animate-fade-in flex flex-col">
-            <form 
-              acceptCharset="UTF-8" 
-              action="https://formspree.io/f/manbebwo" 
-              method="POST" 
-              encType="multipart/form-data" 
-              autoComplete="on" 
-              target="_self"
-              className="space-y-6 flex flex-col h-full"
-              key={lang}
-            >
-              <input type="hidden" name="_next" value={`/${lang}/success`} />
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6 relative">
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  {t.name_label}
+                <label className="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">
+                  Full Name
                 </label>
-                <Input
+                <input
+                  className="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:border-2 transition-colors text-on-surface placeholder:text-on-surface-variant/50"
+                  placeholder="Tony Stark"
                   type="text"
                   name="name"
-                  placeholder={t.name_placeholder}
                   required
-                  autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange text-white placeholder:text-gray-300"
                 />
               </div>
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  {t.email_label}
+                <label className="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">
+                  Work Email
                 </label>
-                <Input
+                <input
+                  className="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:border-2 transition-colors text-on-surface placeholder:text-on-surface-variant/50"
+                  placeholder="tony@starkindustries.com"
                   type="email"
                   name="email"
-                  placeholder={t.email_placeholder}
                   required
-                  autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange text-white placeholder:text-gray-300"
                 />
               </div>
-              <div className="flex-1 flex flex-col">
-                <label className="block text-white text-sm font-medium mb-2">
-                  {t.challenge_label}
+              <div>
+                <label className="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">
+                  Your Challenge
                 </label>
-                <Textarea
+                <textarea
+                  className="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:border-2 transition-colors text-on-surface placeholder:text-on-surface-variant/50 resize-none"
+                  placeholder="We spend 20+ hours a week on manual data entry and reconciliation..."
+                  rows={4}
                   name="challenge"
                   required
-                  autoComplete="off"
-                  className="w-full p-3 sm:p-4 text-base sm:text-lg glass-input focus:border-yoluko-orange focus:ring-yoluko-orange resize-none flex-1 min-h-[120px] text-white placeholder:text-gray-300"
-                  placeholder={t.challenge_placeholder}
                 />
               </div>
-              <Button 
+              <button
+                className="w-full bg-primary text-on-primary py-5 rounded-full font-headline font-black text-lg hover:shadow-[0_0_20px_rgba(255,221,124,0.4)] transition-all disabled:opacity-50"
                 type="submit"
-                className="w-full bg-yoluko-orange hover:bg-yoluko-orange/90 text-white py-3 text-base sm:py-4 sm:text-lg font-semibold group transition-all hover-scale"
+                disabled={state.submitting}
               >
-                {t.send_button}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                {state.submitting ? "Sending..." : "Send Request"}
+              </button>
             </form>
-          </div>
+          )}
         </div>
       </div>
     </section>

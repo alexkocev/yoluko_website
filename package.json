@@ -10,7 +10,7 @@
     "check-sitemap": "curl -s -I 'https://yoluko.com/sitemap.xml' | head -1"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.4",
+    "@formspree/react": "^3.0.0",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -42,12 +42,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
-    "embla-carousel-react": "^8.6.0",
-    "geist": "^1.4.2",
-    "input-otp": "^1.4.2",
-    "lottie-react": "^2.4.1",
     "lucide-react": "^0.525.0",
-    "negotiator": "^0.6.3",
     "next": "^14.2.30",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.4.6",
@@ -65,7 +60,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoluko | AI &amp; Automation Agency</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-bright": "#2c2c2c",
+                "secondary": "#ff6c95",
+                "on-tertiary-fixed-variant": "#006832",
+                "on-tertiary-fixed": "#004820",
+                "on-tertiary-container": "#005d2c",
+                "secondary-fixed-dim": "#ffadbe",
+                "outline-variant": "#484847",
+                "surface-tint": "#ffdd7c",
+                "error": "#ff7351",
+                "secondary-container": "#bb0054",
+                "primary-fixed-dim": "#eebe00",
+                "primary-dim": "#eebe00",
+                "on-surface": "#ffffff",
+                "primary": "#ffdd7c",
+                "background": "#0e0e0e",
+                "on-primary": "#634d00",
+                "tertiary-container": "#3fff8b",
+                "on-surface-variant": "#adaaaa",
+                "surface-container-highest": "#262626",
+                "tertiary-fixed-dim": "#24f07e",
+                "tertiary-fixed": "#3fff8b",
+                "surface-variant": "#262626",
+                "surface": "#0e0e0e",
+                "on-tertiary": "#006731",
+                "on-secondary-container": "#fff5f6",
+                "surface-container-low": "#131313",
+                "surface-dim": "#0e0e0e",
+                "on-primary-fixed": "#413200",
+                "secondary-fixed": "#ffc2cd",
+                "error-dim": "#d53d18",
+                "surface-container": "#1a1919",
+                "tertiary-dim": "#24f07e",
+                "on-secondary-fixed": "#6d002e",
+                "on-primary-fixed-variant": "#634e00",
+                "secondary-dim": "#ff6c95",
+                "error-container": "#b92902",
+                "inverse-surface": "#fcf9f8",
+                "inverse-primary": "#755c00",
+                "on-background": "#ffffff",
+                "on-error-container": "#ffd2c8",
+                "on-error": "#450900",
+                "tertiary": "#b5ffc2",
+                "surface-container-high": "#201f1f",
+                "primary-container": "#fecb00",
+                "outline": "#777575",
+                "surface-container-lowest": "#000000",
+                "inverse-on-surface": "#565555",
+                "on-primary-container": "#584500",
+                "primary-fixed": "#fecb00",
+                "on-secondary": "#48001c",
+                "on-secondary-fixed-variant": "#a20048"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .terminal-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #ffffff05 1px, transparent 1px);
+        }
+        .glow-line {
+            background: linear-gradient(90deg, transparent, #ffdd7c, transparent);
+        }
+    
+        @keyframes flowLine {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes softGlow {
+            0%, 100% { opacity: 1; filter: brightness(1); }
+            50% { opacity: 0.7; filter: brightness(1.3); }
+        }
+        @keyframes recordPulse {
+            0%, 100% { transform: scaleX(1); opacity: 0.4; }
+            50% { transform: scaleX(1.05); opacity: 0.6; }
+        }
+        .animate-flow {
+            stroke-dasharray: 10;
+            animation: flowLine 10s linear infinite;
+        }
+        .animate-soft-glow {
+            animation: softGlow 3s ease-in-out infinite;
+        }
+        .animate-record-pulse {
+            animation: recordPulse 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-black text-[#FFCC00] tracking-tighter font-['Space_Grotesk']">
+            Yoluko
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-white/70 hover:text-white transition-colors" href="#services">Services</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-white/70 hover:text-white transition-colors" href="#cases">Case Studies</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-white/70 hover:text-white transition-colors" href="#pricing">Pricing</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-white/70 hover:text-white transition-colors" href="#faq">FAQ</a>
+<div class="h-4 w-px bg-white/10"></div>
+<button class="text-white/70 hover:text-white font-bold transition-colors">FR</button>
+</div>
+<button class="bg-primary text-on-primary-fixed px-6 py-2.5 rounded-full font-headline font-bold hover:bg-primary-dim transition-all active:scale-95 duration-100">
+            Get Started
+        </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-6 lg:px-8">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full py-20">
+<div class="z-10">
+<span class="inline-block bg-secondary text-on-secondary px-4 py-1 rounded-sm text-sm font-label font-bold uppercase tracking-widest mb-6">
+                AI-POWERED EFFICIENCY
+            </span>
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                Transform your business with <span class="text-primary">Automation</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                Scale your operations with custom AI agents and automated workflows. $0 upfront cost. We only win when you grow.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-extrabold text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(255,221,124,0.3)] transition-all">
+                    Tell us what you need
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-bright transition-all border border-outline-variant/15">
+                    View Solutions
+                </button>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional business client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAkWTgR9gaQNyPyND8HJcLFbtuXD1NxMqn2GI0od1fsH9IMh3tHGsDByBlHdf500u1RKLpdLjjzI6ffs_OOE3spos8SMQcRks-J54w-21xWxmyrQPEU3eSTMCxXPYdTH27rjTwf3ctTJjHVgQaBmznb1tMQ2RycJFibzAmu0PER0Sg1puKw5bPfcBI1qy87qFvykl0aG0rJ8kPxbEe8Q5S_OqO2oTS1GFvAiQjrTiYB62TCEiXBwdMuTYd4pRbRvyVG-OenOX2uag"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female corporate executive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZrTUonVCRcsOZ6M-BSKxH5eHDssjPhR0f6ORGECqA2Lyo3y7nL_2nVKNgHHYmC4lM6TZcDfSq0Xse2ejr-iJ1EGKc1fAUuvP6SgCLv7Dy4WG2l88nA9HNA5yvu2rj1cKkywTEmqsErfSWuuMv2uG2DmJwaCGm-W7w2ARiRXSwO1_4SSo1Rgoc5Qj0MhpJ5dlUUEQvkoDrcywTgRRmGzD_D9oxzP16Grfaio0f6K-vCk_Ub2CIXJPhOSkEcnE3OtsB1RrJG9G5Sw"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a startup founder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSua45I1HeaYBZ45scZcRJlJyDHJ6dExc4HPhkPp1KnZi73-oVialsQgVClhoXuwdOFOKydA-bVTCgsi3sI2Z6jpCQURglrGpL0aI2jtcoPK_8WUC3Ev-jj4fWthdlsH1NemLoIUgBi4GQ9rHupYj06i3FrLhaIFlNFf9iTy3cAMT3a0rKGsqZoBhmFYRbEIvW_lxhdJoBU5ivsZLnLgcT48gMoGxCTGULqgbyAaLSprJBtNiY_XNhep9lLwORduMPVTGMbwTlEG0"/>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">Trusted by 50+ forward-thinking teams</p>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full"></div>
+<div class="relative glass-panel rounded-xl border border-outline-variant/20 p-4 shadow-2xl">
+<img class="rounded-lg w-full aspect-square object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="Futuristic 3D representation of AI neural network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm49cBsR6D8yFWo6V0ToiaejPcJSd8QEeuiR8sKmcDQ2hpT2T2hhdTkB5xItmobqJedb8U32zmFlONjqo9sCdWc1CfRmZfy-36gsQSqQcfPBZitZuhZdZroh4GU3z8yKidXD8kdwk29ayjsR18unIhAh9B6Rsfwa9NzWpsIjg0NOYUEEABN1AXn-S9Wqced3eRr5mhNe4dWI_ZB6Upe7pMHYVKPONi7j0v1Am99xJLVowc2kk8AzD3tLO0iZyZBjRzJVYjL5YsZzA"/>
+<div class="absolute -bottom-6 -right-6 bg-surface-container-high p-6 rounded-lg border border-outline-variant/20 shadow-xl max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="text-[10px] font-label font-bold text-tertiary uppercase tracking-tighter">System Active</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body leading-tight">Automation running: 99.9% Efficiency Gained</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Verticals Section -->
+<section class="py-24 px-6 lg:px-8 terminal-grid border-y border-white/5 bg-surface-container-lowest" id="verticals">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-primary font-label font-bold uppercase tracking-[0.3em] text-sm mb-4 block">Engineered Verticals</span>
+<h2 class="text-4xl lg:text-6xl font-headline font-black tracking-tighter text-on-surface">
+                Our Core <span class="text-primary">Specialized Solutions</span>
+</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- AI Agents -->
+<div class="group relative bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 hover:border-primary/50 transition-all duration-500 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">AI Agents</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+                        Building full AI agents that handle all types of tasks, fully autonomous or with human-in-the-loop. Fully customized, like a digital receptionist.
+                    </p>
+<div class="flex items-center gap-2 text-primary text-xs font-label font-bold uppercase tracking-widest">
+                        Deploy Intelligence <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Software Engineering -->
+<div class="group relative bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 hover:border-secondary/50 transition-all duration-500 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Software Eng.</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+                        Build custom SaaS platforms and high-performance software. Quality builds like our <a class="text-secondary hover:underline" href="https://frontdesk.yoluko.com/">Frontdesk</a> solution.
+                    </p>
+<div class="flex items-center gap-2 text-secondary text-xs font-label font-bold uppercase tracking-widest">
+                        Ship Products <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Automation -->
+<div class="group relative bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 hover:border-tertiary/50 transition-all duration-500 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-tertiary/5 rounded-full blur-2xl group-hover:bg-tertiary/10 transition-colors"></div>
+<div class="flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">settings_input_component</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Automation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+                        Beyond just AI—build intelligent algorithms that transform complex operational tasks into a single button press.
+                    </p>
+<div class="flex items-center gap-2 text-tertiary text-xs font-label font-bold uppercase tracking-widest">
+                        Scale Ops <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Data Science -->
+<div class="group relative bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 hover:border-primary/50 transition-all duration-500 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex flex-col h-full">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Data Science</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+                        Custom ML &amp; DL workflows for M&amp;A, price prediction, and advanced profile clustering for enterprise growth.
+                    </p>
+<div class="flex items-center gap-2 text-primary text-xs font-label font-bold uppercase tracking-widest">
+                        Predict Future <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem/Solution Section (Fireship Style) -->
+<section class="py-24 px-6 lg:px-8 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<span class="text-tertiary font-label font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Engineered for Results</span>
+<h2 class="text-4xl lg:text-6xl font-headline font-black tracking-tighter text-on-surface max-w-2xl">
+                Why choose the <span class="text-secondary">Yoluko</span> way?
+            </h2>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container p-8 rounded-lg border border-outline-variant/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden h-full">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div class="w-12 h-12 rounded bg-primary-container/20 flex items-center justify-center text-primary mb-8">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Eliminate Manual Work</h3>
+<p class="text-on-surface-variant leading-relaxed">Stop wasting hours on repetitive tasks. We build AI agents that handle the heavy lifting while you focus on high-level strategy.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center gap-2 text-primary font-bold font-label uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container p-8 rounded-lg border border-outline-variant/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden h-full">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-secondary mb-8">
+<span class="material-symbols-outlined">universal_currency_alt</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">No Hidden Costs</h3>
+<p class="text-on-surface-variant leading-relaxed">Transparent $0 upfront model. Our pricing is performance-based, ensuring our incentives are perfectly aligned with your business success.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center gap-2 text-secondary font-bold font-label uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
+                    Our Pricing <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container p-8 rounded-lg border border-outline-variant/5 hover:border-tertiary/30 transition-all duration-500 relative overflow-hidden h-full">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">integration_instructions</span>
+</div>
+<div class="w-12 h-12 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary mb-8">
+<span class="material-symbols-outlined">api</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Works With Your Tools</h3>
+<p class="text-on-surface-variant leading-relaxed">No need to switch stacks. We integrate seamlessly with Salesforce, Stripe, Slack, and 1000+ other enterprise applications.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center gap-2 text-tertiary font-bold font-label uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
+                    Integrations <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Solutions Grid (Bento Style) -->
+<section class="py-24 px-6 lg:px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl lg:text-5xl font-headline font-black tracking-tight mb-6">Omnichannel <span class="text-primary-fixed">Intelligence</span></h2>
+<p class="text-on-surface-variant text-lg">We don't just "do AI". We deploy targeted automation modules that solve specific operational bottlenecks.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">chevron_left</span>
+</div>
+<div class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]">
+<!-- Real-time Analytics -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="mb-8">
+<span class="bg-primary/10 text-primary-fixed px-3 py-1 rounded text-[10px] font-label font-black uppercase tracking-widest mb-4 inline-block">Flagship Solution</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Real-time Analytics</h3>
+<p class="text-on-surface-variant leading-relaxed">Unified data streams across your entire stack. Predictive modeling for growth and churn prevention.</p>
+</div>
+<div class="flex-grow flex items-center justify-center w-full relative group-hover:scale-105 transition-transform duration-700">
+<div class="w-full max-w-md h-auto p-4 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#ffdd7c]"></div>
+<div class="h-3 w-32 bg-white/10 rounded-full"></div>
+</div>
+<div class="px-3 py-1 bg-primary/20 rounded text-xs text-primary font-black tracking-tighter border border-primary/30">LIVE FEED</div>
+</div>
+<div class="relative h-64 w-full">
+<svg class="w-full h-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" preserveaspectratio="none" viewbox="0 0 400 120">
+<defs>
+<lineargradient id="chart-grad-large" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffdd7c" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#ffdd7c" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,100 L0,80 Q50,75 100,50 T200,60 T300,20 T400,40 L400,120 L0,120 Z" fill="url(#chart-grad-large)"></path>
+<path class="animate-flow" d="M0,80 Q50,75 100,50 T200,60 T300,20 T400,40" fill="none" stroke="#ffdd7c" stroke-linecap="round" stroke-width="3"></path>
+<circle class="drop-shadow-[0_0_12px_rgba(255,221,124,0.9)]" cx="100" cy="50" fill="#ffdd7c" r="5"></circle>
+<circle class="drop-shadow-[0_0_12px_rgba(255,221,124,0.9)]" cx="300" cy="20" fill="#ffdd7c" r="5"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="h-2 bg-primary/40 rounded-full"></div>
+<div class="h-2 bg-white/5 rounded-full"></div>
+<div class="h-2 bg-white/5 rounded-full"></div>
+<div class="h-2 bg-white/5 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Auto-Reporting -->
+<div class="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col md:flex-row gap-8 group overflow-hidden relative items-center">
+<div class="flex-grow text-left order-2 md:order-1">
+<h3 class="text-2xl font-headline font-bold mb-3">Auto-Reporting</h3>
+<p class="text-on-surface-variant">Automated stakeholder reports delivered weekly via Slack, Email, or Notion.</p>
+</div>
+<div class="flex-shrink-0 w-48 h-48 order-1 md:order-2 flex items-center justify-center relative group-hover:scale-110 transition-transform duration-500">
+<div class="relative w-28 h-36 bg-surface-container-highest border border-white/10 rounded-lg shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] p-4 flex flex-col gap-4">
+<div class="w-full h-2 bg-secondary/40 rounded-full animate-record-pulse"></div>
+<div class="w-3/4 h-2 bg-white/10 rounded-full"></div>
+<div class="w-1/2 h-2 bg-white/10 rounded-full"></div>
+<div class="mt-auto flex items-center justify-between">
+<div class="w-10 h-6 bg-secondary/20 border border-secondary/40 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-secondary">check</span>
+</div>
+<div class="w-6 h-2 bg-white/5 rounded-full"></div>
+</div>
+<div class="absolute -right-4 -top-4 w-12 h-12 rounded-full bg-secondary shadow-2xl shadow-secondary/40 flex items-center justify-center border-4 border-surface animate-bounce animate-soft-glow">
+<span class="material-symbols-outlined text-on-secondary text-xl">notifications_active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Accounting -->
+<div class="bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group relative overflow-hidden items-center text-center">
+<div class="flex-grow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+<div class="w-32 h-32 rounded-3xl bg-primary/5 border border-primary/20 flex items-center justify-center relative shadow-inner">
+<div class="w-20 h-20 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ffdd7c]"></div>
+<div class="flex-grow h-2 bg-primary/20 rounded-full"></div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="h-2 w-12 bg-white/10 rounded-full"></div>
+<div class="h-2 w-6 bg-primary/40 rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<div class="h-2 w-8 bg-white/10 rounded-full"></div>
+<div class="h-2 w-10 bg-primary/40 rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<div class="h-2 w-14 bg-white/10 rounded-full"></div>
+<div class="h-2 w-4 bg-primary/40 rounded-full"></div>
+</div>
+</div>
+<div class="h-[2px] w-full bg-white/10 mt-2"></div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Accounting</h3>
+<p class="text-on-surface-variant text-sm">Auto-matching invoices and expenses.</p>
+</div>
+</div>
+<!-- Operations -->
+<div class="bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group relative overflow-hidden items-center text-center">
+<div class="flex-grow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+<div class="w-32 h-32 rounded-3xl bg-primary/5 border border-primary/20 flex items-center justify-center relative shadow-inner">
+<div class="relative w-20 h-20">
+<div class="absolute inset-0 rounded-full border-4 border-primary/10 border-t-primary animate-[spin_8s_linear_infinite]"></div>
+<div class="absolute inset-3 rounded-full border-2 border-white/5"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center border-2 border-primary/30 rotate-45">
+<div class="w-3 h-3 rounded-full bg-primary -rotate-45 shadow-[0_0_15px_rgba(255,221,124,0.9)]"></div>
+</div>
+</div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-4 h-4 rounded-full bg-primary border-4 border-surface shadow-[0_0_12px_rgba(255,221,124,0.6)]"></div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Operations</h3>
+<p class="text-on-surface-variant text-sm">24/7 internal process oversight.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Comparison -->
+<section class="py-24 px-6 lg:px-8 bg-surface-container-low" id="pricing">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-headline font-black mb-6">Re-thinking Agency <span class="text-secondary">Economics</span></h2>
+<p class="text-on-surface-variant text-lg">We eliminated the overhead and the fluff. You pay for value, not billable hours.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 items-stretch">
+<div class="bg-surface-container p-10 rounded-xl border border-outline-variant/10 flex flex-col h-full grayscale opacity-70">
+<h3 class="text-2xl font-headline font-bold text-on-surface-variant mb-8">The Traditional Way</h3>
+<ul class="space-y-6 flex-grow">
+<li class="flex gap-4 items-start text-on-surface-variant">
+<span class="material-symbols-outlined text-error">close</span>
+<span>High setup fees ($10k+) before any work begins</span>
+</li>
+<li class="flex gap-4 items-start text-on-surface-variant">
+<span class="material-symbols-outlined text-error">close</span>
+<span>Hourly billing that incentivizes slow progress</span>
+</li>
+<li class="flex gap-4 items-start text-on-surface-variant">
+<span class="material-symbols-outlined text-error">close</span>
+<span>3-month lead times for simple automations</span>
+</li>
+<li class="flex gap-4 items-start text-on-surface-variant">
+<span class="material-symbols-outlined text-error">close</span>
+<span>Static results that require manual maintenance</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl border-2 border-primary shadow-[0_0_40px_rgba(255,221,124,0.1)] flex flex-col h-full relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-label font-bold uppercase tracking-tighter">Recommended</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-8">The Yoluko Way</h3>
+<ul class="space-y-6 flex-grow">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span>$0 Upfront cost. We build the PoC for free.</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span>Success-based flat monthly management.</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span>Deploy first workflows in under 7 days.</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span>Self-healing AI agents that evolve with you.</span>
+</li>
+</ul>
+<button class="mt-12 w-full bg-primary text-on-primary py-4 rounded-full font-headline font-extrabold hover:bg-primary-dim transition-all">Start Your Free Audit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Integrations Wall -->
+<section class="py-20 border-y border-outline-variant/10 overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center font-label font-bold text-on-surface-variant uppercase tracking-[0.3em] text-xs mb-12">Built to scale on your stack</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="text-3xl font-headline font-bold">Salesforce</div>
+<div class="text-3xl font-headline font-bold">Stripe</div>
+<div class="text-3xl font-headline font-bold">HubSpot</div>
+<div class="text-3xl font-headline font-bold">Zendesk</div>
+<div class="text-3xl font-headline font-bold">Shopify</div>
+<div class="text-3xl font-headline font-bold">AWS</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 px-6 lg:px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<h2 class="text-4xl lg:text-5xl font-headline font-black mb-4">The Humans behind the <span class="text-primary">Bots</span></h2>
+<p class="text-on-surface-variant">Expertise at the intersection of Engineering and Business Strategy.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start p-8 rounded-2xl bg-surface-container border border-outline-variant/10 group">
+<div class="w-32 h-32 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Alexandre - Tech Lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmi-Ac_NwtnFX63p3KcfZ6t7wpjl0745ChzENkT3D_W-UjDXdwJ2uFoS3Vs3qaxfF4y23WvBF9JexxedUI-sgpPiIsLqQY3_Us7ET47m3VBySJDMss3uUm4PGwfCHPn7oFrCzQQbziSbCsxurRBmKO_p83D8iz5OKDBaUxlTehp0vfwQ9IeT4FxDGzdCSFmPRwf6bbQ0qOEQm13c8ZvRkdkbInUMyRPE_CD9JxrWsXebfVKjmoN2QiFQMWkQPk5HAnOyqTh1hsSdQ"/>
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold mb-2">Alexandre</h3>
+<p class="text-primary font-label font-bold uppercase text-xs tracking-widest mb-4">Tech Lead &amp; AI Architect</p>
+<p class="text-on-surface-variant leading-relaxed">Ex-Big Tech engineer specialized in Large Language Models and distributed systems. Designing the brain of your automation.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start p-8 rounded-2xl bg-surface-container border border-outline-variant/10 group">
+<div class="w-32 h-32 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Yahya - Strategy Director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZgYKsB1cl7u3oTV0gHW7qyJyW_I5-vGAvJ88_pOsagV8bPvgJMu9kQ4pkcmXjVt0PNKfhiyds0fQBWPLaiDFU8c1fQE2Bsr25LcCaP7aDGMdSyuo4cs_dtvHhIFsK-iCl5XQdaHCBL94wP280LEFebjwoIy1f88A_kcdDCkiPHWQwmkedG8fNnClsTXryUvk02lvNjs2YMwORiAFdIF310Gp6sOJtsf2Cr0JHxPn3oUejzP4mMQwtZ7JtBJNkWxDSY0rifKtkgLs"/>
+</div>
+<div>
+<h3 class="text-2xl font-headline font-bold mb-2">Yahya</h3>
+<p class="text-secondary font-label font-bold uppercase text-xs tracking-widest mb-4">Strategy &amp; Ops Director</p>
+<p class="text-on-surface-variant leading-relaxed">Business optimization expert with a track record of scaling operations for global startups. Ensuring AI translates to ROI.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 px-6 lg:px-8 bg-surface-container-low" id="faq">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-4xl font-headline font-black mb-12 text-center">Questions you might have</h2>
+<div class="space-y-4">
+<div class="bg-surface-container border border-outline-variant/10 rounded-lg p-6">
+<div class="flex justify-between items-center cursor-pointer group">
+<h4 class="font-headline font-bold text-lg">How does the $0 upfront model work?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed">We invest our time and resources to build your initial proof of concept. If you're happy with the results, we move into a performance-based monthly partnership. If not, you owe us nothing.</p>
+</div>
+<div class="bg-surface-container border border-outline-variant/10 rounded-lg p-6">
+<div class="flex justify-between items-center cursor-pointer group">
+<h4 class="font-headline font-bold text-lg">Is my data secure with your AI?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed">Security is our top priority. We use enterprise-grade encryption and can deploy local, private LLM instances that never send data to public training sets.</p>
+</div>
+<div class="bg-surface-container border border-outline-variant/10 rounded-lg p-6">
+<div class="flex justify-between items-center cursor-pointer group">
+<h4 class="font-headline font-bold text-lg">Do we need a technical team to manage it?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed">Not at all. We provide full-service management. We monitor the systems 24/7 and handle all updates, so you can just enjoy the results.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-24 px-6 lg:px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-5xl font-headline font-black mb-8 leading-tight">Ready to <span class="text-primary">Automate</span> your growth?</h2>
+<p class="text-on-surface-variant text-lg mb-10">Fill out the form and our team will get back to you with a custom automation audit within 24 hours.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<span class="font-label font-bold text-sm tracking-wider">hello@yoluko.ai</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">location_on</span>
+</div>
+<span class="font-label font-bold text-sm tracking-wider" data-location="Paris">Paris &amp; Remote Worldwide</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 lg:p-12 rounded-2xl border border-outline-variant/10 shadow-2xl relative">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-3xl"></div>
+<form class="space-y-6">
+<div>
+<label class="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary transition-colors text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">Work Email</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary transition-colors text-on-surface" placeholder="john@company.com" type="email"/>
+</div>
+<div>
+<label class="block font-label font-bold text-xs uppercase tracking-widest mb-2 text-on-surface-variant">Your Challenge</label>
+<textarea class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary transition-colors text-on-surface" placeholder="Tell us about the manual tasks holding you back..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-headline font-black text-lg hover:shadow-[0_0_20px_rgba(255,221,124,0.4)] transition-all" type="submit">
+                    Send Request
+                </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] border-t border-white/5 py-12">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="text-xl font-bold text-white font-['Space_Grotesk'] tracking-tighter">Yoluko</div>
+<p class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-gray-500">
+                © 2024 Yoluko AI &amp; Automation Agency. All rights reserved.
+            </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#FFCC00] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#FFCC00] transition-colors" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#FFCC00] transition-colors" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-gray-500 hover:text-[#FFCC00] transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

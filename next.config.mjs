@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: false, // Consistent URL structure without trailing slashes
+  trailingSlash: false,
   async redirects() {
     return [
-      // HTTP to HTTPS redirect - force HTTPS everywhere
       {
         source: '/:path*',
         has: [
@@ -16,7 +15,6 @@ const nextConfig = {
         destination: 'https://yoluko.com/:path*',
         permanent: true,
       },
-      // WWW to non-WWW redirect with language preservation
       {
         source: '/:path*',
         has: [
@@ -28,16 +26,25 @@ const nextConfig = {
         destination: 'https://yoluko.com/:path*',
         permanent: true,
       },
-      // Root redirect to default language
+      // Legacy locale redirects
       {
-        source: '/',
-        destination: '/en',
+        source: '/en',
+        destination: '/',
         permanent: true,
       },
-      // Handle legacy URLs without language prefix
       {
-        source: '/success',
-        destination: '/en/success',
+        source: '/fr',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en/success',
+        destination: '/success',
+        permanent: true,
+      },
+      {
+        source: '/fr/success',
+        destination: '/success',
         permanent: true,
       },
     ];
@@ -51,7 +58,6 @@ const nextConfig = {
             key: 'X-Robots-Tag',
             value: 'index, follow',
           },
-          // Force HTTPS and improve security
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains',
