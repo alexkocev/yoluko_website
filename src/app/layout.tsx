@@ -38,9 +38,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/Yoluko_logo_gen2.ico",
-    shortcut: "/images/Yoluko_logo_gen2.ico",
-    apple: "/images/Yoluko_logo_gen2.ico",
+    icon: "/images/favicon.svg",
+    shortcut: "/images/favicon.svg",
+    apple: "/images/favicon.svg",
+  },
+  alternates: {
+    canonical: SITE_CONFIG.baseUrl,
   },
   openGraph: {
     title: "Yoluko | AI & Automation Agency",
@@ -57,12 +60,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Yoluko | AI & Automation Agency",
-    description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost.",
-    images: [`${SITE_CONFIG.baseUrl}/images/og-image.jpg`],
   },
 };
 
@@ -115,11 +112,11 @@ export default function RootLayout({
                   "url": SITE_CONFIG.baseUrl,
                   "logo": {
                     "@type": "ImageObject",
-                    "url": `${SITE_CONFIG.baseUrl}/images/LOGO Yoluko.svg`,
+                    "url": `${SITE_CONFIG.baseUrl}/images/logo-yoluko.svg`,
                     "width": 400,
                     "height": 400
                   },
-                  "image": `${SITE_CONFIG.baseUrl}/images/LOGO Yoluko.svg`,
+                  "image": `${SITE_CONFIG.baseUrl}/images/logo-yoluko.svg`,
                   "description": "AI & Automation agency building custom solutions for businesses. AI agents, software engineering, automation, and data science.",
                   "foundingDate": "2024",
                   "founders": [

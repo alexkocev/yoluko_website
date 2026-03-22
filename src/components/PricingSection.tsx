@@ -32,7 +32,7 @@ export const PricingSection = () => {
                 "High setup fees ($10k+) before any work begins",
                 "Hourly billing that incentivizes slow progress",
                 "3-month lead times for simple automations",
-                "Static results that require manual maintenance",
+                "One-size-fits-all solutions",
               ].map((item) => (
                 <li
                   key={item}
@@ -58,7 +58,7 @@ export const PricingSection = () => {
                 "$0 Upfront cost. We build the PoC for free.",
                 "Success-based flat monthly management.",
                 "Deploy first workflows in under 7 days.",
-                "Self-healing AI agents that evolve with you.",
+                "Fully customized to your needs.",
               ].map((item) => (
                 <li key={item} className="flex gap-4 items-start">
                   <CheckCircle className="h-5 w-5 text-tertiary flex-shrink-0 mt-0.5" />

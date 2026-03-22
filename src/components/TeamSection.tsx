@@ -1,16 +1,16 @@
 const team = [
   {
-    name: "Alexandre",
+    name: "Alexandre Kocev",
     role: "Tech Lead & AI Architect",
     roleColor: "text-primary",
-    bio: "Ex-Big Tech engineer specialized in Large Language Models and distributed systems. Designing the brain of your automation.",
+    bio: "I'm the builder. You bring a vision or a challenge, I turn it into a real, working solution. I handle the complex tech so you can focus on growing your business.",
     image: "/images/profile_alex_chill.jpg",
   },
   {
-    name: "Yahya",
+    name: "Yahya Lahlou",
     role: "Strategy & Ops Director",
     roleColor: "text-secondary",
-    bio: "Business optimization expert with a track record of scaling operations for global startups. Ensuring AI translates to ROI.",
+    bio: "I find the hidden bottlenecks and revenue opportunities most businesses miss. Your strategic partner, focused on making sure every solution we build makes a real difference.",
     image: "/images/profile_yayha.jpeg",
   },
 ];

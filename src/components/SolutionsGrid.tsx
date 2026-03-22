@@ -10,25 +10,24 @@ export const SolutionsGrid = () => {
               Omnichannel <span className="text-primary">Intelligence</span>
             </h2>
             <p className="text-on-surface-variant text-lg">
-              If it involves copy-pasting, spreadsheets, or repetitive manual work
-              we can automate it. Custom-built from scratch, not off-the-shelf.
+              If it involves repetitive tasks, we can automate it. Custom-built from scratch, not off-the-shelf.
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]">
-          {/* Real-time Analytics - Large Card */}
+          {/* On-demand AI Business Analyst - Large Card */}
           <div className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="mb-8 relative">
               <span className="bg-primary/10 text-primary px-3 py-1 rounded text-[10px] font-label font-black uppercase tracking-widest mb-4 inline-block">
-                Flagship Solution
+                Strategy
               </span>
               <h3 className="text-3xl font-headline font-bold mb-4">
-                Unified Dashboard
+                On-demand AI Business Analyst
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                All your data sources, one live dashboard. Decide with clarity, not gut feeling.
+                Ask any strategic question about your business and get instant, data-backed answers.
               </p>
             </div>
             <div className="flex-grow flex items-center justify-center w-full relative group-hover:scale-105 transition-transform duration-700">
@@ -107,14 +106,17 @@ export const SolutionsGrid = () => {
             </div>
           </div>
 
-          {/* Auto-Reporting */}
+          {/* AI Social Media Manager */}
           <div className="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col md:flex-row gap-8 group overflow-hidden relative items-center">
             <div className="flex-grow text-left order-2 md:order-1">
+              <span className="bg-secondary/10 text-secondary px-3 py-1 rounded text-[10px] font-label font-black uppercase tracking-widest mb-4 inline-block">
+                Marketing
+              </span>
               <h3 className="text-2xl font-headline font-bold mb-3">
-                Hands-Free Reporting
+                AI Social Media Manager
               </h3>
               <p className="text-on-surface-variant">
-                Automated summaries delivered to your inbox, Slack, or Notion. On your schedule.
+                Maintain your social presence consistently without the daily grind. Boost engagement while cutting content creation time by 75%.
               </p>
             </div>
             <div className="flex-shrink-0 w-48 h-48 order-1 md:order-2 flex items-center justify-center relative group-hover:scale-110 transition-transform duration-500">
@@ -135,7 +137,7 @@ export const SolutionsGrid = () => {
             </div>
           </div>
 
-          {/* Accounting */}
+          {/* Automated Reconciliation Specialist */}
           <div className="bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group relative overflow-hidden items-center text-center">
             <div className="flex-grow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <div className="w-32 h-32 rounded-3xl bg-primary/5 border border-primary/20 flex items-center justify-center relative shadow-inner">
@@ -163,16 +165,19 @@ export const SolutionsGrid = () => {
               </div>
             </div>
             <div>
+              <span className="bg-primary/10 text-primary px-3 py-1 rounded text-[10px] font-label font-black uppercase tracking-widest mb-3 inline-block">
+                Accounting
+              </span>
               <h3 className="text-xl font-headline font-bold mb-2">
-                Smart Alerting
+                Automated Reconciliation Specialist
               </h3>
               <p className="text-on-surface-variant text-sm">
-                Real-time alerts for anomalies, sales drops, and low inventory before they hurt.
+                Processes weeks of financial transactions in minutes with 99.8% accuracy.
               </p>
             </div>
           </div>
 
-          {/* Operations */}
+          {/* Live Operations Monitor */}
           <div className="bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group relative overflow-hidden items-center text-center">
             <div className="flex-grow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <div className="w-32 h-32 rounded-3xl bg-primary/5 border border-primary/20 flex items-center justify-center relative shadow-inner">
@@ -189,11 +194,14 @@ export const SolutionsGrid = () => {
               </div>
             </div>
             <div>
+              <span className="bg-primary/10 text-primary px-3 py-1 rounded text-[10px] font-label font-black uppercase tracking-widest mb-3 inline-block">
+                Operations
+              </span>
               <h3 className="text-xl font-headline font-bold mb-2">
-                AI Analyst
+                Live Operations Monitor
               </h3>
               <p className="text-on-surface-variant text-sm">
-                Ask anything about your business and get instant, data-backed answers.
+                Instant Slack or email alerts for the metrics that matter, before small issues become big problems.
               </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 const integrations = [
-  "Salesforce", "Stripe", "HubSpot", "Zendesk", "Shopify", "AWS",
-  "Slack", "Google Analytics", "Databricks", "Tableau", "Magento",
-  "Notion", "Zapier", "Airtable", "Monday.com", "Intercom",
+  "Salesforce", "Gmail", "Google Calendar", "Stripe", "Slack", "HubSpot",
+  "AWS", "Zapier", "Zendesk", "Shopify", "Google Analytics", "Databricks",
+  "Tableau", "Magento", "Notion", "Airtable", "Monday.com", "Intercom",
 ];
 
 export const IntegrationsWall = () => {
@@ -22,6 +22,9 @@ export const IntegrationsWall = () => {
           ))}
         </div>
       </div>
+      <p className="text-center text-on-surface-variant/50 font-label font-bold text-sm mt-10">
+        + 200 other tools supported
+      </p>
     </section>
   );
 };

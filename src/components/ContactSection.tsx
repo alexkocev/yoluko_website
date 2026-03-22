@@ -61,7 +61,7 @@ export const ContactSection = () => {
                 </label>
                 <input
                   className="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:border-2 transition-colors text-on-surface placeholder:text-on-surface-variant/50"
-                  placeholder="Tony Stark"
+                  placeholder="Ada Lovelace"
                   type="text"
                   name="name"
                   required
@@ -73,7 +73,7 @@ export const ContactSection = () => {
                 </label>
                 <input
                   className="w-full bg-surface-container-highest border border-outline-variant/15 rounded-lg px-4 py-4 focus:outline-none focus:border-primary focus:border-2 transition-colors text-on-surface placeholder:text-on-surface-variant/50"
-                  placeholder="tony@starkindustries.com"
+                  placeholder="ada@yourcompany.com"
                   type="email"
                   name="email"
                   required
