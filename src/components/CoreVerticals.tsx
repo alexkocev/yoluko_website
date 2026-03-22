@@ -1,4 +1,4 @@
-import { Bot, Terminal, Cog, TrendingUp } from "lucide-react";
+import { Bot, Terminal, Cog, Database } from "lucide-react";
 
 const verticals = [
   {
@@ -26,11 +26,11 @@ const verticals = [
     color: "tertiary",
   },
   {
-    icon: TrendingUp,
-    title: "Data Science",
+    icon: Database,
+    title: "Data & Intelligence",
     description:
-      "Custom ML & DL workflows for M&A, price prediction, and advanced profile clustering for enterprise growth.",
-    cta: "Predict Future",
+      "From large-scale web scraping and data engineering pipelines to custom ML models for market mapping, price prediction, and competitive intelligence.",
+    cta: "Unlock Insights",
     color: "primary",
   },
 ];

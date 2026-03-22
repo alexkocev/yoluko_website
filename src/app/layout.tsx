@@ -145,8 +145,9 @@ export default function RootLayout({
                     "AI Agents",
                     "Software Engineering",
                     "Business Automation",
-                    "Data Science",
-                    "Custom Software Development"
+                    "Data & Intelligence",
+                    "Custom Software Development",
+                    "Clinic Market Intelligence"
                   ],
                 },
                 {

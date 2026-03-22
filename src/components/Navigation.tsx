@@ -17,6 +17,7 @@ export const Navigation = () => {
   const navLinks = [
     { label: "Services", id: "verticals" },
     { label: "Case Studies", id: "solutions" },
+    { label: "Products", id: "products" },
     { label: "Pricing", id: "pricing" },
     { label: "FAQ", id: "faq" },
   ];

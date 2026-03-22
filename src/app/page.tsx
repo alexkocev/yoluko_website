@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { CoreVerticals } from "@/components/CoreVerticals";
 import { WhyYoluko } from "@/components/WhyYoluko";
 import { SolutionsGrid } from "@/components/SolutionsGrid";
+import { ProductsSection } from "@/components/ProductsSection";
 import { PricingSection } from "@/components/PricingSection";
 import { IntegrationsWall } from "@/components/IntegrationsWall";
 import { TeamSection } from "@/components/TeamSection";
@@ -19,6 +20,7 @@ export default function Home() {
         <CoreVerticals />
         <WhyYoluko />
         <SolutionsGrid />
+        <ProductsSection />
         <PricingSection />
         <IntegrationsWall />
         <TeamSection />
