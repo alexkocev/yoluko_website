@@ -169,7 +169,7 @@ export const SolutionsGrid = () => {
                 Accounting
               </span>
               <h3 className="text-xl font-headline font-bold mb-2">
-                Automated Reconciliation Specialist
+                AutomatedReconciliation Specialist
               </h3>
               <p className="text-on-surface-variant text-sm">
                 Weeks of transactions reconciled in minutes. 99.8% accuracy.

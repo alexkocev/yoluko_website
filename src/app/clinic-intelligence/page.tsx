@@ -449,13 +449,13 @@ export default function ClinicIntelligencePage() {
             <p className="text-on-surface-variant text-lg mb-8">
               Tell us your Ideal Customer Profile and we&apos;ll run a free market sizing count and send you pricing.
             </p>
-            <a
-              href="mailto:alexandre@yoluko.com?subject=Clinic%20Market%20Intelligence%20—%20Custom%20Quote&body=Delivery%20Model%3A%20%5BOne-shot%20extract%20%2F%20Monthly%20refresh%20%2F%20Migration%20alerts%20%2F%20Full%20market%20dataset%5D%0AStates%3A%20%5BAll%20Aus%20%2F%20NSW%20%2F%20VIC%20%2F%20QLD%20%2F%20WA%20%2F%20SA%20%2F%20TAS%20%2F%20NT%5D%0AVerticals%3A%20%5BAll%20%2F%20GP%20%2F%20Dental%20%2F%20Physio%20%2F%20Allied%20Health%20%2F%20Specialist%20%2F%20Other%5D%0ATech%20Stack%20Filter%3A%20%5Be.g.%2C%20%22Cliniko%20but%20NO%20HotDoc%22%5D%0AInclude%20Decision%20Makers%3F%20%5BYes%20%2F%20No%5D"
+            <Link
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-extrabold hover:bg-primary-dim transition-all text-lg"
             >
               <Mail className="h-5 w-5" />
               Request a Quote
-            </a>
+            </Link>
           </div>
         </section>
       </main>

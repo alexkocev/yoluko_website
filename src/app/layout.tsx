@@ -139,7 +139,9 @@ export default function RootLayout({
                   },
                   "areaServed": [
                     { "@type": "Country", "name": "France" },
-                    { "@type": "Country", "name": "Europe" }
+                    { "@type": "Country", "name": "Australia" },
+                    { "@type": "Place", "name": "Europe" },
+                    { "@type": "Place", "name": "APAC" }
                   ],
                   "serviceType": [
                     "AI Agents",

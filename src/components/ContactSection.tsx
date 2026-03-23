@@ -32,7 +32,7 @@ export const ContactSection = () => {
                 <MapPin className="h-4 w-4" />
               </div>
               <span className="font-label font-bold text-sm tracking-wider">
-                France &amp; Remote Worldwide
+                France, APAC &amp; Australia — Remote Worldwide
               </span>
             </div>
           </div>
