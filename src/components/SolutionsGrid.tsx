@@ -15,7 +15,7 @@ export const SolutionsGrid = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[750px]">
           {/* On-demand AI Business Analyst - Large Card */}
           <div className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 flex flex-col group overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -172,7 +172,7 @@ export const SolutionsGrid = () => {
                 Automated Reconciliation Specialist
               </h3>
               <p className="text-on-surface-variant text-sm">
-                Processes weeks of financial transactions in minutes with 99.8% accuracy.
+                Weeks of transactions reconciled in minutes. 99.8% accuracy.
               </p>
             </div>
           </div>
@@ -201,7 +201,7 @@ export const SolutionsGrid = () => {
                 Live Operations Monitor
               </h3>
               <p className="text-on-surface-variant text-sm">
-                Instant Slack or email alerts for the metrics that matter, before small issues become big problems.
+                Real-time Slack or email alerts before small issues become big problems.
               </p>
             </div>
           </div>
