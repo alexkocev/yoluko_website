@@ -61,7 +61,7 @@ const digitalMaturity = [
   { tech: "CMS", detected: "87.0%", greenfield: "13.0%" },
   { tech: "Payments Integration", detected: "74.8%", greenfield: "25.2%" },
   { tech: "Ad Tracking (Pixels)", detected: "64.4%", greenfield: "35.6%" },
-  { tech: "Online Booking", detected: "57.2%", greenfield: "42.8%" },
+  { tech: "Booking Platform", detected: "57.2%", greenfield: "42.8%" },
   { tech: "PMS / EHR", detected: "43.9%", greenfield: "56.1%" },
   { tech: "Telehealth", detected: "8.6%", greenfield: "91.4%" },
   { tech: "CRM / Marketing", detected: "8.3%", greenfield: "91.7%" },
@@ -193,7 +193,7 @@ export default function ClinicIntelligencePage() {
           <div className="max-w-5xl mx-auto">
             <div className="bg-surface-container-low p-4 rounded-xl border border-primary/20 mb-4">
               <p className="text-primary text-sm font-label font-bold text-center">
-                82% of clinics have online booking, but only 11.2% use a CRM and 8.3% offer Telehealth — massive greenfield.
+                80.6% of clinics offer online booking, but only 57.2% use a dedicated booking platform, 11.2% use a CRM and 8.3% offer Telehealth — massive greenfield.
               </p>
             </div>
           </div>
