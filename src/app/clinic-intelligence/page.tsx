@@ -18,7 +18,7 @@ import {
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Clinic Market Intelligence — Australian Healthcare Data",
+  title: "Clinic Market Intelligence | Australian Healthcare Data",
   description:
     "28,252 Australian clinic locations mapped. Tech stacks, firmographics, migration alerts, and decision-maker contacts for B2B SaaS vendors and agencies.",
 };
@@ -147,7 +147,7 @@ export default function ClinicIntelligencePage() {
             <p className="text-xl text-on-surface-variant max-w-3xl leading-relaxed mb-8">
               Structured visibility into the technology stacks, firmographics, and change activity of{" "}
               <span className="text-primary font-bold">28,252 Australian clinic locations</span>.
-              Built for B2B tech vendors and agencies who need deterministic market data — not guesswork.
+              Built for B2B tech vendors and agencies who need deterministic market data, not guesswork.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
@@ -170,6 +170,36 @@ export default function ClinicIntelligencePage() {
           </div>
         </section>
 
+        {/* Coverage Map */}
+        <section className="px-6 lg:px-8 mb-24">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-surface-container-low rounded-2xl border border-outline-variant/10 overflow-hidden">
+              <div className="grid md:grid-cols-2 items-center">
+                <div className="p-8 lg:p-10">
+                  <span className="text-primary font-label font-bold uppercase tracking-[0.3em] text-xs mb-3 block">
+                    National Coverage
+                  </span>
+                  <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface mb-4">
+                    Full <span className="text-primary">Australia-Wide</span> Coverage
+                  </h2>
+                  <p className="text-on-surface-variant leading-relaxed">
+                    Every state and territory mapped, from metro hubs to regional and rural clinics.
+                    Our dataset covers the entire Australian private healthcare market with no geographic gaps.
+                  </p>
+                </div>
+                <div className="relative min-h-[300px]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/aus_map.png"
+                    alt="Heatmap of Australian clinic coverage across all states and territories"
+                    className="w-full h-full object-cover absolute inset-0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* What It Is */}
         <section className="px-6 lg:px-8 mb-24">
           <div className="max-w-5xl mx-auto">
@@ -183,7 +213,7 @@ export default function ClinicIntelligencePage() {
             <p className="text-on-surface-variant text-lg leading-relaxed max-w-3xl">
               We&apos;ve automated it by deterministically mapping the digital footprint of the
               Australian private clinic market. Systems are tagged only when structurally
-              identified — no guessing, no stale directories.
+              identified. No guessing, no stale directories.
             </p>
           </div>
         </section>
@@ -193,7 +223,7 @@ export default function ClinicIntelligencePage() {
           <div className="max-w-5xl mx-auto">
             <div className="bg-surface-container-low p-4 rounded-xl border border-primary/20 mb-4">
               <p className="text-primary text-sm font-label font-bold text-center">
-                80.6% of clinics offer online booking, but only 57.2% use a dedicated booking platform, 11.2% use a CRM and 8.3% offer Telehealth — massive greenfield.
+                80.6% of clinics offer online booking, but only 57.2% use a dedicated booking platform, 11.2% use a CRM and 8.3% offer Telehealth. Massive greenfield.
               </p>
             </div>
           </div>
@@ -240,7 +270,7 @@ export default function ClinicIntelligencePage() {
               PMS / EHR <span className="text-primary">Market Share</span>
             </h2>
             <p className="text-on-surface-variant mb-8">
-              Over 56% of clinics expose no public PMS signal — representing a massive greenfield opportunity.
+              Over 56% of clinics expose no public PMS signal, representing a massive greenfield opportunity.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-left">
@@ -406,7 +436,7 @@ export default function ClinicIntelligencePage() {
                 </h3>
                 <p className="text-on-surface-variant text-sm leading-relaxed">
                   Need to know if a clinic specifically mentions &quot;Bulk Billing&quot; or &quot;NDIS&quot;?
-                  We own the scrapers in-house — tell us what you need and we&apos;ll run a custom
+                  We own the scrapers in-house. Tell us what you need and we&apos;ll run a custom
                   scrape for your extract.
                 </p>
               </div>
@@ -419,9 +449,9 @@ export default function ClinicIntelligencePage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { icon: RefreshCw, title: "Fresh Data", desc: "Regularly refreshed — reflects the live market, not stale directories." },
+                { icon: RefreshCw, title: "Fresh Data", desc: "Regularly refreshed to reflect the live market, not stale directories." },
                 { icon: Shield, title: "Deterministic", desc: "Systems tagged only when structurally identified in the public footprint." },
-                { icon: Search, title: "Greenfield Signal", desc: "A null result means no public signal — itself a qualification for outbound." },
+                { icon: Search, title: "Greenfield Signal", desc: "A null result means no public signal, itself a qualification for outbound." },
                 { icon: Shield, title: "Public Data Only", desc: "All signals from publicly exposed sources. No patient-level data collected." },
               ].map((principle) => {
                 const Icon = principle.icon;
