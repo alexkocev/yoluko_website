@@ -54,12 +54,18 @@ export const metadata: Metadata = {
       {
         url: `${SITE_CONFIG.baseUrl}/images/og-image.jpg`,
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Yoluko - AI & Automation Agency",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yoluko | AI & Automation Agency",
+    description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost. We only win when you grow.",
+    images: [`${SITE_CONFIG.baseUrl}/images/og-image.jpg`],
   },
 };
 

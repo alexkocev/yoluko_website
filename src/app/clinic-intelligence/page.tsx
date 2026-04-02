@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/constants";
 import Link from "next/link";
 import {
   MapPin,
@@ -21,6 +22,28 @@ export const metadata: Metadata = {
   title: "Clinic Market Intelligence | Australian Healthcare Data",
   description:
     "28,252 Australian clinic locations mapped. Tech stacks, firmographics, migration alerts, and decision-maker contacts for B2B SaaS vendors and agencies.",
+  openGraph: {
+    title: "Clinic Market Intelligence | 28,252 Australian Clinics Mapped",
+    description:
+      "Tech stacks, firmographics, migration alerts, and decision-maker contacts. Built for B2B SaaS vendors and agencies.",
+    type: "website",
+    siteName: "Yoluko",
+    images: [
+      {
+        url: `${SITE_CONFIG.baseUrl}/images/og-clinic-intelligence.png`,
+        width: 1200,
+        height: 630,
+        alt: "Clinic Market Intelligence - 28,252 Australian Clinic Locations Mapped",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clinic Market Intelligence | 28,252 Australian Clinics Mapped",
+    description:
+      "Tech stacks, firmographics, migration alerts, and decision-maker contacts. Built for B2B SaaS vendors and agencies.",
+    images: [`${SITE_CONFIG.baseUrl}/images/og-clinic-intelligence.png`],
+  },
 };
 
 const highlightStats = [
