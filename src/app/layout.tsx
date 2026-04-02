@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Yoluko",
     images: [
       {
-        url: `${SITE_CONFIG.baseUrl}/images/og-image.jpg`,
+        url: `${SITE_CONFIG.baseUrl}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Yoluko - AI & Automation Agency",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yoluko | AI & Automation Agency",
     description: "Scale your operations with custom AI agents and automated workflows. $0 upfront cost. We only win when you grow.",
-    images: [`${SITE_CONFIG.baseUrl}/images/og-image.jpg`],
+    images: [`${SITE_CONFIG.baseUrl}/images/og-image.png`],
   },
 };
 
@@ -94,7 +94,7 @@ export default function RootLayout({
                 } else {
                   const meta = document.createElement('meta');
                   meta.setAttribute('property', 'og:image');
-                  meta.setAttribute('content', '${SITE_CONFIG.baseUrl}/images/og-image.jpg');
+                  meta.setAttribute('content', '${SITE_CONFIG.baseUrl}/images/og-image.png');
                   meta.setAttribute('itemProp', 'image');
                   document.head.appendChild(meta);
                 }
