@@ -26,6 +26,12 @@ const nextConfig = {
         destination: 'https://yoluko.com/:path*',
         permanent: true,
       },
+      // Clinic Intelligence → standalone site
+      {
+        source: '/clinic-intelligence',
+        destination: 'https://atlas.yoluko.com',
+        permanent: true,
+      },
       // Legacy locale redirects
       {
         source: '/en',
